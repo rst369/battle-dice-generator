@@ -154,24 +154,25 @@
 
         function updatePrintList() {
             const container = document.getElementById('printList');
-             const filteredCards = getFilteredCards();
-            if (cards.length === 0) {
-                container.innerHTML = '<div style="text-align: center; padding: 20px; color: #999;">Nenhuma carta criada ainda</div>';
+            const filteredCards = getFilteredCards();
+            
+            if (filteredCards.length === 0) {
+                container.innerHTML = '<div style="text-align: center; padding: 20px; color: #999;">Nenhuma carta encontrada com este filtro</div>';
                 return;
             }
             
-            container.innerHTML = cards.map(card => {
+            container.innerHTML = filteredCards.map(card => {
                 const selection = printSelections[card.id] || { selected: true, quantity: 1 };
                 return `
                     <div class="print-item">
                         <div class="print-item-info">
                             <input type="checkbox" class="print-item-checkbox" data-id="${card.id}" ${selection.selected ? 'checked' : ''} onchange="toggleCardSelection(${card.id}, this.checked)">
                             <span class="print-item-name">${escapeHtml(card.name)}</span>
-                            ${card.archetype ? `<span class="print-item-archetype">🏷️ ${escapeHtml(card.archetype)}</span>` : ''}
+                            ${card.archetype ? `<span class="print-item-archetype">🏷️ ${escapeHtml(card.archetype)}</span>` : '<span class="print-item-archetype" style="background:rgba(0,0,0,0.4);">❌ Sem arquétipo</span>'}
                         </div>
                         <div class="print-item-quantity">
                             <button onclick="changeCardQuantity(${card.id}, -1)">-</button>
-                            <input type="number" id="qty-${card.id}" value="${selection.quantity}" min="1" max="99" onchange="setCardQuantity(${card.id}, this.value)">
+                            <input type="number" id="qty-${card.id}" value="${selection.quantity}" min="1" max="99" onchange="setCardQuantity(${card.id}, this.value)" style="width:50px; text-align:center;">
                             <button onclick="changeCardQuantity(${card.id}, 1)">+</button>
                         </div>
                     </div>
@@ -833,6 +834,7 @@
             setTimeout(() => notification.remove(), 3000);
         }
         
+        // Event listeners
         document.getElementById('cardName').addEventListener('input', updatePreview);
         document.getElementById('archetype').addEventListener('input', updatePreview);
         document.getElementById('baseAttack').addEventListener('input', updatePreview);
@@ -843,6 +845,11 @@
         document.getElementById('mainEffect').addEventListener('input', updatePreview);
         document.getElementById('imageUrl').addEventListener('input', updatePreview);
         document.getElementById('cardType').addEventListener('change', toggleCardType);
+
+        document.getElementById('archetypeFilter').addEventListener('change', function() {
+            updatePrintList();
+            updatePrintCounter();
+        });
         
         loadCards();
         updatePreview();
