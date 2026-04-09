@@ -232,12 +232,25 @@
         }
 
         function selectAllCards() {
-            cards.forEach(card => {
-                if (!printSelections[card.id]) {
-                    printSelections[card.id] = { selected: true, quantity: 1 };
-                }
-                printSelections[card.id].selected = true;
-            });
+
+            const filteredCards = getFilteredCards();
+            
+            if (filteredCards.length === 0) {
+                cards.forEach(card => {
+                    if (!printSelections[card.id]) {
+                        printSelections[card.id] = { selected: true, quantity: 1 };
+                    }
+                    printSelections[card.id].selected = true;
+                });
+            }else{
+                filteredCards.forEach(card => {
+                    if (!printSelections[card.id]) {
+                        printSelections[card.id] = { selected: true, quantity: 1 };
+                    }
+                    printSelections[card.id].selected = true;
+                });
+            }
+
             updatePrintList();
             updatePrintCounter();
             showNotification('Todas as cartas selecionadas!', 'success');
