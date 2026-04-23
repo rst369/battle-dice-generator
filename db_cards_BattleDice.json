@@ -2,6 +2,71 @@
   "version": "1.0",
   "exportDate": "2026-04-07T21:36:46.851Z",
   "cards": [
+     {
+      "id": 1776958797129,
+      "name": "Mestre de Águia",
+      "archetype": "Cavaleiro",
+      "type": "creature",
+      "attack": 5,
+      "defense": 4,
+      "mana": 4,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRocSMj-Jn0Btm44YVkSlDbi_h35fzl_UEt_Q&s",
+      "attackEffect": "[1][2][3] +2 ATK\n[4][5] +3 ATK\n[6] Envie uma Criatura CAVALEIRO do campo para o descarte para ganhar ATK igual ao seu ATK",
+      "defenseEffect": "[1][2][3] +2 DEF\n[4][5] +2 DEF para cada CAVALEIRO DE PÉGASO no campo ou descarte\n[6] Envie uma Criatura CAVALEIRO do campo para o descarte para ganhar DEF igual ao seu DEF",
+      "mainEffect": "AO ENTRAR: Adicione um CAVALEIRO DE PÉGASO do deck ou descarte para a mão.\nNO CAMPO: Todos CAVALEIRO DE PÉGASO ganham +2ATk +2 DEF"
+    },
+    {
+      "id": 1776958497787,
+      "name": "Meteoro de Pégaso",
+      "archetype": "Cavaleiro",
+      "type": "magic",
+      "attack": 0,
+      "defense": 0,
+      "mana": 4,
+      "imageUrl": "https://vergonhadasprincesas.wordpress.com/wp-content/uploads/2016/08/tech-seiya-pegasusmeteorfist3.jpg?w=467&h=322",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "+3 ATK\nSE Cavaleiro de Pégaso está balhando e VENCER a batalha: Adicione um MESTRE DE AGUIA do deck para a mão e ganhe 2 de mana"
+    },
+    {
+      "id": 1776958219018,
+      "name": "Tempestade Nebulosa",
+      "archetype": "Cavaleiro",
+      "type": "magic",
+      "attack": 0,
+      "defense": 0,
+      "mana": 8,
+      "imageUrl": "https://static.wikia.nocookie.net/saintseya/images/9/91/Shun_-_Tempestade_Nebulosa.png/revision/latest?cb=20181229015538&path-prefix=pt",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "SE Cavaleiro de Andrômeda está em campo: reduza o custo desta carta em 2.\nRole um dado e diminua a DEF de todas criaturas adversárias pelo resultado obtido. Retorne para a mão todas as criaturas que tiveram a DEF zerada por este efeito."
+    },
+      {
+        "id": 1776957553047,
+        "name": "Cavaleiro Aprendiz",
+        "archetype": "Cavaleiro",
+        "type": "creature",
+        "attack": 1,
+        "defense": 2,
+        "mana": 2,
+        "imageUrl": "https://static.wikia.nocookie.net/saintseya/images/3/3a/Kiki_hades.png/revision/latest?cb=20130622232344&path-prefix=pt",
+        "attackEffect": "[1] Adicione uma magia CAVALEIRO do descarte para a mão\n[2][3][4][5][6] +1 ATK",
+        "defenseEffect": "[1] +3 DEF | [2][3][4][5][6] +1 DEF",
+        "mainEffect": "AO ENTRAR: Adicione uma criatura CAVALEIRO do deck ou descarte para a mão com custo de mana menor que 5"
+      },
+     {
+      "id": 1776949966015,
+      "name": "Cavaleiro de Cisne",
+      "archetype": "Cavaleiro",
+      "type": "creature",
+      "attack": 3,
+      "defense": 4,
+      "mana": 4,
+      "imageUrl": "https://i.ebayimg.com/images/g/IuYAAOSwbtRn3QW4/s-l1200.jpg",
+      "attackEffect": "[1][2][3] +2 ATK\n[5][6] Volte uma magia Cavaleiro do descarte para mão",
+      "defenseEffect": "[1][2][3] +2 DEF\n[5] +3 DEF\n[6] Cancele a batalha",
+      "mainEffect": "AO ENTRAR: Role um dado, volte uma magia Cavaleiro do descarte para a mão com custo de mana menor ou igual que o resultado obtido"
+    },
     {
       "id": 3550693147173.46,
       "name": "Mago da IA",
@@ -458,6 +523,7 @@
     {
       "id": 1775096962263,
       "name": "Cavaleiro de Andrômeda",
+      "archetype": "Cavaleiro",
       "type": "creature",
       "attack": 3,
       "defense": 5,
@@ -470,11 +536,12 @@
     {
       "id": 1775096549948,
       "name": "Cavaleiro de Fênix",
+      "archetype": "Cavaleiro",
       "type": "creature",
       "attack": 5,
       "defense": 5,
       "mana": 5,
-      "imageUrl": "data:image/jpeg;base64,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",
+      "imageUrl": "https://dthezntil550i.cloudfront.net/5u/latest/5u2103310754424620017124178/dddfd343-380a-4024-aedc-84066655d3b2.png",
       "attackEffect": "[1]...[5] +2 ATK\n[6] Adicione um CAVALEIRO do seu descarte para a mão. Ganhe ATK igual ao seu custo de MANA",
       "defenseEffect": "[1]...[5] -2 ATK para o atacante\n[6] Se Cavaleiro de Fênix for derrotado neste combate, mova o atacante para o descarte",
       "mainEffect": "QUANDO FOR DERROTADO: Descarte 1 carta da mão para adicionar esta carta à sua mão."
@@ -482,6 +549,7 @@
     {
       "id": 1775096328214,
       "name": "Escudo de Cavaleiro",
+      "archetype": "Cavaleiro",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -542,6 +610,7 @@
     {
       "id": 1775078927045,
       "name": "Treinamento de Cavaleiro",
+      "archetype": "Cavaleiro",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -554,6 +623,7 @@
     {
       "id": 1775078556599,
       "name": "Armadura dourada",
+      "archetype": "Cavaleiro",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -566,6 +636,7 @@
     {
       "id": 1775077443758,
       "name": "Cavaleiro de Pégaso",
+      "archetype": "Cavaleiro",
       "type": "creature",
       "attack": 5,
       "defense": 3,
