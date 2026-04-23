@@ -2,6 +2,45 @@
   "version": "1.0",
   "exportDate": "2026-04-07T21:36:46.851Z",
   "cards": [
+    {
+      "id": 1776960919854,
+      "name": "Mestre Ancião",
+      "archetype": "Cavaleiro",
+      "type": "creature",
+      "attack": 1,
+      "defense": 1,
+      "mana": 1,
+      "imageUrl": "https://pbs.twimg.com/media/D3M4vEUWsAAB2b0.jpg",
+      "attackEffect": "[1]...[4] +2 ATK | [5] +2 ATK + 2 PV\n[6] +5 ATK ",
+      "defenseEffect": "[1]...[4] Adicione um CAVALEIRO do descarte para a mão\n[5][6] SE FOR DERROTADO: Jogue um Cavaleiro de Dragão do deck ou descarte para o campo sem pagar o custo",
+      "mainEffect": "AO ENTRAR: Role um dado e adicione uma carta CAVALEIRO do descarte com custo menor ou igual ao resultado"
+    },
+    {
+      "id": 1776960517707,
+      "name": "Cavaleiro de Áries",
+      "archetype": "Cavaleiro",
+      "type": "creature",
+      "attack": 6,
+      "defense": 6,
+      "mana": 6,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXsMEq4ZwnMQRQzIqQtGAAQJw6baRnDYjq8Q&s",
+      "attackEffect": "[1][3][5] +1 ATK para cada CAVALEIRO no descarte\n[2][4][6] +2 ATK para cada CAVALEIRO no descarte",
+      "defenseEffect": "[1][3][5] +1 DEF para cada CAVALEIRO no descarte\n[2][4][6] +2 DEF para cada CAVALEIRO no descarte",
+      "mainEffect": "AO SER DERROTADO: adicione um DEUSA ATENA do deck ou descarte para a mão"
+    },
+      {
+      "id": 3553918301695.083,
+      "name": "Cavaleiro de Cobra",
+      "archetype": "Cavaleiro",
+      "type": "creature",
+      "attack": 4,
+      "defense": 1,
+      "mana": 3,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzVGyd5dxL48sBrWTXrIygXwoU0vHr3pk3Q&s",
+      "attackEffect": "[1]...[3] -1 DEF adversário\n[4]...[6] -2 DEF adversário",
+      "defenseEffect": "[1]...[3] -3 ATK adversário\n[4]...[6] AO SER DERROTADO: Adicione um MESTRE DE AGUIA do deck ou descarte para a mão",
+      "mainEffect": "AO ENTRAR: Adicione uma carta CAVALEIRO com custo de mana menor que 4 do descarte para a mão."
+    },
      {
       "id": 1776958797129,
       "name": "Mestre de Águia",
