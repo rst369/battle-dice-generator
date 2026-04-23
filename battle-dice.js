@@ -312,19 +312,21 @@
                         .print-card-content { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; gap: 0.8mm; }
                         .print-card.magic-card { background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border-color: #9b59b6; }
                         .print-card-header { display: flex; justify-content: space-between; align-items: center; gap: 1mm; background: rgba(255,255,255,0.85); padding: 1mm; border-radius: 1.5mm; flex-shrink: 0; }
-                        .print-card-name { font-weight: bold; text-align: center; background: rgba(255,255,255,0.9); padding: 0.8mm 1.5mm; border-radius: 1.5mm; flex: 1; word-wrap: break-word; line-height: 1.2; white-space: normal; font-size: 3mm; }
+                        .print-card-name { font-weight: bold; text-align: center; color: rgba(255,255,255,0.9); padding: 0.8mm 1.5mm; border-radius: 1.5mm; flex: 1; word-wrap: break-word; line-height: 1.2; white-space: normal; font-size: 3mm; }
                         .print-card-name[data-length="long"] { font-size: 2.6mm; }
                         .print-card-name[data-length="very-long"] { font-size: 2.2mm; }
+                        .print-card-bg-criatura{ background: rgba(194, 175, 9, 0.7); }
+                        .print-card-bg-magia{ background: rgba(188, 4, 167, 0.7); }
                         .print-card-mana { display: flex; gap: 0.8mm; background: rgba(0,0,0,0.7); padding: 0.8mm 1.5mm; border-radius: 3mm; flex-shrink: 0; }
                         .print-mana-dice { width: 5mm; height: 5mm; background: rgba(0,0,0,0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
                         .print-mana-dice img { width: 4mm; height: 4mm; }
                         .print-card-spacer { width: 7mm; visibility: hidden; flex-shrink: 0; }
-                        .print-image-container { position: relative; margin: 0.5mm 0; border-radius: 1.5mm; overflow: hidden; background: rgba(44,62,80,0.3); flex-shrink: 0; height: 35mm; }
+                        .print-image-container { position: relative; margin: 0.5mm 0; border-radius: 1.5mm; overflow: hidden; background: rgba(44,62,80,0.3); flex-shrink: 0; height: 38mm; }
                         .print-card-image { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: transparent; }
-                        .print-card-image img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+                        .print-card-image img { width: 100%; height: 100%; object-fit: inherit; opacity: 0.85; }
                         .print-card-image div { font-size: 2mm; color: #999; text-align: center; }
                         .print-overlay-stats { position: absolute; top: 1mm; right: 1mm; background: rgba(0,0,0,0.7); padding: 0.8mm 1.2mm; border-radius: 1.5mm; }
-                        .print-overlay-stat { color: white; font-size: 1.8mm; display: flex; gap: 0.8mm; font-weight: bold; line-height: 1.2; }
+                        .print-overlay-stat { color: white; font-size: 2.5mm; display: flex; gap: 0.8mm; font-weight: bold; line-height: 1.2; }
                         .print-archetype {
                             position: absolute;
                             bottom: 1mm;
@@ -350,7 +352,7 @@
                         .print-effect-text { color: #555; font-size: 1.6mm; line-height: 1.2; word-break: break-word; white-space: pre-wrap; }
                         .print-dice-image { width: 1.8mm; height: 1.8mm; display: inline-block; vertical-align: middle; }
                         .print-dice-image img { width: 100%; height: 120%; object-fit: contain;image-rendering: high-quality;}
-                        .print-type-badge { position: absolute; bottom: 1.2mm; right: 1.2mm; background: rgba(0,0,0,0.6); color: white; padding: 0.4mm 0.8mm; border-radius: 1.5mm; font-size: 1.4mm; font-weight: bold; z-index: 2; }
+                        .print-type-badge { position: absolute; bottom: 1.2mm; right: 1.2mm; background: rgba(0,0,0,0.6); color: white; padding: 0.4mm 0.8mm; border-radius: 1.5mm; font-size: 1.8mm; font-weight: bold; z-index: 2; }
                     </style>
                 </head>
                 <body>
@@ -378,9 +380,9 @@
                     <div class="print-card ${card.type === 'magic' ? 'magic-card' : ''}">
                         <div class="print-card-bg" style="background-image: url('${card.imageUrl || ''}');"></div>
                         <div class="print-card-content">
-                            <div class="print-card-header">
+                            <div class="${card.type === 'creature' ? 'print-card-bg-criatura' : 'print-card-bg-magia'} print-card-header">
                                 <div class="print-card-mana">${manaDisplay}</div>
-                                <div class="print-card-name" data-length="${nameAttr}">${escapeHtml(card.name)}</div>
+                                <div class="${card.type === 'creature' ? 'print-card-bg-criatura' : 'print-card-bg-magia'} print-card-name" data-length="${nameAttr}">${escapeHtml(card.name)}</div>
                                 <div class="print-card-spacer"></div>
                             </div>
                             <div class="print-image-container">
@@ -393,7 +395,10 @@
                                     <div class="print-overlay-stat">🛡️ ${card.defense}</div>
                                 </div>
                                 ` : ''}
-                                ${card.archetype ? `<div class="print-archetype" title="${escapeHtml(card.archetype)}">🏷️ ${escapeHtml(card.archetype.length > 12 ? card.archetype.substring(0, 10) + '...' : card.archetype)}</div>` : ''}
+                                <div>
+                                    ${card.archetype ? `<div class="print-archetype" title="${escapeHtml(card.archetype)}">🏷️ ${escapeHtml(card.archetype.length > 12 ? card.archetype.substring(0, 10) + '...' : card.archetype)}</div>` : ''}
+                                    <div class="print-type-badge">${card.type === 'magic' ? '✨ Magia' : '🦎 Criatura'}</div>
+                                </div>
                             </div>
                             <div class="print-effects">
                                 ${card.type === 'creature' ? `
@@ -412,7 +417,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="print-type-badge">${card.type === 'magic' ? '✨ Magia' : '🦎 Criatura'}</div>
                     </div>
                 `);
             });
