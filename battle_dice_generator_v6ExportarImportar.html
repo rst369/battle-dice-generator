@@ -317,6 +317,14 @@
         <!-- Miniaturas -->
         <div class="thumbnails-section">
             <h2>📚 Cartas Criadas (<span id="cardCount">0</span>)</h2>
+            <div class="filter-bar" style="margin-bottom: 15px;">   
+                <label>🏷️ Filtrar por Arquétipo:</label>
+                <select id="thumbnailArchetypeFilter" onchange="filterThumbnailsByArchetype()">
+                    <option value="all">📋 Todos os Arquétipos</option>
+                </select>
+                <button class="btn-info" onclick="clearThumbnailFilter()">🗑️ Limpar Filtro</button>
+                <span id="thumbnailFilterInfo" style="font-size: 0.85em; color: #666; margin-left: 10px;"></span>
+            </div>
             <div id="thumbnailsGrid" class="thumbnails-grid">
                 <div style="text-align: center; color: #999; grid-column: 1/-1;">Nenhuma carta criada ainda</div>
             </div>

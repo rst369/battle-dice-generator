@@ -657,34 +657,7 @@ function clearForm() {
             localStorage.setItem('battleDiceCards', JSON.stringify(cards));
         }
 
-        function updateArchetypeFilter() {
-            const archetypes = new Set();
-            cards.forEach(card => {
-                if (card.archetype && card.archetype.trim() !== '') {
-                    archetypes.add(card.archetype);
-                }
-            });
-            
-            const filterSelect = document.getElementById('archetypeFilter');
-            const currentValue = filterSelect.value;
-            
-            filterSelect.innerHTML = '<option value="all">📋 Todos os Arquétipos</option>';
-            if (cards.some(card => card.archetype && card.archetype.trim() !== '')) {
-                filterSelect.innerHTML += '<option value="sem_arquetipo">❌ Sem Arquétipo</option>';
-            }
-            Array.from(archetypes).sort().forEach(arch => {
-                filterSelect.innerHTML += `<option value="${escapeHtml(arch)}">🏷️ ${escapeHtml(arch)}</option>`;
-            });
-            
-            if (currentValue && Array.from(archetypes).includes(currentValue)) {
-                filterSelect.value = currentValue;
-            } else if (currentValue === 'sem_arquetipo') {
-                filterSelect.value = currentValue;
-            } else {
-                filterSelect.value = 'all';
-                currentArchetypeFilter = 'all';
-            }
-        }
+       
 
         function getFilteredCards() {
             const filter = document.getElementById('archetypeFilter').value;
@@ -711,37 +684,6 @@ function clearForm() {
             updatePrintCounter();
             showNotification('Filtro removido!', 'success');
         }
-        
-        function updateThumbnails() {
-            const grid = document.getElementById('thumbnailsGrid');
-            const cardCount = document.getElementById('cardCount');
-            cardCount.textContent = cards.length;
-            if (cards.length === 0) {
-                grid.innerHTML = '<div style="text-align: center; color: #999; grid-column: 1/-1;">Nenhuma carta criada ainda</div>';
-                return;
-            }
-            grid.innerHTML = cards.map(card => {
-                const manaDisplay = card.mana <= 6 ? 
-                    `<img src="${getDiceImage(card.mana)}" style="width:14px; height:14px;">` :
-                    `<img src="${getDiceImage(6)}" style="width:12px; height:12px;"><img src="${getDiceImage(card.mana - 6)}" style="width:12px; height:12px;">`;
-                return `
-                <div class="thumbnail ${card.type === 'magic' ? 'magic-thumb' : ''}" onclick="loadCard(${card.id})">
-                    <div class="delete-thumb" onclick="event.stopPropagation(); deleteCard(${card.id})">✖</div>
-                    <div class="thumbnail-name" title="${escapeHtml(card.name)}">${escapeHtml(card.name.length > 20 ? card.name.substring(0, 17) + '...' : card.name)}</div>
-                    ${card.archetype ? `<div class="thumbnail-archetype">🏷️ ${escapeHtml(card.archetype)}</div>` : ''}
-                    <div class="thumbnail-stats">
-                        ${card.type === 'creature' ? `<span style="color:#e74c3c;">⚔️${card.attack}</span><span style="color:#3498db;">🛡️${card.defense}</span>` : '<span>✨ Magia</span>'}
-                        <span>${manaDisplay}</span>
-                    </div>
-                    <div class="thumbnail-image">
-                        ${card.imageUrl ? `<img src="${card.imageUrl}" alt="${card.name}" style="max-width:100%; max-height:45px;">` : '<div style="font-size: 25px;">' + (card.type === "magic" ? "✨" : "🎲") + '</div>'}
-                    </div>
-                    <div class="thumbnail-effects">${(card.mainEffect || '').substring(0, 25)}...</div>
-                    <div class="type-badge">${card.type === 'magic' ? '✨ Magia' : '🦎 Criatura'}</div>
-                </div>`;
-            }).join('');
-        }
-        
         
         function deleteCard(id) {
             if (confirm('Excluir esta carta?')) {
@@ -929,6 +871,118 @@ function clearForm() {
         location.reload();
     }
 }
+
+let currentThumbnailFilter = 'all';
+
+function filterThumbnailsByArchetype() {
+    const filter = document.getElementById('thumbnailArchetypeFilter').value;
+    currentThumbnailFilter = filter;
+    updateThumbnails();
+}
+
+function clearThumbnailFilter() {
+    document.getElementById('thumbnailArchetypeFilter').value = 'all';
+    currentThumbnailFilter = 'all';
+    updateThumbnails();
+    showNotification('Filtro de visualização removido!', 'success');
+}
+
+// Modificar a função updateThumbnails para aplicar o filtro
+function updateThumbnails() {
+    const grid = document.getElementById('thumbnailsGrid');
+    const cardCount = document.getElementById('cardCount');
+    
+    // Aplicar filtro
+    let filteredCards = cards;
+    let filterInfo = '';
+    
+    if (currentThumbnailFilter === 'sem_arquetipo') {
+        filteredCards = cards.filter(card => !card.archetype || card.archetype.trim() === '');
+        filterInfo = `Mostrando cartas sem arquétipo (${filteredCards.length} cartas)`;
+    } else if (currentThumbnailFilter !== 'all') {
+        filteredCards = cards.filter(card => card.archetype === currentThumbnailFilter);
+        filterInfo = `Mostrando cartas do arquétipo "${currentThumbnailFilter}" (${filteredCards.length} cartas)`;
+    } else {
+        filterInfo = `Mostrando todas as cartas (${cards.length} cartas)`;
+    }
+    
+    document.getElementById('thumbnailFilterInfo').textContent = filterInfo;
+    cardCount.textContent = filteredCards.length;
+    
+    if (filteredCards.length === 0) {
+        grid.innerHTML = '<div style="text-align:center;color:#999;grid-column:1/-1;padding:40px;">Nenhuma carta encontrada com este filtro</div>';
+        return;
+    }
+    
+    grid.innerHTML = filteredCards.map(card => `
+        <div class="thumbnail ${card.type === 'magic' ? 'magic-thumb' : ''}" onclick="loadCard(${card.id})">
+            <div class="delete-thumb" onclick="event.stopPropagation(); deleteCard(${card.id})">✖</div>
+            <div class="thumbnail-name" title="${escapeHtml(card.name)}">${escapeHtml(card.name.length > 20 ? card.name.substring(0, 17) + '...' : card.name)}</div>
+            ${card.archetype ? `<div class="thumbnail-archetype">🏷️ ${escapeHtml(card.archetype)}</div>` : '<div class="thumbnail-archetype" style="opacity:0.5;">🏷️ Sem arquétipo</div>'}
+            <div class="thumbnail-stats">
+                ${card.type === 'creature' ? `<span style="color:#e74c3c;">⚔️${card.attack}</span><span style="color:#3498db;">🛡️${card.defense}</span>` : '<span>✨ Magia</span>'}
+                <span>${getManaDisplay(card.mana)}</span>
+            </div>
+            <div class="thumbnail-image">
+                ${card.imageUrl ? `<img src="${card.imageUrl}" alt="${card.name}" style="max-width:100%; max-height:45px; object-fit:cover;">` : '<div style="font-size: 25px;">' + (card.type === "magic" ? "✨" : "🎲") + '</div>'}
+            </div>
+            <div class="thumbnail-effects">${(card.mainEffect || '').substring(0, 25)}...</div>
+            <div class="type-badge">${card.type === 'magic' ? '✨ Magia' : '🦎 Criatura'}</div>
+        </div>
+    `).join('');
+}
+
+// Modificar a função updateArchetypeFilter para atualizar também o filtro das miniaturas
+function updateArchetypeFilter() {
+    const archetypes = new Set();
+    cards.forEach(card => {
+        if (card.archetype && card.archetype.trim() !== '') {
+            archetypes.add(card.archetype);
+        }
+    });
+    
+    // Atualizar filtro da impressão
+    const printFilterSelect = document.getElementById('archetypeFilter');
+    const currentPrintValue = printFilterSelect.value;
+    
+    printFilterSelect.innerHTML = '<option value="all">📋 Todos os Arquétipos</option>';
+    if (cards.some(card => !card.archetype || card.archetype.trim() === '')) {
+        printFilterSelect.innerHTML += '<option value="sem_arquetipo">❌ Sem Arquétipo</option>';
+    }
+    Array.from(archetypes).sort().forEach(arch => {
+        printFilterSelect.innerHTML += `<option value="${escapeHtml(arch)}">🏷️ ${escapeHtml(arch)}</option>`;
+    });
+    
+    if (currentPrintValue && (currentPrintValue === 'all' || currentPrintValue === 'sem_arquetipo' || archetypes.has(currentPrintValue))) {
+        printFilterSelect.value = currentPrintValue;
+    } else {
+        printFilterSelect.value = 'all';
+    }
+    
+    // Atualizar filtro das miniaturas
+    const thumbFilterSelect = document.getElementById('thumbnailArchetypeFilter');
+    if (thumbFilterSelect) {
+        const currentThumbValue = thumbFilterSelect.value;
+        thumbFilterSelect.innerHTML = '<option value="all">📋 Todos os Arquétipos</option>';
+        if (cards.some(card => !card.archetype || card.archetype.trim() === '')) {
+            thumbFilterSelect.innerHTML += '<option value="sem_arquetipo">❌ Sem Arquétipo</option>';
+        }
+        Array.from(archetypes).sort().forEach(arch => {
+            thumbFilterSelect.innerHTML += `<option value="${escapeHtml(arch)}">🏷️ ${escapeHtml(arch)}</option>`;
+        });
+        
+        if (currentThumbValue && (currentThumbValue === 'all' || currentThumbValue === 'sem_arquetipo' || archetypes.has(currentThumbValue))) {
+            thumbFilterSelect.value = currentThumbValue;
+        } else {
+            thumbFilterSelect.value = 'all';
+            currentThumbnailFilter = 'all';
+        }
+    }
+    
+    // Reaplicar filtro atual
+    filterThumbnailsByArchetype();
+}
+
         
         // Event listeners
         document.getElementById('cardName').addEventListener('input', updatePreview);

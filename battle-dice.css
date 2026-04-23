@@ -1229,4 +1229,35 @@
                 }
             }
         }
+        .filter-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.filter-bar select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+}
+
+.filter-bar select:focus {
+    outline: none;
+    border-color: #ffd700;
+}
+
+#thumbnailFilterInfo {
+    font-size: 0.8em;
+    color: #666;
+    padding: 4px 8px;
+    background: #e9ecef;
+    border-radius: 20px;
+}
     </style>
