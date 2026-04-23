@@ -562,7 +562,7 @@
     {
       "id": 1775272697462,
       "name": "Vortexmon",
-      "archetype": "Digimon",
+      "archetype": "Fakemon",
       "type": "creature",
       "attack": 2,
       "defense": 5,
@@ -575,7 +575,7 @@
     {
       "id": 1775272573323,
       "name": "Rinovortexmon",
-      "archetype": "Digimon",
+      "archetype": "Fakemon",
       "type": "creature",
       "attack": 5,
       "defense": 1,
@@ -588,7 +588,7 @@
     {
       "id": 1775272424396,
       "name": "Voltramon",
-      "archetype": "Digimon",
+      "archetype": "Fakemon",
       "type": "creature",
       "attack": 6,
       "defense": 3,
@@ -601,7 +601,7 @@
     {
       "id": 1775272316791,
       "name": "Anfibimon",
-      "archetype": "Digimon",
+      "archetype": "Fakemon",
       "type": "creature",
       "attack": 3,
       "defense": 2,
@@ -614,7 +614,7 @@
     {
       "id": 1775272103246,
       "name": "Inferno Furia",
-      "archetype": "Digimon",
+      "archetype": "Fakemon",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -627,7 +627,7 @@
     {
       "id": 1775271991233,
       "name": "Lamina de Dados",
-      "archetype": "Digimon",
+      "archetype": "Fakemon",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -640,7 +640,7 @@
     {
       "id": 1775271910613,
       "name": "Barragem Espinhosa",
-      "archetype": "Digimon",
+      "archetype": "Fakemon",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -653,7 +653,7 @@
     {
       "id": 1775271845724,
       "name": "Super Carga Elétrica",
-      "archetype": "Digimon",
+      "archetype": "Fakemon",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -666,7 +666,7 @@
     {
       "id": 1775271796978,
       "name": "Portal Espiritual",
-      "archetype": "Digimon",
+      "archetype": "Fakemon",
       "type": "magic",
       "attack": 0,
       "defense": 0,
