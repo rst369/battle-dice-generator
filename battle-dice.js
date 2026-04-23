@@ -726,6 +726,63 @@ function clearForm() {
             }
         });
 
+        function exportSelectedData() {
+    // Obter apenas as cartas selecionadas na área de impressão
+    const selectedCards = [];
+   
+    cards.forEach(card => {
+        const selection = printSelections[card.id];
+        if (selection && selection.selected) {
+            // Incluir a quantidade também
+            selectedCards.push({
+                ...card,
+                exportQuantity: selection.quantity
+            });
+        }
+    });
+    
+    if (selectedCards.length === 0) {
+        showNotification('Nenhuma carta selecionada para exportar!', 'error');
+        return;
+    }
+
+    var cardArchetype = selectedCards[0].archetype;
+    
+    const exportData = {
+        version: "1.0",
+        exportDate: new Date().toISOString(),
+        totalCards: selectedCards.length,
+        totalCopies: selectedCards.reduce((sum, card) => sum + (card.exportQuantity || 1), 0),
+        cards: selectedCards.map(card => ({
+            id: card.id,
+            name: card.name,
+            archetype: card.archetype,
+            type: card.type,
+            attack: card.attack,
+            defense: card.defense,
+            mana: card.mana,
+            imageUrl: card.imageUrl,
+            attackEffect: card.attackEffect,
+            defenseEffect: card.defenseEffect,
+            mainEffect: card.mainEffect,
+            quantity: card.exportQuantity // Salvar a quantidade também
+        }))
+    };
+    
+    const dataStr = JSON.stringify(exportData, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `battle_dice_export_${new Date().toISOString().split('T')[0]}_${selectedCards.length}cartas_de_`+cardArchetype+`.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    showNotification(`📤 ${selectedCards.length} cartas selecionadas exportadas (${exportData.totalCopies} cópias no total)!`, 'success');
+}
+
          // Função para exportar dados
         function exportData() {
             if (cards.length === 0) {
