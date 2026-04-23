@@ -600,7 +600,7 @@
             max-height: 160px;
             object-fit: inherit;
             display: block;
-            opacity: 0.6;
+            opacity: 0.85;
         }
 
         .overlay-stats {
