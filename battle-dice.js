@@ -315,8 +315,8 @@
                         .print-card-name { font-weight: bold; text-align: center; color: rgba(255,255,255,0.9); padding: 0.8mm 1.5mm; border-radius: 1.5mm; flex: 1; word-wrap: break-word; line-height: 1.2; white-space: normal; font-size: 3mm; }
                         .print-card-name[data-length="long"] { font-size: 2.6mm; }
                         .print-card-name[data-length="very-long"] { font-size: 2.2mm; }
-                        .print-card-bg-criatura{ background: rgba(194, 175, 9, 0.7); }
-                        .print-card-bg-magia{ background: rgba(188, 4, 167, 0.7); }
+                        .print-card-bg-criatura{ background: rgba(194, 175, 9, 0.6); }
+                        .print-card-bg-magia{ background: rgba(188, 4, 167, 0.6); }
                         .print-card-mana { display: flex; gap: 0.8mm; background: rgba(0,0,0,0.7); padding: 0.8mm 1.5mm; border-radius: 3mm; flex-shrink: 0; }
                         .print-mana-dice { width: 5mm; height: 5mm; background: rgba(0,0,0,0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
                         .print-mana-dice img { width: 4mm; height: 4mm; }
@@ -343,12 +343,12 @@
                             overflow: hidden;
                             text-overflow: ellipsis;
                         }
-                        .print-effects { flex: 1; background: rgba(255,255,255,0.7); border-radius: 1.5mm; padding: 1mm; min-height: 0; display: flex; flex-direction: column; overflow: visible; }
+                        .print-effects { flex: 1; background: rgba(255,255,255,0.45); border-radius: 1.5mm; padding: 1mm; min-height: 0; display: flex; flex-direction: column; overflow: visible; }
                         .print-effect-section { background: rgba(255,255,255,0.85); margin: 0.6mm 0; padding: 0.8mm; border-radius: 1.2mm; border-left: 0.6mm solid; }
                         .print-effect-section.attack-effect { border-left-color: #e74c3c; }
                         .print-effect-section.defense-effect { border-left-color: #3498db; }
                         .print-effect-section.other-effect { border-left-color: #9b59b6; }
-                        .print-effect-title { font-weight: bold; margin-bottom: 0.3mm; font-size: 1.8mm; }
+                        .print-effect-title { font-weight: bold; margin-bottom: 0.3mm; font-size: 1.2mm; }
                         .print-effect-text { color: #555; font-size: 1.6mm; line-height: 1.2; word-break: break-word; white-space: pre-wrap; }
                         .print-dice-image { width: 1.8mm; height: 1.8mm; display: inline-block; vertical-align: middle; }
                         .print-dice-image img { width: 100%; height: 120%; object-fit: contain;image-rendering: high-quality;}
@@ -850,6 +850,40 @@
             document.body.appendChild(notification);
             setTimeout(() => notification.remove(), 3000);
         }
+
+        function clearAllCards() {
+    if (confirm('⚠️ ATENÇÃO: Isso irá apagar TODAS as cartas permanentemente!\n\nDeseja realmente continuar?')) {
+        // Limpar o array de cartas
+        cards = [];
+        
+        // Limpar as seleções de impressão
+        printSelections = {};
+        
+        // Remover do localStorage
+        localStorage.removeItem('battleDiceCards');
+        
+        // Resetar a posição da imagem atual
+        resetImagePosition();
+        
+        // Limpar o formulário
+        clearForm();
+        
+        // Atualizar todas as interfaces
+        updateThumbnails();
+        updateArchetypeFilter();
+        updatePrintList();
+        updatePrintCounter();
+        
+        // Mostrar mensagem de confirmação
+        showNotification('🗑️ Todas as cartas foram apagadas com sucesso!', 'success');
+        
+        // Opcional: limpar também a pré-visualização
+        document.getElementById('previewImage').innerHTML = '<div style="color: #999; padding: 20px;">Sem imagem</div>';
+        document.getElementById('cardBgImage').style.backgroundImage = 'none';
+
+        location.reload();
+    }
+}
         
         // Event listeners
         document.getElementById('cardName').addEventListener('input', updatePreview);

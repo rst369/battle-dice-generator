@@ -83,7 +83,7 @@
                                 <strong>1. Gerar Mana</strong>
                                 - ganhe 1 dado adicional (máximo 3);<br/>
                                 - role todos os dados de mana que possuir (mesmo os que já tinha do turno passado);<br/>
-                                - você pode descartar um dado para rolar quantos dados desejar novamente;<br/>
+                                - você pode perder -2PV para rolar um dados novamente; A cada rerrolagem perca -1PV adicional;<br/>
                             </div>
                             <div class="phase">
                                 <strong>2. Compra</strong>
@@ -92,23 +92,28 @@
                             </div>
                             <div class="phase">
                                 <strong>4. Principal</strong>
-                                Invoque criaturas ou Conjure magias subtraindo o custo de mana da sua reserva de mana
+                                Invoque criaturas ou Conjure magias subtraindo o custo de mana da sua reserva de mana;<br/>
+                                Caso um dado de mana chegue a 0, ele é descartado (-1 dado na próxima fase de Gerar Mana)<br/>
+                                Você pode gerenciar o custo dos dados de mana como quiser;
                             </div>
                             <div class="phase">
                                 <strong>4. Combate</strong>
                                 Cada criatura pode declarar um ataque e quem atacou escolhe o alvo;<br/>
                                 Ambos jogadores rolam um d6 para resolver os efeitos de ataque e defesa;<br/>
                                 Ataque resolve o efeito primeiro, defesa depois;<br/>
+                                Ambos jogadores podem descartar uma carta da mão para re-rolarem o dado de ataque ou defesa próprios, apenas uma vez por combate <br/>
                                 Atacante precisa zerar os pontos de defesa para derrotar o defensor (comparando seu ataque com a defesa do defensor);<br/>
-                                Diferença entre ataque e defesa é descontada da vida do oponente;<br/>
+                                Caso Defensor não tenha defesa zerada, nada ocorre na batalha. Defesa se mantém para próximos combates;<br/>
                                 Após resolverem ambos efeitos das criaturas, magias podem ser conjuradas;<br/>
                                 Criaturas derrotadas vão para o descarte;<br/>
                                 Se não houver criaturas para defender, pode atacar a vida do oponente, descontando valor de ataque<br/>
+                                Ao atacar diretamente a vida não é realizado efeitos de ataque ou defesa;
                             </div>
                             <div class="phase">
                                 <strong>5. Final</strong>
-                                Antes de passar o turno, você pode gastar mana para conjurar magias<br/>
-                                A mana que não foi utilizada, pode ser utilizada no turno do oponente<br/>
+                                Antes de passar o turno, você pode gastar mana para conjurar magias;<br/>
+                                A mana que não foi utilizada, pode ser utilizada no turno do oponente;<br/>
+                                Desde que um dado de mana tenha pelo menos 1 ele é mantido para a próxima rolagem;
                             </div>
                         </div>
                     </div>
@@ -261,6 +266,7 @@
                     <button class="btn-import" onclick="document.getElementById('importFile').click()">📥 Importar Dados (JSON)</button>
                     <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData(this.files[0])">
                 </div>
+                <button class="btn-danger" onclick="clearAllCards()">🗑️ Apagar Todas as Cartas</button>
             </div>
             <small>⚠️ A importação irá ADICIONAR as cartas do arquivo às cartas existentes. Para substituir completamente, limpe as cartas primeiro.</small>
         </div>

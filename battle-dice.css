@@ -598,7 +598,7 @@
             width: 100%;
             height: auto;
             max-height: 160px;
-            object-fit: cover;
+            object-fit: inherit;
             display: block;
             opacity: 0.6;
         }
