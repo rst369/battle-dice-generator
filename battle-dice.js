@@ -1,3 +1,4 @@
+let editingCardId = null; // Variável para armazenar o ID da carta sendo editada
 
         let currentArchetypeFilter = 'all';
         // Funções auxiliares
@@ -536,39 +537,121 @@
             showNotification('✨ Efeito aleatório gerado!', 'success');
         }
         
-        async function saveCard() {
-            const name = document.getElementById('cardName').value.trim();
-            if (!name) {
-                showNotification('Por favor, dê um nome à carta!', 'error');
-                return;
-            }
-            const cardType = document.getElementById('cardType').value;
-            let imageUrl = document.getElementById('imageUrl').value;
-            if (imageUrl && imageUrl.startsWith('data:image') && imageUrl.length > 50000) {
-                try {
-                    imageUrl = await compressImage(imageUrl, 150, 150, 0.5);
-                    showNotification('Imagem comprimida!', 'success');
-                } catch (e) {}
-            }
-            const card = {
-                id: Date.now(),
-                name: name,
-                archetype: document.getElementById('archetype').value || '',
-                type: cardType,
-                attack: cardType === 'creature' ? (parseInt(document.getElementById('baseAttack').value) || 0) : 0,
-                defense: cardType === 'creature' ? (parseInt(document.getElementById('baseDefense').value) || 0) : 0,
-                mana: parseInt(document.getElementById('manaCost').value) || 1,
-                imageUrl: imageUrl || '',
-                attackEffect: cardType === 'creature' ? document.getElementById('attackEffect').value : '',
-                defenseEffect: cardType === 'creature' ? document.getElementById('defenseEffect').value : '',
-                mainEffect: document.getElementById('mainEffect').value
-            };
-            cards.unshift(card);
-            printSelections[card.id] = { selected: true, quantity: 1 };
-            saveCards();
-            clearForm();
-            showNotification(`🎲 Carta "${name}" salva!`, 'success');
+        
+
+// Modificar a função saveCard para suportar edição
+async function saveCard() {
+    const name = document.getElementById('cardName').value.trim();
+    if (!name) { 
+        showNotification('Dê um nome à carta!', 'error'); 
+        return; 
+    }
+    
+    let imageUrl = document.getElementById('imageUrl').value;
+    if (imageUrl && imageUrl.startsWith('data:image') && imageUrl.length > 50000) {
+        imageUrl = await compressImage(imageUrl, 150, 150, 0.5);
+    }
+    
+    const cardData = {
+        name: name,
+        archetype: document.getElementById('archetype').value || '',
+        type: document.getElementById('cardType').value,
+        attack: parseInt(document.getElementById('baseAttack').value) || 0,
+        defense: parseInt(document.getElementById('baseDefense').value) || 0,
+        mana: parseInt(document.getElementById('manaCost').value) || 1,
+        imageUrl: imageUrl || '',
+        attackEffect: document.getElementById('attackEffect').value,
+        defenseEffect: document.getElementById('defenseEffect').value,
+        mainEffect: document.getElementById('mainEffect').value
+    };
+    
+    if (editingCardId) {
+        // Modo edição - sobrescrever carta existente
+        const index = cards.findIndex(c => c.id === editingCardId);
+        if (index !== -1) {
+            cards[index] = { ...cardData, id: editingCardId };
+            showNotification(`✏️ Carta "${name}" atualizada!`, 'success');
         }
+        editingCardId = null;
+        document.querySelector('.btn-primary').innerHTML = '💾 Salvar Carta';
+    } else {
+        // Modo criação - adicionar nova carta
+        const newCard = { ...cardData, id: Date.now() };
+        cards.unshift(newCard);
+        printSelections[newCard.id] = { selected: true, quantity: 1 };
+        showNotification(`🎲 Nova carta "${name}" salva!`, 'success');
+    }
+    
+    localStorage.setItem('battleDiceCards', JSON.stringify(cards));
+    updateThumbnails();
+    updateArchetypeFilter();
+    updatePrintList();
+    updatePrintCounter();
+    clearForm();
+}
+
+// Modificar a função loadCard para entrar em modo edição
+function loadCard(id) {
+    const card = cards.find(c => c.id === id);
+    if (!card) return;
+    
+    // Preencher formulário com os dados da carta
+    document.getElementById('cardName').value = card.name;
+    document.getElementById('archetype').value = card.archetype || '';
+    document.getElementById('cardType').value = card.type;
+    toggleCardType();
+    document.getElementById('baseAttack').value = card.attack;
+    document.getElementById('baseDefense').value = card.defense;
+    document.getElementById('manaCost').value = card.mana;
+    document.getElementById('imageUrl').value = card.imageUrl || '';
+    document.getElementById('attackEffect').value = card.attackEffect || '';
+    document.getElementById('defenseEffect').value = card.defenseEffect || '';
+    document.getElementById('mainEffect').value = card.mainEffect || '';
+    //updateImagePosition(card.imagePosX || 50, card.imagePosY || 50);
+    
+    if (card.imageUrl) {
+        document.getElementById('imagePreview').innerHTML = `<img src="${card.imageUrl}" style="max-width:100%; max-height:100px;">`;
+    } else {
+        document.getElementById('imagePreview').innerHTML = '';
+    }
+    
+    // Ativar modo edição
+    editingCardId = card.id;
+    const saveButton = document.querySelector('.btn-primary');
+    saveButton.innerHTML = '✏️ Atualizar Carta';
+    saveButton.style.background = 'linear-gradient(135deg, #27ae60 0%, #229954 100%)';
+    
+    updatePreview();
+    showNotification(`✏️ Editando: ${card.name}. Clique em "Atualizar Carta" para salvar as alterações.`, 'success');
+}
+
+// Modificar a função clearForm para resetar o modo edição
+function clearForm() {
+    document.getElementById('cardName').value = '';
+    document.getElementById('archetype').value = '';
+    document.getElementById('cardType').value = 'creature';
+    toggleCardType();
+    document.getElementById('baseAttack').value = '5';
+    document.getElementById('baseDefense').value = '5';
+    document.getElementById('manaCost').value = '3';
+    document.getElementById('imageUrl').value = '';
+    document.getElementById('attackEffect').value = '';
+    document.getElementById('defenseEffect').value = '';
+    document.getElementById('mainEffect').value = '';
+    document.getElementById('imagePreview').innerHTML = '';
+    
+    updatePreview();
+    
+    // Resetar modo edição
+    editingCardId = null;
+    const saveButton = document.querySelector('.btn-primary');
+    saveButton.innerHTML = '💾 Salvar Carta';
+    saveButton.style.background = '';
+}
+
+// Adicionar um botão "Nova Carta" para limpar o formulário e sair do modo edição
+// HTML para este botão (adicione ao lado do botão Salvar):
+// <button class="btn-info" onclick="clearForm()">➕ Nova Carta</button>
 
           function saveToLocalStorage() {
             localStorage.setItem('battleDiceCards', JSON.stringify(cards));
@@ -659,26 +742,6 @@
             }).join('');
         }
         
-        function loadCard(id) {
-            const card = cards.find(c => c.id === id);
-            if (card) {
-                document.getElementById('cardName').value = card.name;
-                document.getElementById('archetype').value = card.archetype || '';
-                document.getElementById('cardType').value = card.type;
-                toggleCardType();
-                document.getElementById('baseAttack').value = card.attack;
-                document.getElementById('baseDefense').value = card.defense;
-                document.getElementById('manaCost').value = card.mana;
-                document.getElementById('imageUrl').value = card.imageUrl || '';
-                document.getElementById('attackEffect').value = card.attackEffect;
-                document.getElementById('defenseEffect').value = card.defenseEffect;
-                document.getElementById('mainEffect').value = card.mainEffect;
-                if (card.imageUrl) document.getElementById('imagePreview').innerHTML = `<img src="${card.imageUrl}" style="max-width:100%; max-height:100px;">`;
-                else document.getElementById('imagePreview').innerHTML = '';
-                updatePreview();
-                showNotification(`🎲 Carregando: ${card.name}`, 'success');
-            }
-        }
         
         function deleteCard(id) {
             if (confirm('Excluir esta carta?')) {
@@ -693,21 +756,6 @@
             }
         }
         
-        function clearForm() {
-            document.getElementById('cardName').value = '';
-            document.getElementById('archetype').value = '';
-            document.getElementById('cardType').value = 'creature';
-            toggleCardType();
-            document.getElementById('baseAttack').value = '5';
-            document.getElementById('baseDefense').value = '5';
-            document.getElementById('manaCost').value = '3';
-            document.getElementById('imageUrl').value = '';
-            document.getElementById('attackEffect').value = '';
-            document.getElementById('defenseEffect').value = '';
-            document.getElementById('mainEffect').value = '';
-            document.getElementById('imagePreview').innerHTML = '';
-            updatePreview();
-        }
         
         function clearAllCards() {
             if (confirm('Apagar TODAS as cartas?')) {
@@ -861,9 +909,6 @@
         
         // Remover do localStorage
         localStorage.removeItem('battleDiceCards');
-        
-        // Resetar a posição da imagem atual
-        resetImagePosition();
         
         // Limpar o formulário
         clearForm();
