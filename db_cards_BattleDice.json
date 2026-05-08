@@ -1,7 +1,319 @@
 {
   "version": "1.0",
-  "exportDate": "2026-04-07T21:36:46.851Z",
+  "exportDate": "2026-05-08T18:26:31.052Z",
   "cards": [
+    {
+      "id": 1778262375809,
+      "name": "Cell Forma Perfeita",
+      "archetype": "Androide",
+      "type": "creature",
+      "attack": 5,
+      "defense": 7,
+      "mana": 8,
+      "imageUrl": "https://i.redd.it/80srurhh8cze1.jpeg",
+      "attackEffect": "[1][2] Ganha +1Atk para cada criatura na sua pilha de descarte.\n[3][4][5] +3Atk",
+      "defenseEffect": "[1][2][4][6] +2Def\n[3][5] +4Def",
+      "mainEffect": "Ganha +2Atk e 2Def para cada criatura que derrotou."
+    },
+    {
+      "id": 1778261303038,
+      "name": "Super Boo",
+      "archetype": "Majin",
+      "type": "creature",
+      "attack": 5,
+      "defense": 5,
+      "mana": 6,
+      "imageUrl": "https://i.pinimg.com/736x/43/3c/bb/433cbb426c2bce1d180e4324b18ec8c6.jpg",
+      "attackEffect": "[1][2] +2Atk | [3][4] +3Atk\n[5][6] Revele a carta no topo do deck e ganha Atk igual o custo de mana.",
+      "defenseEffect": "[1][2] +2Def | [3][4] +3Def\n[5][6] Você pode descartar uma carta da sua mão para não ser destruído nessa batalha.",
+      "mainEffect": "Uma vez por turno você pode usar o efeito principal de uma de suas criaturas que estejam em campo ou na pilha de descarte."
+    },
+    {
+      "id": 1778260680762,
+      "name": "Vou te comer",
+      "archetype": "Majin",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 3,
+      "imageUrl": "https://pbs.twimg.com/media/EMPGhSJXYAMspfu.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Aumenta Atk e Def em +3, se for usado em Majin aumenta em +5."
+    },
+    {
+      "id": 1778259966530,
+      "name": "Androide 17",
+      "archetype": "Androide",
+      "type": "creature",
+      "attack": 5,
+      "defense": 2,
+      "mana": 2,
+      "imageUrl": "https://www.comboinfinito.com.br/principal/wp-content/uploads/2018/03/dragon-ball-super-android-17.jpg",
+      "attackEffect": "[2][4] +1Atk | [5][6] +2Atk | [1][3] Adicione Androide 18 do deck para mão.",
+      "defenseEffect": "[1][6] +2Def | [3][5] +3Def | [2][4] Devolva uma magia da sua pilha de descarte para o deck",
+      "mainEffect": "Seu oponente perde 1 de mana sempre que usar uma magia, esse efeito só acontece no turno do oponente."
+    },
+    {
+      "id": 1778258835065,
+      "name": "Kid Boo",
+      "archetype": "Majin",
+      "type": "creature",
+      "attack": 10,
+      "defense": 10,
+      "mana": 12,
+      "imageUrl": "https://i.redd.it/x6ft5jket1a91.jpg",
+      "attackEffect": "[1][2][3] +3Atk | [4][5] +5Atk",
+      "defenseEffect": "[1][2][3] +3Def | [4][5] +5Def",
+      "mainEffect": "Custa -2 de mana para cada carta de criatura na pilha de descarte do oponente."
+    },
+    {
+      "id": 1777914154512,
+      "name": "Androide 18",
+      "archetype": "Androide",
+      "type": "creature",
+      "attack": 2,
+      "defense": 4,
+      "mana": 2,
+      "imageUrl": "https://www.fatosdesconhecidos.com.br/wp-content/uploads/2018/05/Androide18-2.png",
+      "attackEffect": "[1][2] +2Atk | [3][4] +3Atk | [5][6] Adicione Androide 17 do deck para mão.",
+      "defenseEffect": "[1][2] +1Def | [3][4] +2Def | [5][6] Devolva um Androide  da sua pilha de descarte para o deck.",
+      "mainEffect": "Se o seu Pv for maior que 10, reduza o custo das suas cartas em 1.\nSe o seu Pv for menor ou igual a 10, reduza o custo das suas cartas em 2."
+    },
+    {
+      "id": 1777913078908,
+      "name": "Semente dos Deuses",
+      "archetype": "Saiyajin",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 2,
+      "imageUrl": "https://static.wixstatic.com/media/d3cd60_2da47199fdda4d86a366d311963f9b5d~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Jogue um dado e ganhe mana de acordo com o resultado."
+    },
+    {
+      "id": 1777483410569,
+      "name": "Cell Semi-Perfeito",
+      "archetype": "Androide",
+      "type": "creature",
+      "attack": 5,
+      "defense": 7,
+      "mana": 6,
+      "imageUrl": "https://static0.srcdn.com/wordpress/wp-content/uploads/2017/11/Semi-Perfect-Cell-from-Dragon-Ball.jpg?q=50&fit=crop&w=825&dpr=1.5",
+      "attackEffect": "[1][3][5] +3 ATK\n[2][4][6] +5 ATK",
+      "defenseEffect": "[1][2][3] +3 DEF\n[4][5][6] +4 DEF",
+      "mainEffect": "Toda vez que seu oponente ativar um efeito de ataque ou defesa, ambos os jogadores devem jogar um dado, se o seu valor for maior o efeito é negado."
+    },
+    {
+      "id": 1777085837628,
+      "name": "Mestre do Rodizio",
+      "archetype": "Cliente",
+      "type": "creature",
+      "attack": 3,
+      "defense": 3,
+      "mana": 5,
+      "imageUrl": "data:image/jpeg;base64,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",
+      "attackEffect": "[1][4][6] +3 ATK | [2][5] +2 Mana | [3] Escolha uma carta alimento de custo 1 na pilha de descarte e aplique seu efeito.",
+      "defenseEffect": "[2][3] +3 DEF | [4][5] Procure no seu deck por um funcionário e adicione a mão.\n[6] Revele cartas do topo do deck até encontrar uma carta que tenha alimento, aplique efeito e depois embaralhe o deck.",
+      "mainEffect": "Ganha +1 ATK e DEF para cada alimento na pilha de descarte."
+    },
+    {
+      "id": 1777069224869,
+      "name": "Fat Boo",
+      "archetype": "Majin",
+      "type": "creature",
+      "attack": 4,
+      "defense": 5,
+      "mana": 5,
+      "imageUrl": "https://static.wikia.nocookie.net/dragonball/images/9/97/Super_Hero_-_Good_Buu_sleeping.png/revision/latest/scale-to-width-down/985?cb=20240213212315",
+      "attackEffect": "[1][2][3] +2 ATK | [4][6] +3 ATK | [5] Adicione uma criatura que tenha Boo no nome da sua pilha de descarte para mão.",
+      "defenseEffect": "[1][2][3] +2 DEF | [3][4] +3 DEF | [6] Não é destruído nessa batalha.",
+      "mainEffect": "No seu turno: Ganha +3 ATK se seu oponente controlar uma criatura que tenha defesa maior que seu ataque.\nTurno do oponente: Ganha +3 DEF se seu oponente controlar uma criatura que tenha ataque maior que sua defesa."
+    },
+    {
+      "id": 1776987432734,
+      "name": "Cell Imperfeito",
+      "archetype": "Androide",
+      "type": "creature",
+      "attack": 1,
+      "defense": 1,
+      "mana": 1,
+      "imageUrl": "https://preview.redd.it/an-interesting-thing-about-imperfect-cell-v0-nezlg7h7ert91.jpg?width=1080&crop=smart&auto=webp&s=3a848ceb8cd6166cb969bd30b01fe9f9d42f9f10",
+      "attackEffect": "[1] Retorne uma carta da mão do seu oponente para o mão. [2][5] Revele uma carta da sua mão e reduza o custo em -1. [3][4] Ganhe +1 de mana.",
+      "defenseEffect": "[2][3][5] Seu oponente perde -1 de mana.\n[1][4][6] Escolha uma carta aleatória da mão do seu oponente, revele e o custo aumenta em +1, se houver mais de uma cópia, todas aumentam o custo.",
+      "mainEffect": "Esta carta só pode ser destruída em batalha no turno do oponente ao tirar [1] ou [6] quando atacar."
+    },
+    {
+      "id": 1776986851830,
+      "name": "Androide 19",
+      "archetype": "Androide",
+      "type": "creature",
+      "attack": 4,
+      "defense": 3,
+      "mana": 3,
+      "imageUrl": "https://pixelnerd.com.br/wp-content/uploads/2023/03/19150840051639386540.jpg",
+      "attackEffect": "[1][3][5] -1 de DEF para todas as criaturas do oponente.\n[2][4][6] -2 de DEF para criatura do seu oponente.",
+      "defenseEffect": "[1][5][6] Busque no seu deck por um androide, exceto Androide 19.\n[2][3][4] Criatura atacante -2 ATK.",
+      "mainEffect": "Quando você invocar uma criatura ganhe 1 de mana.\nQuando seu oponente invoca uma criatura perde 1 de mana.\nVocê só pode usar cada um dos efeitos uma vez por turno."
+    },
+    {
+      "id": 1776971720940,
+      "name": "Saibaimen",
+      "archetype": "Androide",
+      "type": "creature",
+      "attack": 1,
+      "defense": 1,
+      "mana": 2,
+      "imageUrl": "https://static.wikia.nocookie.net/dragonball/images/8/8b/SaiabamenInfoBox.jpeg/revision/latest?cb=20141227155300&path-prefix=pt-br",
+      "attackEffect": "[1][2] Seu oponente não compra carta no próximo turno. [3][4] Descarte uma carta aleatória da mão do seu oponente. [5][6] Perde mana igual a metade do ataque da criatura atacante.",
+      "defenseEffect": "[1][2] Compre uma carta. | [3][4] Ganhe 2 de mana. | [5][6] Destrua a criatura que atacou essa carta.",
+      "mainEffect": "Após aplicar o efeito de defesa ou ataque esta carta deve ser enviada para a pilha de descarte."
+    },
+    {
+      "id": 1778177163991,
+      "name": "cover",
+      "archetype": "",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 3,
+      "imageUrl": "data:image/jpeg;base64,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",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": ""
+    },
+    {
+      "id": 1777993942612,
+      "name": "Equipamento de Recuperação",
+      "archetype": "Digimon",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 6,
+      "imageUrl": "https://static.wikia.nocookie.net/digimon-tamers/images/7/75/Blue_Card.jpg/revision/latest?cb=20180405050640",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Retorne duas cartas DIGIMON do descarte para o deck, compre 1 carta. \nEscolha um DIGIMON em campo, Se ele vencer uma batalha: Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão"
+    },
+    {
+      "id": 1777993801934,
+      "name": "Equipamento de Socorro",
+      "archetype": "Digimon",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 3,
+      "imageUrl": "https://wikimon.net/images/thumb/6/6d/Card_Slash.png/300px-Card_Slash.png",
+      "attackEffect": "",
+      "defenseEffect": "Se ele vencer uma batalha: Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão",
+      "mainEffect": "Escolha um DIGIMON em campo, Se ele vencer uma batalha: \nGanhe PV igual a DEF do defensor e Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão "
+    },
+    {
+      "id": 1777993573160,
+      "name": "Equipamento de batalha",
+      "archetype": "Digimon",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 2,
+      "imageUrl": "https://static.wikia.nocookie.net/digimonat/images/e/ef/DigimonTamers1_1.jpg/revision/latest?cb=20150718151453&path-prefix=pt",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "+2 ATK ou +2 DEF para um DIGIMON\nSe ele vencer uma batalha: Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão"
+    },
+    {
+      "id": 1777993455002,
+      "name": "Culumon",
+      "archetype": "Digimon",
+      "type": "creature",
+      "attack": 2,
+      "defense": 2,
+      "mana": 2,
+      "imageUrl": "https://static.wikia.nocookie.net/digimon/images/6/68/Calumon.png/revision/latest?cb=20150410061244&path-prefix=es",
+      "attackEffect": "[1]...[5] +1 PV\n[6] Ganhe PV igual ao DEF do defensor",
+      "defenseEffect": "[1][2][3] +1 PV\n[4][5] +2 PV | [6] Ganhe PV igual ao ATK do atacante",
+      "mainEffect": "AO ENTRAR: Adicione um DIGIMON com custo menor ou igual a [6] do deck para a mão"
+    },
+    {
+      "id": 1777993278614,
+      "name": "Kyubimon",
+      "archetype": "Digimon",
+      "type": "creature",
+      "attack": 3,
+      "defense": 6,
+      "mana": 5,
+      "imageUrl": "https://wikimon.net/images/thumb/2/20/Ruki_Kyubimon_DT.jpg/300px-Ruki_Kyubimon_DT.jpg",
+      "attackEffect": "[1][2][3] +1 ATK\n[4][5] +2 ATK | [6] Volte uma magia DIGIMON do descarte para a mão, ganhe 2 de MANA",
+      "defenseEffect": "[1][2][3] +1 DEF\n[4][5] +2 DEF | [6] Volte uma magia DIGIMON do descarte para a mão, ganhe 2 de MANA",
+      "mainEffect": "AO ENTRAR: Adicione uma magia DIGIMON do descarte ou do deck para a mão"
+    },
+    {
+      "id": 1777993074546,
+      "name": "Gargomon",
+      "archetype": "Digimon",
+      "type": "creature",
+      "attack": 4,
+      "defense": 6,
+      "mana": 4,
+      "imageUrl": "https://cosplayfu-website.s3.amazonaws.com/_Upload/b/83800-Gargomon-Cosplay-from-Digimon-Tamers-1-2.jpg",
+      "attackEffect": "[1][2][3] +1 ATK\n[4][5] +2 ATK | [6] +Volte o defensor para a mão",
+      "defenseEffect": "[1][2][3] +1 DEF\n[4][5] +2 DEF | [6] +Volte o atacante para a mão",
+      "mainEffect": "AO ENTRAR: Descarte um DIGIMON do campo para voltar para a mão uma criatura com o custo menor ou igual do que o descartado"
+    },
+    {
+      "id": 1777992921537,
+      "name": "Growlmon",
+      "archetype": "Digimon",
+      "type": "creature",
+      "attack": 5,
+      "defense": 3,
+      "mana": 4,
+      "imageUrl": "https://external-preview.redd.it/dude-growlmon-you-look-huge-model-vs-art-v0-ntsBqb3Wh1ovYhlFmCtl-4aAJx5MbHto17YoWbZwLFk.jpeg?auto=webp&s=c4e8bef54cbd2abeda53ec3b9f2a85efa12fbe0b",
+      "attackEffect": "[1][2][3] +2 MANA\n[4][5] +2 ATK |  [6] +3 ATK",
+      "defenseEffect": "[1][2][3] +2 MANA\n[4][5] +2 DEF |  [6] +3 DEF",
+      "mainEffect": "AO ENTRAR: Adicione um DIGIMON do descarte para a mão."
+    },
+    {
+      "id": 1777901674346,
+      "name": "O determinado Zatch",
+      "archetype": "Mamodo",
+      "type": "creature",
+      "attack": 5,
+      "defense": 4,
+      "mana": 5,
+      "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgI8SXdBqsSO6jTY94f8nk2D6hcf3yMF8NyqjzFohUHebQu24ZSILo0dfaeyuwq7yLFOXzEjqtcgAiciWoUho9TxQEjk0WDYA3tmeDoYNKjEthOC41DAXha60iELs-2JPbugd_vPS_41UwzKoLr9uGqlDRFesmkM8GFNdU51ICnT4vvSuF-NGREdRlq4Q/s800/que%20cara%20de%20BONECAUM.jpg",
+      "attackEffect": "[1][2] +1 ATK | [3][4] +2 ATK\n[5][6] Escolha um MAMODO em campo, volte ele pra mão e ganhe ATK igual seu ATK",
+      "defenseEffect": "[1][2] +1 DEF | [3][4] +2 DEF\n[5][6] Escolha um MAMODO em campo, volte ele pra mão e ganhe DEF igual seu DEF",
+      "mainEffect": "AO ENTRAR: escolha uma outra criatura MAMODO em campo, enquanto esta carta estiver em campo a outra criatura não pode ser atacada.\nNO DESCARTE: Este card  é considerado como Zatch Bell."
+    },
+    {
+      "id": 1777899935471,
+      "name": "Tia",
+      "archetype": "Mamodo",
+      "type": "creature",
+      "attack": 2,
+      "defense": 5,
+      "mana": 4,
+      "imageUrl": "https://static.wikia.nocookie.net/zatchbell/images/0/07/Tia.png/revision/latest?cb=20101003154720",
+      "attackEffect": "[1][2][3] +1 ATK +1 PV\n[4][5][6] +2 ATK +2 PV",
+      "defenseEffect": "[1][2] +1 DEF +1 PV\n[3][4] +2 DEF +2 PV\n[5][6] +3 DEF +3 PV",
+      "mainEffect": "AO ENTRAR: envie um MAMODO do deck para o descarte e  ganhe PV igual seu custo de mana"
+    },
+    {
+      "id": 1777148857185,
+      "name": "cover",
+      "archetype": "",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 3,
+      "imageUrl": "data:image/jpeg;base64,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",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": ""
+    },
     {
       "id": 1777066783961,
       "name": "O livro dos Mamodos",
@@ -24,8 +336,8 @@
       "defense": 2,
       "mana": 1,
       "imageUrl": "https://i1.sndcdn.com/artworks-000155805002-ygm0qd-t1080x1080.jpg",
-      "attackEffect": "",
-      "defenseEffect": "",
+      "attackEffect": "[1]...[5] +1 PV\n[6] +2 PV",
+      "defenseEffect": "[1]...[5] +1 DEF\n[6] +3 DEF",
       "mainEffect": "EM CAMPO: +2 ATK e +2 DEF para outros MAMODOS em campo. \nNão pode ser atacado se houver outros MAMODOS em campo."
     },
     {
@@ -65,7 +377,7 @@
       "imageUrl": "https://static.wikia.nocookie.net/zatchbell/images/7/77/Jigadirasu_Uru_Zakeruga.png/revision/latest/scale-to-width-down/985?cb=20250911213809",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Jogue até duas criaturas MAMODO do descarte cuja soma dos custos seja [6] sem pagar o custo. Diminua o ATK de uma criatura adversária pela soma dos ATK das criaturas escolhidas."
+      "mainEffect": "Jogue até duas criaturas MAMODO do descarte cuja soma dos custos seja até 8 sem pagar o custo. Diminua o ATK de uma criatura adversária pela soma dos ATK das criaturas escolhidas."
     },
     {
       "id": 1777066131704,
@@ -172,7 +484,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma magia MAMODO do deck ou descarte para a mão. Descarte um MAMODO do campo para ganhar mana igual ao seu custo."
     },
     {
-      "id": 1776974897837,
+      "id": 3554040176799.6934,
       "name": "Gummymon",
       "archetype": "Digimon",
       "type": "creature",
@@ -185,7 +497,7 @@
       "mainEffect": "AO SER DERROTADO: Adicione uma carta DIGIMON do deck para a mão com custo menor que [6]"
     },
     {
-      "id": 1776974802160,
+      "id": 3554040085575.332,
       "name": "Viximon",
       "archetype": "Digimon",
       "type": "creature",
@@ -198,7 +510,7 @@
       "mainEffect": "AO ENTRAR: Adicione do deck para a mão uma magia DIGIMON com custo menor que [6]"
     },
     {
-      "id": 1776974688542,
+      "id": 3554039974753.1484,
       "name": "Gigimon",
       "archetype": "Digimon",
       "type": "creature",
@@ -211,7 +523,7 @@
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON do deck para a mão com custo menor que [6]"
     },
     {
-      "id": 1776974493263,
+      "id": 3554039777147.793,
       "name": "Raptando os novatos",
       "archetype": "Digimon",
       "type": "magic",
@@ -221,10 +533,10 @@
       "imageUrl": "https://static.wikia.nocookie.net/super-villain/images/2/2f/Myotismon_looks_at_Gatomon_%28Ep._37%29.jpg/revision/latest/scale-to-width-down/250?cb=20240423101155",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Descarte 2 cartas da mão do adversário. Ele compra 1 carta nova do deck."
+      "mainEffect": "Descarte 1 Digimon do campo e mova para o descarte um digimon adversário com custo menos que seu custo de mana"
     },
     {
-      "id": 1776974404158,
+      "id": 3554039685193.665,
       "name": "Assombração digital",
       "archetype": "Digimon",
       "type": "magic",
@@ -237,7 +549,7 @@
       "mainEffect": "Escolha 1 DIGIMON, neste turno, se ele vencer uma batalha: ganhe PV igual a defesa do defensor"
     },
     {
-      "id": 1776974291614,
+      "id": 3554039571440.178,
       "name": "Mundo digital",
       "archetype": "Digimon",
       "type": "magic",
@@ -250,20 +562,20 @@
       "mainEffect": "Soma ou subtraia até +3 ou -3 no resultado de um dado. Perca -2 PV vezes a quantidade escolhida"
     },
     {
-      "id": 1776974142138,
+      "id": 3554039423413.392,
       "name": "Taomon",
       "archetype": "Digimon",
       "type": "creature",
       "attack": 5,
       "defense": 8,
-      "mana": 3,
+      "mana": 7,
       "imageUrl": "https://media.tenor.com/vzY9m6uxwcEAAAAe/taomon-renamon.png",
       "attackEffect": "[1]...[3] +1 ATK |  [4][5] +2 ATK\n[6] Volte o atacante para o deck. Perca PV igual seu custo de mana",
       "defenseEffect": "[1]...[3] +2 DEF |  [4][5] +3 DEF\n[6] Volte o atacante para o deck. Perca PV igual seu custo de mana",
       "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta pelo custo de mana do DIGIMON enviado (min 1.)"
     },
     {
-      "id": 1776973832309,
+      "id": 3554039116999.3535,
       "name": "Sakuyamon",
       "archetype": "Digimon",
       "type": "creature",
@@ -272,11 +584,11 @@
       "mana": 10,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGE6-JML1oRSBrqrhrsfnboJDIHtjqgylbWA&s",
       "attackEffect": "[1]...[3] +2 ATK |  [4][5] +3 ATK\n[6] Descarte uma magia DIGIMON do deck, ganhe ATK igual seu custo de mana",
-      "defenseEffect": "[1]...[3] +3 DEF |  [4][5] +4 DEF\n[6] Descarte uma magia DIGIMON do deck, ganhe DEF igual seu custo de mana",
+      "defenseEffect": "[1]...[3] +1 DEF |  [4][5] +2 DEF\n[6] Descarte uma magia DIGIMON do deck, ganhe DEF igual seu custo de mana",
       "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta em [3]"
     },
     {
-      "id": 1776973549274,
+      "id": 3554038833858.325,
       "name": "Renamon",
       "archetype": "Digimon",
       "type": "creature",
@@ -289,7 +601,7 @@
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON do deck para a mão"
     },
     {
-      "id": 1776973096140,
+      "id": 3554038381992.7974,
       "name": "Rapidimon",
       "archetype": "Digimon",
       "type": "creature",
@@ -302,20 +614,20 @@
       "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta em [3]"
     },
     {
-      "id": 1776972712898,
+      "id": 3554037996387.4385,
       "name": "MegaGargomon",
       "archetype": "Digimon",
       "type": "creature",
       "attack": 4,
       "defense": 6,
-      "mana": 6,
+      "mana": 7,
       "imageUrl": "https://i.pinimg.com/736x/63/8c/ce/638cce546f4778a84425b098e396531d.jpg",
       "attackEffect": "[1]...[4] +2 ATK\n[5][6] -5 PV, volte o defensor para a mão",
       "defenseEffect": "[1]...[4] +3 DEF\n[5][6] -5 PV, volte o atacante para a mão",
       "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta pelo custo de mana do DIGIMON enviado"
     },
     {
-      "id": 1776972403591,
+      "id": 3554037686739.194,
       "name": "Terriermon",
       "archetype": "Digimon",
       "type": "creature",
@@ -328,7 +640,7 @@
       "mainEffect": "AO ENTRAR: Adicionei uma magia DIGIMON do descarte para a mão"
     },
     {
-      "id": 1776970934767,
+      "id": 3554036217465.043,
       "name": "Cura necessária",
       "archetype": "",
       "type": "magic",
@@ -341,7 +653,7 @@
       "mainEffect": "Recupere 2 PV. Você pode pagar até mais 4 de MANA, recupere o mesmo tanto de PV"
     },
     {
-      "id": 1776966748699,
+      "id": 3554032034469.454,
       "name": "Investigando com demônios",
       "archetype": "Infernal",
       "type": "magic",
@@ -354,7 +666,7 @@
       "mainEffect": "Role um dado: olhe a quantidade de cartas no topo do deck igual ao resultado, adicione uma carta INFERNAL com custo menor ou igual que o custo da maior carta que o adversário controla para a mão. Perca PV igual ao seu custo de mana."
     },
     {
-      "id": 1776966428134,
+      "id": 3554031709458.7246,
       "name": "Negociando com demônios",
       "archetype": "Infernal",
       "type": "magic",
@@ -367,7 +679,7 @@
       "mainEffect": "Role um dado: seu adversário perde PV igual ao resultado obtido"
     },
     {
-      "id": 1776966188540,
+      "id": 3554031469823.3926,
       "name": "King Hellboy",
       "archetype": "Infernal",
       "type": "creature",
@@ -380,7 +692,7 @@
       "mainEffect": "AO SER DERROTADO: Pague -6 PV para jogar estar carta em campo do descarte"
     },
     {
-      "id": 1776965743285,
+      "id": 3554031028234.913,
       "name": "Abe Sapien",
       "archetype": "Infernal",
       "type": "creature",
@@ -393,7 +705,7 @@
       "mainEffect": "AO SER DERROTADO: Volte uma magia INFERNAL do descarte para a mão"
     },
     {
-      "id": 1776965158529,
+      "id": 3554030442102.1807,
       "name": "Liz Sherman",
       "archetype": "Infernal",
       "type": "creature",
@@ -406,7 +718,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma carta INFERNAL do deck para a mão"
     },
     {
-      "id": 1776964647329,
+      "id": 3554029929336.3994,
       "name": "Lutando contra demônios",
       "archetype": "Infernal",
       "type": "magic",
@@ -419,7 +731,7 @@
       "mainEffect": "Descarte um Infernal: cause dano ao PV adversário igual ao custo de mana da carta descartada"
     },
     {
-      "id": 1776964556419,
+      "id": 3554029839571.4966,
       "name": "Tiro Infernal",
       "archetype": "Infernal",
       "type": "magic",
@@ -432,7 +744,7 @@
       "mainEffect": "Cause 3 de dano ao PV adversário"
     },
     {
-      "id": 1776964270472,
+      "id": 3554029551831.9297,
       "name": "Hellboy",
       "archetype": "Infernal",
       "type": "creature",
@@ -445,7 +757,7 @@
       "mainEffect": "AO ENTRAR: Pague até 5 de MANA para diminuir o PV adversário pelo mesmo número"
     },
     {
-      "id": 1776963861891,
+      "id": 3554029146501.024,
       "name": "Digivice boost",
       "archetype": "Digimon",
       "type": "magic",
@@ -455,10 +767,10 @@
       "imageUrl": "https://static.wikia.nocookie.net/digimonat/images/3/35/Adventure_20_-_DigiVice_Taichi.jpg/revision/latest?cb=20210929033406&path-prefix=pt",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Descarte um DIGIMON do campo e ganhe mana igual seu custo de mana "
+      "mainEffect": "Descarte um DIGIMON do campo, jogue um DIGIMON da sua mão com custo reduzido igual ao custo da criatura descartada"
     },
     {
-      "id": 1776963560577,
+      "id": 3554028845357.3276,
       "name": "Dukemon Carmesin",
       "archetype": "Digimon",
       "type": "creature",
@@ -471,7 +783,7 @@
       "mainEffect": "Você pode descartar um DIGIMON em campo para reduzir o custo de mana desta carta em [4]"
     },
     {
-      "id": 1776963245533,
+      "id": 3554028530821.043,
       "name": "Dukemon",
       "archetype": "Digimon",
       "type": "creature",
@@ -484,20 +796,20 @@
       "mainEffect": "Você pode descartar um DIGIMON em campo para reduzir o custo de mana desta carta pelo custo de mana da carta descartada (min 1)"
     },
     {
-      "id": 1776963112636,
+      "id": 3554028391290.885,
       "name": "War Growlmon",
       "archetype": "Digimon",
       "type": "creature",
       "attack": 6,
       "defense": 5,
-      "mana": 5,
+      "mana": 7,
       "imageUrl": "https://i.ytimg.com/vi/mRV9ngypeKQ/maxresdefault.jpg",
       "attackEffect": "[1]...[4] Adicione uma magia DIGIMON do deck para a mão\n[5][6] + 3 ATK",
       "defenseEffect": "[1]...[4] Adicione uma magia DIGIMON do descarte para a mão\n[5][6] + 3 DEF",
       "mainEffect": "Você pode descartar um DIGIMON em campo para reduzir o custo de mana desta carta pelo custo de mana da carta descartada (min 1)"
     },
     {
-      "id": 1776962938811,
+      "id": 3554028220421.583,
       "name": "Guilmon",
       "archetype": "Digimon",
       "type": "creature",
@@ -510,7 +822,7 @@
       "mainEffect": "AO SER DERROTADO: Adicione um DIGIMON com custo [4] ou [5] do deck ou descarte para a mão"
     },
     {
-      "id": 1776960919854,
+      "id": 3554026201036.882,
       "name": "Mestre Ancião",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -523,7 +835,7 @@
       "mainEffect": "AO ENTRAR: Role um dado e adicione uma carta CAVALEIRO do descarte com custo menor ou igual ao resultado"
     },
     {
-      "id": 1776960517707,
+      "id": 3554025803603.2188,
       "name": "Cavaleiro de Áries",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -535,8 +847,8 @@
       "defenseEffect": "[1][3][5] +1 DEF para cada CAVALEIRO no descarte\n[2][4][6] +2 DEF para cada CAVALEIRO no descarte",
       "mainEffect": "AO SER DERROTADO: adicione um DEUSA ATENA do deck ou descarte para a mão"
     },
-      {
-      "id": 3553918301695.083,
+    {
+      "id": 5330983589098.945,
       "name": "Cavaleiro de Cobra",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -548,8 +860,8 @@
       "defenseEffect": "[1]...[3] -3 ATK adversário\n[4]...[6] AO SER DERROTADO: Adicione um MESTRE DE AGUIA do deck ou descarte para a mão",
       "mainEffect": "AO ENTRAR: Adicione uma carta CAVALEIRO com custo de mana menor que 4 do descarte para a mão."
     },
-     {
-      "id": 1776958797129,
+    {
+      "id": 3554024082816.7896,
       "name": "Mestre de Águia",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -562,7 +874,7 @@
       "mainEffect": "AO ENTRAR: Adicione um CAVALEIRO DE PÉGASO do deck ou descarte para a mão.\nNO CAMPO: Todos CAVALEIRO DE PÉGASO ganham +2ATk +2 DEF"
     },
     {
-      "id": 1776958497787,
+      "id": 3554023779075.259,
       "name": "Meteoro de Pégaso",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -575,7 +887,7 @@
       "mainEffect": "+3 ATK\nSE Cavaleiro de Pégaso está balhando e VENCER a batalha: Adicione um MESTRE DE AGUIA do deck para a mão e ganhe 2 de mana"
     },
     {
-      "id": 1776958219018,
+      "id": 3554023502626.852,
       "name": "Tempestade Nebulosa",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -587,21 +899,21 @@
       "defenseEffect": "",
       "mainEffect": "SE Cavaleiro de Andrômeda está em campo: reduza o custo desta carta em 2.\nRole um dado e diminua a DEF de todas criaturas adversárias pelo resultado obtido. Retorne para a mão todas as criaturas que tiveram a DEF zerada por este efeito."
     },
-      {
-        "id": 1776957553047,
-        "name": "Cavaleiro Aprendiz",
-        "archetype": "Cavaleiro",
-        "type": "creature",
-        "attack": 1,
-        "defense": 2,
-        "mana": 2,
-        "imageUrl": "https://static.wikia.nocookie.net/saintseya/images/3/3a/Kiki_hades.png/revision/latest?cb=20130622232344&path-prefix=pt",
-        "attackEffect": "[1] Adicione uma magia CAVALEIRO do descarte para a mão\n[2][3][4][5][6] +1 ATK",
-        "defenseEffect": "[1] +3 DEF | [2][3][4][5][6] +1 DEF",
-        "mainEffect": "AO ENTRAR: Adicione uma criatura CAVALEIRO do deck ou descarte para a mão com custo de mana menor que 5"
-      },
-     {
-      "id": 1776949966015,
+    {
+      "id": 3554022837817.1006,
+      "name": "Cavaleiro Aprendiz",
+      "archetype": "Cavaleiro",
+      "type": "creature",
+      "attack": 1,
+      "defense": 2,
+      "mana": 2,
+      "imageUrl": "https://static.wikia.nocookie.net/saintseya/images/3/3a/Kiki_hades.png/revision/latest?cb=20130622232344&path-prefix=pt",
+      "attackEffect": "[1] Adicione uma magia CAVALEIRO do descarte para a mão\n[2][3][4][5][6] +1 ATK",
+      "defenseEffect": "[1] +3 DEF | [2][3][4][5][6] +1 DEF",
+      "mainEffect": "AO ENTRAR: Adicione uma criatura CAVALEIRO do deck ou descarte para a mão com custo de mana menor que 5"
+    },
+    {
+      "id": 3554015251209.5156,
       "name": "Cavaleiro de Cisne",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -614,7 +926,7 @@
       "mainEffect": "AO ENTRAR: Role um dado, volte uma magia Cavaleiro do descarte para a mão com custo de mana menor ou igual que o resultado obtido"
     },
     {
-      "id": 3550693147173.46,
+      "id": 5327758428936.691,
       "name": "Mago da IA",
       "type": "",
       "attack": 0,
@@ -626,7 +938,7 @@
       "mainEffect": "[1][2] Ganhe 1 de vida | [3][4][5][6] Ganhe 2 de vida"
     },
     {
-      "id": 3550692990107.1064,
+      "id": 5327758272432.442,
       "name": "Mago Vampiresco",
       "type": "creature",
       "attack": 5,
@@ -638,7 +950,7 @@
       "mainEffect": "CONTÍNUO: Quando derrotar uma criatura, ganhe PV igual a mana do defensor derrotado"
     },
     {
-      "id": 3550673338490.016,
+      "id": 5327738620801.784,
       "name": "Ganância",
       "type": "magic",
       "attack": 0,
@@ -650,7 +962,7 @@
       "mainEffect": "Role um dado. Compre cartas igual ao número obtido."
     },
     {
-      "id": 3550673171550.08,
+      "id": 5327738454008.506,
       "name": "Magia da fortuna",
       "type": "magic",
       "attack": 0,
@@ -662,7 +974,7 @@
       "mainEffect": "[1] compre 3 cartas\n[2] [3] [4] [5] compre 1 carta\n[6] descarte 1 carta"
     },
     {
-      "id": 3550666552745.758,
+      "id": 5327731834679.977,
       "name": "Mago Vampiresco",
       "type": "creature",
       "attack": 5,
@@ -674,7 +986,7 @@
       "mainEffect": "CONTÍNUO: Quando derrotar uma criatura, ganhe PV igual a mana do defensor derrotado"
     },
     {
-      "id": 3550663470049.913,
+      "id": 5327728756944.516,
       "name": "Mago da IA",
       "attack": 5,
       "defense": 5,
@@ -684,7 +996,7 @@
       "defenseEffect": "🎲 Ao defender, role um dado de 6 faces:\n• Se 1-2: +2 de defesa\n• Se 3-5: +5 de defesa\n• Se 6: +8 de defesa"
     },
     {
-      "id": 3550663788758.7393,
+      "id": 5327729070131.714,
       "name": "livro do caos",
       "attack": 5,
       "defense": 5,
@@ -694,7 +1006,7 @@
       "defenseEffect": ""
     },
     {
-      "id": 3550664589389.121,
+      "id": 5327729875828.906,
       "name": "Livro da sabedoria",
       "attack": 0,
       "defense": 0,
@@ -704,7 +1016,7 @@
       "defenseEffect": ""
     },
     {
-      "id": 3550665963036.15,
+      "id": 5327731245934.817,
       "name": "Magia avançada",
       "type": "magic",
       "attack": 0,
@@ -716,7 +1028,7 @@
       "mainEffect": "[1] compre 3 cartas\n[2] [3] [4] [5] compre 1 carta\n[6] descarte 1 carta"
     },
     {
-      "id": 1775272815640,
+      "id": 3552338102274.696,
       "name": "Fogarimon",
       "archetype": "",
       "type": "creature",
@@ -729,7 +1041,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 1775272697462,
+      "id": 3552337980217.3916,
       "name": "Vortexmon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -742,7 +1054,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 1775272573323,
+      "id": 3552337859574.2236,
       "name": "Rinovortexmon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -755,7 +1067,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 1775272424396,
+      "id": 3552337708109.966,
       "name": "Voltramon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -768,7 +1080,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 1775272316791,
+      "id": 3552337601111.711,
       "name": "Anfibimon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -781,7 +1093,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 1775272103246,
+      "id": 3552337384646.4775,
       "name": "Inferno Furia",
       "archetype": "Fakemon",
       "type": "magic",
@@ -794,7 +1106,7 @@
       "mainEffect": "Escolha um DIGIMON em campo e role um dado\n[2][4][6] todas as criaturas adversárias perdem ATK igual ao seu ATK\n[1][3][5] todas as criaturas adversárias perdem ATK igual a sua DEF"
     },
     {
-      "id": 1775271991233,
+      "id": 3552337276110.3384,
       "name": "Lamina de Dados",
       "archetype": "Fakemon",
       "type": "magic",
@@ -807,7 +1119,7 @@
       "mainEffect": "+3 ATK para o DIGIMON alvo. Se o DIGIMON alvo ganhar o combate: adicione uma magia DIGIMON do deck para a mão."
     },
     {
-      "id": 1775271910613,
+      "id": 3552337196421.876,
       "name": "Barragem Espinhosa",
       "archetype": "Fakemon",
       "type": "magic",
@@ -820,7 +1132,7 @@
       "mainEffect": "Escolha um Digimon em campo. Neste turno ele não pode atacar. Cause dano ao PV de ambos jogadores igual ao seu ATK."
     },
     {
-      "id": 1775271845724,
+      "id": 3552337130711.9688,
       "name": "Super Carga Elétrica",
       "archetype": "Fakemon",
       "type": "magic",
@@ -833,7 +1145,7 @@
       "mainEffect": "Role um dado: ganhe ATK ou DEF igual ao resultado obtido"
     },
     {
-      "id": 1775271796978,
+      "id": 3552337083345.969,
       "name": "Portal Espiritual",
       "archetype": "Fakemon",
       "type": "magic",
@@ -846,7 +1158,7 @@
       "mainEffect": "Adicione uma carta DIGIMON do deck para sua mão"
     },
     {
-      "id": 1775271097160,
+      "id": 3552336384402.967,
       "name": "Fofuxo",
       "archetype": "Medabot",
       "type": "creature",
@@ -859,7 +1171,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você pode pagar PV para jogar uma carta MEDABOT ao invés do seu custo de mana."
     },
     {
-      "id": 1775270901875,
+      "id": 3552336186876.1094,
       "name": "Ciandog",
       "archetype": "Medabot",
       "type": "creature",
@@ -872,7 +1184,7 @@
       "mainEffect": "AO ENTRAR: descarte uma carta da mão: adicione uma criatura MEDABOT do deck para mão"
     },
     {
-      "id": 1775270696923,
+      "id": 3552335985261.6504,
       "name": "Peppacat",
       "archetype": "Medabot",
       "type": "creature",
@@ -885,7 +1197,7 @@
       "mainEffect": ""
     },
     {
-      "id": 1775270588550,
+      "id": 3552335874797.9756,
       "name": "Explosão de mísseis",
       "archetype": "Medabot",
       "type": "magic",
@@ -898,7 +1210,7 @@
       "mainEffect": "Role um dado, diminua a defesa de todas criaturas adversárias igual ao resultado obtido."
     },
     {
-      "id": 1775270340089,
+      "id": 3552335621631.9883,
       "name": "Canhões não bastam",
       "archetype": "Medabot",
       "type": "magic",
@@ -911,7 +1223,7 @@
       "mainEffect": "Descarte 3 cartas do topo do deck, escolha uma carta entre as descartadas e adicione a mão. Escolha um MEDABOT para ganhar ATK ou DEF igual ao custo de mana da carta escolhida."
     },
     {
-      "id": 1775270311556,
+      "id": 3552335590897.465,
       "name": "Fênix",
       "archetype": "Medabot",
       "type": "creature",
@@ -924,7 +1236,7 @@
       "mainEffect": ""
     },
     {
-      "id": 1775270067290,
+      "id": 3552335350942.5537,
       "name": "Lâmina de combate",
       "archetype": "Medabot",
       "type": "magic",
@@ -937,7 +1249,7 @@
       "mainEffect": "Descarte um MEDABOT da mão, escolha uma criatura para ganhar ATK igual ao custo de mana da carta descartada."
     },
     {
-      "id": 1775269881379,
+      "id": 3552335165526.5835,
       "name": "Agilidade robótica",
       "archetype": "Medabot",
       "type": "magic",
@@ -950,7 +1262,7 @@
       "mainEffect": "Role um dado, adicione do seu descarte para mão uma carta MEDABOT com custo de mana menor que o resultado obtido"
     },
     {
-      "id": 1775269799759,
+      "id": 3552335084094.3115,
       "name": "Kabuto",
       "archetype": "Medabot",
       "type": "creature",
@@ -963,7 +1275,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma carta MEDABOT do deck para mão"
     },
     {
-      "id": 1775269642920,
+      "id": 3552334927186.2983,
       "name": "Barreira de energia",
       "archetype": "Medabot",
       "type": "magic",
@@ -976,7 +1288,7 @@
       "mainEffect": "Adicione +3 ao bônus de ATK ou DEF para um MEDABOT"
     },
     {
-      "id": 1775166576081,
+      "id": 3552231861625.287,
       "name": "Cavaleiro de Andrômeda",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -989,7 +1301,7 @@
       "mainEffect": "CASO SEJA DERROTADO: Adicione um CAVALEIRO DE FENIX do deck ou descarte para a mão. No seu próximo turno ganhe +3 de MANA"
     },
     {
-      "id": 1775166372436,
+      "id": 3552231651616.8,
       "name": "Mago do Caos",
       "archetype": "Mago",
       "type": "creature",
@@ -1002,20 +1314,20 @@
       "mainEffect": "AO ENTRAR: [1]...[6] olhe no topo do seu deck igual ao resultado, adicione quaisquer cartas \"MAGO\" para a mão."
     },
     {
-      "id": 1775165818272,
+      "id": 3552231097215.302,
       "name": "Cavaleiro de Dragão",
       "archetype": "Cavaleiro",
       "type": "creature",
       "attack": 4,
       "defense": 4,
       "mana": 4,
-      "imageUrl": "data:image/jpeg;base64,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",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHBGdp6rv6TRx86SNPDnnquKLDe1Uqq-_Vw&s",
       "attackEffect": "[1]...[4] +1ATK\n[5]+2ATK\n[6] +3 ATK",
       "defenseEffect": "[1]...[4] +2 DEF\n[5]+2 DEF - 1 ATK Atacante\n[6] +3 DEF",
       "mainEffect": "APÒS O COMBATE: Se Cavaleiro de Dragão não for derrotado nesta batalha, adicione uma criatura \"Cavaleiro\" do deck para a mão."
     },
     {
-      "id": 1775165806187,
+      "id": 3552231085009.8145,
       "name": "Luffy",
       "archetype": "Pirata",
       "type": "creature",
@@ -1028,7 +1340,7 @@
       "mainEffect": "QUANDO ENTRAR EM CAMPO: Adicione do deck para mão uma carta \"Pirata\"."
     },
     {
-      "id": 1775165791395,
+      "id": 3552231071691.4805,
       "name": "Dragão Azul",
       "archetype": "Dragão Azul",
       "type": "creature",
@@ -1041,7 +1353,7 @@
       "mainEffect": "AO ENTRAR NO CAMPO: escolha uma criatura oponente, role um dado, se cair um valor menor que o custo de mana dele, envie a criatura para o descarte "
     },
     {
-      "id": 1775165345167,
+      "id": 3552230624447.744,
       "name": "Mago da Destruição",
       "archetype": "Mago",
       "type": "creature",
@@ -1054,7 +1366,7 @@
       "mainEffect": "AO ENTRAR EM CAMPO: Compre 3 cartas e descarte 2"
     },
     {
-      "id": 1775164453478,
+      "id": 3552229737792.127,
       "name": "Deusa Atena",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1067,7 +1379,7 @@
       "mainEffect": "ENQUANTO ESTIVER EM CAMPO: Todos os outros Cavaleiros ganham +3 ATK e +3 DEF"
     },
     {
-      "id": 1775096962263,
+      "id": 3552162242315.7583,
       "name": "Cavaleiro de Andrômeda",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1080,7 +1392,7 @@
       "mainEffect": "CASO SEJA DERROTADO: Adicione um CAVALEIRO DE FENIX do deck ou descarte para a mão. No seu próximo turno ganhe +3 de MANA"
     },
     {
-      "id": 1775096549948,
+      "id": 3552161831885.6445,
       "name": "Cavaleiro de Fênix",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1090,10 +1402,10 @@
       "imageUrl": "https://dthezntil550i.cloudfront.net/5u/latest/5u2103310754424620017124178/dddfd343-380a-4024-aedc-84066655d3b2.png",
       "attackEffect": "[1]...[5] +2 ATK\n[6] Adicione um CAVALEIRO do seu descarte para a mão. Ganhe ATK igual ao seu custo de MANA",
       "defenseEffect": "[1]...[5] -2 ATK para o atacante\n[6] Se Cavaleiro de Fênix for derrotado neste combate, mova o atacante para o descarte",
-      "mainEffect": "QUANDO FOR DERROTADO: Descarte 1 carta da mão para adicionar esta carta à sua mão."
+      "mainEffect": "QUANDO FOR DERROTADO: Descarte 2 cartas da mão para jogar esta carta em campo"
     },
     {
-      "id": 1775096328214,
+      "id": 3552161611776.2817,
       "name": "Escudo de Cavaleiro",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -1106,7 +1418,7 @@
       "mainEffect": "+ 2 DEF para o alvo. Se for um CAVALEIRO +5"
     },
     {
-      "id": 1775080934482,
+      "id": 3552146217484.2153,
       "name": "Beyblade - batalha",
       "type": "magic",
       "attack": 0,
@@ -1118,7 +1430,7 @@
       "mainEffect": "Role um dado (de qualquer lado) novamente."
     },
     {
-      "id": 1775080890873,
+      "id": 3552146172590.6133,
       "name": "Beyblade -  Dragon",
       "type": "creature",
       "attack": 4,
@@ -1130,7 +1442,7 @@
       "mainEffect": "QUANDO FOR DERROTADO: Adicione uma carta \"Beyblade\" do deck para a mão."
     },
     {
-      "id": 1775079773283,
+      "id": 3552145055820.815,
       "name": "O Samurai",
       "type": "creature",
       "attack": 5,
@@ -1142,7 +1454,7 @@
       "mainEffect": ""
     },
     {
-      "id": 1775079299121,
+      "id": 3552144583133.117,
       "name": "Medabot - Kabuto",
       "type": "creature",
       "attack": 4,
@@ -1154,7 +1466,7 @@
       "mainEffect": "NA INVOCAÇÂO: Role um dado, caso o resultado seja [6] adicione 2 cartas \"MEDAPEÇA\" do seu deck à sua mão. Caso contrário adicione 1 carta \"MEDAPEÇA\""
     },
     {
-      "id": 1775078927045,
+      "id": 3552144215251.169,
       "name": "Treinamento de Cavaleiro",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -1167,7 +1479,7 @@
       "mainEffect": "+1 ou -1 (para qualquer um dos lados) no resultado de um dado em um combate envolvendo um cavaleiro."
     },
     {
-      "id": 1775078556599,
+      "id": 3552143839983.1875,
       "name": "Armadura dourada",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -1180,7 +1492,7 @@
       "mainEffect": "Neste turno soma ou subtraia +1 ou +2 a um lançamento de dado de uma carta \"Cavaleiro\""
     },
     {
-      "id": 1775077443758,
+      "id": 3552142728992.05,
       "name": "Cavaleiro de Pégaso",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1192,9 +1504,8 @@
       "defenseEffect": "[1]...[4] +1 DEF\n[5] + 2 DEF\n[6] se for derrotado, busque uma carta \"Cavaleiro\" do seu deck para sua mão",
       "mainEffect": ""
     },
-    
     {
-      "id": 1775594447805,
+      "id": 3552659733882.168,
       "name": "Goku SS2",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1207,9 +1518,9 @@
       "mainEffect": "Antes de terminar o turno jogue um dado, se o resultado for [2][4][6], troque essa carta pelo Goku SS4, no deck ou na mão."
     },
     {
-      "id": 1775588996094,
+      "id": 3552654281459.2847,
       "name": "Esfera do Dragão 7",
-      "archetype": "Magia",
+      "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -1220,9 +1531,9 @@
       "mainEffect": "Busque no seu deck por uma carta de criatura ou magia, ela terá o custo de mana reduzido em 2, mas não pode ser jogado no mesmo turno em que essa carta foi usada."
     },
     {
-      "id": 1775588669737,
+      "id": 3552653956887.016,
       "name": "Esfera do Dragão 5",
-      "archetype": "Magia",
+      "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -1233,9 +1544,9 @@
       "mainEffect": "Compre 1 carta\nSe você usou esta carta, pode buscar pela Esfera do Dragão 6, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
     },
     {
-      "id": 1775588638775,
+      "id": 3552653925693.456,
       "name": "Esfera do Dragão 6",
-      "archetype": "Magia",
+      "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -1246,9 +1557,9 @@
       "mainEffect": "Devolva uma carta de criatura da pilha de descarte para sua mão.\nSe você usou esta carta, pode buscar pela Esfera do Dragão 7, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
     },
     {
-      "id": 1775588310616,
+      "id": 3552653597722.9727,
       "name": "Esfera do Dragão 4",
-      "archetype": "Magia",
+      "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -1259,9 +1570,9 @@
       "mainEffect": "Todas as suas criaturas ganham 2 de defesa.\nSe você usou esta carta, pode buscar pela Esfera do Dragão 5, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
     },
     {
-      "id": 1775586938734,
+      "id": 3552652225725.1094,
       "name": "Esfera do Dragão 3",
-      "archetype": "Magia",
+      "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -1272,9 +1583,9 @@
       "mainEffect": "Ganha 3 de mana,\nSe você usou esta carta, pode buscar pela Esfera do Dragão 4, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
     },
     {
-      "id": 1775586799802,
+      "id": 3552652086663.877,
       "name": "Esfera do Dragão 2",
-      "archetype": "Magia",
+      "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -1285,9 +1596,9 @@
       "mainEffect": "Suas criaturas em campo ganham +3 de ataque.\nSe você usou esta carta, pode buscar pela Esfera do Dragão 3, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
     },
     {
-      "id": 1775586589106,
+      "id": 3552651876812.466,
       "name": "Esfera do Dragão 1",
-      "archetype": "Magia",
+      "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -1298,7 +1609,7 @@
       "mainEffect": "Suas criaturas em campo ganham +2 de ataque.\nSe você usou esta carta, pode buscar pela Esfera do Dragão 2, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
     },
     {
-      "id": 1775585496492,
+      "id": 3552650779360.67,
       "name": "Instinto Superior",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1311,7 +1622,7 @@
       "mainEffect": "Está carta é tratada como Goku enquanto estiver em campo.\nQuando derrotado, escolha 2 Saiyajins na pilha de descarte e retorne para o deck, exceto Instinto Superior."
     },
     {
-      "id": 1775585259050,
+      "id": 3552650538007.8145,
       "name": "Vegeta SS2",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1324,7 +1635,7 @@
       "mainEffect": "Está carta ganha 2 de ataque adicional para cartas magicas que aumentam o ataque."
     },
     {
-      "id": 1775585199381,
+      "id": 3552650486802.3574,
       "name": "Trunks",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1337,7 +1648,7 @@
       "mainEffect": "Quando está carta entra em jogo, você pode procurar pelo Goten no deck e adiciona-lo a sua mão."
     },
     {
-      "id": 1775585047948,
+      "id": 3552650333887.791,
       "name": "Gohan",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1350,7 +1661,7 @@
       "mainEffect": "Quando enviado para a pilha de descarte, você pode procurar no deck por Goku e adiciona-lo a sua mão."
     },
     {
-      "id": 1775584899129,
+      "id": 3552650183140.0947,
       "name": "Goten",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1363,7 +1674,7 @@
       "mainEffect": "Quando está carta entrar em jogo, você pode buscar no deck por uma carta mágica de sua escolha."
     },
     {
-      "id": 1775504365809,
+      "id": 3552569651558.334,
       "name": "Vegeta SS God.",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1376,7 +1687,7 @@
       "mainEffect": "Enquanto estiver em jogo, suas cartas tem custo de mana reduzido em 1."
     },
     {
-      "id": 1775503482722,
+      "id": 3552568768565.8887,
       "name": "Vegeta",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1389,7 +1700,7 @@
       "mainEffect": "Se esta carta for destruída, procure no deck pelo Vegeta SS2."
     },
     {
-      "id": 1775501217755,
+      "id": 3552566499306.927,
       "name": "Broly",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1402,9 +1713,9 @@
       "mainEffect": "Quando entrar em jogo, todas as criaturas do oponente perdem 2 de defesa."
     },
     {
-      "id": 1775336237888,
+      "id": 3552401520693.516,
       "name": "Taiyoken",
-      "archetype": "Magia",
+      "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -1415,9 +1726,9 @@
       "mainEffect": "Durante a fase de combate, para cada criatura que seu oponente controlar, será necessário tirar um número par no dado para atacar."
     },
     {
-      "id": 1775335154311,
+      "id": 3552400436639.0166,
       "name": "Kienzan",
-      "archetype": "Magia",
+      "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
@@ -1425,10 +1736,10 @@
       "imageUrl": "https://static.wikia.nocookie.net/dragonball/images/8/80/Disco_Destructor.png/revision/latest?cb=20170810173551&path-prefix=es",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Escolha um criatura do oponente e reduza o ataque e defesa até o final do turno."
+      "mainEffect": "Escolha um criatura do oponente e reduza o ataque e defesa pela metade até o final do turno."
     },
     {
-      "id": 1775232599008,
+      "id": 3552297885429.8613,
       "name": "Goku SS4",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1441,7 +1752,7 @@
       "mainEffect": "No final do turno jogue um dado, se [1] ou [6], troque essa carta pelo Instinto Superior, na mão ou no deck. "
     },
     {
-      "id": 1775232474392,
+      "id": 3552297755509.3057,
       "name": "Goku",
       "archetype": "Saiyajin",
       "type": "creature",
