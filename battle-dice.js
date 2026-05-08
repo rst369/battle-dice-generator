@@ -764,8 +764,7 @@ function clearForm() {
             imageUrl: card.imageUrl,
             attackEffect: card.attackEffect,
             defenseEffect: card.defenseEffect,
-            mainEffect: card.mainEffect,
-            quantity: card.exportQuantity // Salvar a quantidade também
+            mainEffect: card.mainEffect
         }))
     };
     
