@@ -294,21 +294,7 @@ let editingCardId = null; // Variável para armazenar o ID da carta sendo editad
                         * { margin: 0; padding: 0; box-sizing: border-box; }
                         body { font-family: 'Segoe UI', sans-serif; background: white; padding: 0; margin: 0; }
                         .print-grid { display: grid; grid-template-columns: repeat(4, 63mm); gap: 5mm; justify-content: center; padding: 5mm; page-break-inside: avoid; }
-                        .print-card {
-                            width: 63mm;
-                            height: 88mm;
-                            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-                            border-radius: 3mm;
-                            padding: 2mm;
-                            border: 1.0mm solid #ffd700;
-                            break-inside: avoid;
-                            page-break-inside: avoid;
-                            position: relative;
-                            display: flex;
-                            flex-direction: column;
-                            box-sizing: border-box;
-                            overflow: hidden;
-                        }
+                        .print-card {width: 63mm;height: 88mm;background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);border-radius: 3mm;padding: 2mm;border: 1.0mm solid #ffd700;break-inside: avoid;page-break-inside: avoid;position: relative;display: flex;flex-direction: column;box-sizing: border-box;overflow: hidden;}
                         .print-card-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.5; z-index: 0; }
                         .print-card-content { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; gap: 0.8mm; }
                         .print-card.magic-card { background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border-color: #9b59b6; }
@@ -328,23 +314,10 @@ let editingCardId = null; // Variável para armazenar o ID da carta sendo editad
                         .print-card-image div { font-size: 2mm; color: #999; text-align: center; }
                         .print-overlay-stats { position: absolute; top: 1mm; right: 1mm; background: rgba(0,0,0,0.7); padding: 0.8mm 1.2mm; border-radius: 1.5mm; }
                         .print-overlay-stat { color: white; font-size: 2.5mm; display: flex; gap: 0.8mm; font-weight: bold; line-height: 1.2; }
-                        .print-archetype {
-                            position: absolute;
-                            bottom: 1mm;
-                            left: 1mm;
-                            background: rgba(0,0,0,0.75);
-                            color: #ffd700;
-                            padding: 0.5mm 1mm;
-                            border-radius: 2mm;
-                            font-size: 1.4mm;
-                            font-weight: bold;
-                            z-index: 2;
-                            max-width: 22mm;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                        }
-                        .print-effects { flex: 1; background: rgba(255,255,255,0.45); border-radius: 1.5mm; padding: 1mm; min-height: 0; display: flex; flex-direction: column; overflow: visible; }
+                        .print-archetype {position: absolute;bottom: 1mm; left: 1mm; background: rgba(0,0,0,0.75); color: #ffd700;padding: 0.5mm 1mm; border-radius: 2mm; font-size: 1.4mm;z-index: 2;max-width: 22mm;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+                        .print-effects { flex: 1;  margin-top: 10px; background: rgba(255,255,255,0.7); border-radius: 12px;            padding: 5px;            backdrop-filter: blur(2px);            border: 2px solid;            transition: border-color 0.3s;}
+                        .print-card:not(.magic-card) .print-effects { border-color: #ffd700; /* Dourado para Criaturas */}
+                        .print-card.magic-card .print-effects {border-color: #9b59b6; /* Roxo para Magias */}
                         .print-effect-section { background: rgba(255,255,255,0.85); margin: 0.6mm 0; padding: 0.8mm; border-radius: 1.2mm; border-left: 0.6mm solid; }
                         .print-effect-section.attack-effect { border-left-color: #e74c3c; }
                         .print-effect-section.defense-effect { border-left-color: #3498db; }
@@ -401,7 +374,7 @@ let editingCardId = null; // Variável para armazenar o ID da carta sendo editad
                                     <div class="print-type-badge">${card.type === 'magic' ? '✨ Magia' : '🦎 Criatura'}</div>
                                 </div>
                             </div>
-                            <div class="print-effects">
+                            <div class="print-effects ${card.type === 'magic' ? 'magic-card' : ''}">
                                 ${card.type === 'creature' ? `
                                 <div class="print-effect-section attack-effect">
                                     <div class="print-effect-title">⚔️ Efeito de Ataque</div>

@@ -654,13 +654,24 @@
             text-overflow: ellipsis;
         }
 
-        .card-effects {
+       .card-effects {
             margin-top: 10px;
             background: rgba(255,255,255,0.7);
             border-radius: 12px;
             padding: 5px;
             backdrop-filter: blur(2px);
+            border: 2px solid;
+            transition: border-color 0.3s;
         }
+
+        /* Cores da borda por tipo de carta */
+.card:not(.magic-card) .card-effects {
+    border-color: #ffd700; /* Dourado para Criaturas */
+}
+
+.card.magic-card .card-effects {
+    border-color: #9b59b6; /* Roxo para Magias */
+}
 
         .effect-section {
             background: rgba(255,255,255,0.85);
