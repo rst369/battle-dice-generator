@@ -323,7 +323,7 @@ let editingCardId = null; // Variável para armazenar o ID da carta sendo editad
                         .print-effect-section.defense-effect { border-left-color: #3498db; }
                         .print-effect-section.other-effect { border-left-color: #9b59b6; }
                         .print-effect-title { font-weight: bold; margin-bottom: 0.3mm; font-size: 1.2mm; }
-                        .print-effect-text { color: #555; font-size: 1.6mm; line-height: 1.2; word-break: break-word; white-space: pre-wrap; }
+                        .print-effect-text { color: #555; font-size: 1.5mm; line-height: 1.2; word-break: break-word; white-space: pre-wrap; }
                         .print-dice-image { width: 1.8mm; height: 1.8mm; display: inline-block; vertical-align: middle; }
                         .print-dice-image img { width: 100%; height: 120%; object-fit: contain;image-rendering: high-quality;}
                         .print-type-badge { position: absolute; bottom: 1.2mm; right: 1.2mm; background: rgba(0,0,0,0.6); color: white; padding: 0.4mm 0.8mm; border-radius: 1.5mm; font-size: 1.8mm; font-weight: bold; z-index: 2; }
