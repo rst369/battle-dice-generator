@@ -314,7 +314,7 @@ let editingCardId = null; // Variável para armazenar o ID da carta sendo editad
                         .print-card-image div { font-size: 2mm; color: #999; text-align: center; }
                         .print-overlay-stats { position: absolute; top: 1mm; right: 1mm; background: rgba(0,0,0,0.7); padding: 0.8mm 1.2mm; border-radius: 1.5mm; }
                         .print-overlay-stat { color: white; font-size: 2.5mm; display: flex; gap: 0.8mm; font-weight: bold; line-height: 1.2; }
-                        .print-archetype {position: absolute;bottom: 1mm; left: 1mm; background: rgba(0,0,0,0.75); color: #ffd700;padding: 0.5mm 1mm; border-radius: 2mm; font-size: 1.4mm;z-index: 2;max-width: 22mm;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+                        .print-archetype {position: absolute;bottom: 1mm; left: 1mm; background: rgba(0,0,0,0.75); color: #ffd700;padding: 0.5mm 1mm; border-radius: 2mm; font-size: 1.4mm;z-index: 2;max-width: 22mm;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight: bold;}
                         .print-effects { flex: 1;  margin-top: 10px; background: rgba(255,255,255,0.7); border-radius: 12px;            padding: 5px;            backdrop-filter: blur(2px);            border: 2px solid;            transition: border-color 0.3s;}
                         .print-card:not(.magic-card) .print-effects { border-color: #ffd700; /* Dourado para Criaturas */}
                         .print-card.magic-card .print-effects {border-color: #9b59b6; /* Roxo para Magias */}
@@ -323,7 +323,7 @@ let editingCardId = null; // Variável para armazenar o ID da carta sendo editad
                         .print-effect-section.defense-effect { border-left-color: #3498db; }
                         .print-effect-section.other-effect { border-left-color: #9b59b6; }
                         .print-effect-title { font-weight: bold; margin-bottom: 0.3mm; font-size: 1.2mm; }
-                        .print-effect-text { color: #555; font-size: 1.5mm; line-height: 1.2; word-break: break-word; white-space: pre-wrap; }
+                        .print-effect-text { color: #555; font-size: 1.5mm; line-height: 1.2; word-break: break-word; white-space: pre-wrap; font-weight: bold;}
                         .print-dice-image { width: 1.8mm; height: 1.8mm; display: inline-block; vertical-align: middle; }
                         .print-dice-image img { width: 100%; height: 120%; object-fit: contain;image-rendering: high-quality;}
                         .print-type-badge { position: absolute; bottom: 1.2mm; right: 1.2mm; background: rgba(0,0,0,0.6); color: white; padding: 0.4mm 0.8mm; border-radius: 1.5mm; font-size: 1.8mm; font-weight: bold; z-index: 2; }
