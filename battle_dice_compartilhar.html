@@ -661,13 +661,24 @@
             text-overflow: ellipsis;
         }
 
-        .card-effects {
+       .card-effects {
             margin-top: 10px;
             background: rgba(255,255,255,0.7);
             border-radius: 12px;
             padding: 5px;
             backdrop-filter: blur(2px);
+            border: 2px solid;
+            transition: border-color 0.3s;
         }
+
+        /* Cores da borda por tipo de carta */
+.card:not(.magic-card) .card-effects {
+    border-color: #ffd700; /* Dourado para Criaturas */
+}
+
+.card.magic-card .card-effects {
+    border-color: #9b59b6; /* Roxo para Magias */
+}
 
         .effect-section {
             background: rgba(255,255,255,0.85);
@@ -1270,7 +1281,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+   <div class="container">
         <div class="header">
             <h1>
                 <span class="dice-icon"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='white' stroke='black' stroke-width='3' rx='15'/%3E%3Ccircle cx='50' cy='50' r='8' fill='black'/%3E%3C/svg%3E" alt="d6"></span>
@@ -1524,6 +1535,7 @@
         <div class="import-export-section">
             <h3>💾 Backup e Restauração</h3>
             <div class="button-group">
+                <button class="btn-export" onclick="exportSelectedData()">📤 Exportar Selecionadas</button>
                 <button class="btn-export" onclick="exportData()">📤 Exportar Dados (JSON)</button>
                 <div class="file-input-wrapper">
                     <button class="btn-import" onclick="document.getElementById('importFile').click()">📥 Importar Dados (JSON)</button>
@@ -1593,8 +1605,7 @@
         </div>
     </div>
 
-    <script>
-        let editingCardId = null; // Variável para armazenar o ID da carta sendo editada
+    <script>let editingCardId = null; // Variável para armazenar o ID da carta sendo editada
 
         let currentArchetypeFilter = 'all';
         // Funções auxiliares
@@ -1890,21 +1901,7 @@
                         * { margin: 0; padding: 0; box-sizing: border-box; }
                         body { font-family: 'Segoe UI', sans-serif; background: white; padding: 0; margin: 0; }
                         .print-grid { display: grid; grid-template-columns: repeat(4, 63mm); gap: 5mm; justify-content: center; padding: 5mm; page-break-inside: avoid; }
-                        .print-card {
-                            width: 63mm;
-                            height: 88mm;
-                            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-                            border-radius: 3mm;
-                            padding: 2mm;
-                            border: 1.0mm solid #ffd700;
-                            break-inside: avoid;
-                            page-break-inside: avoid;
-                            position: relative;
-                            display: flex;
-                            flex-direction: column;
-                            box-sizing: border-box;
-                            overflow: hidden;
-                        }
+                        .print-card {width: 63mm;height: 88mm;background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);border-radius: 3mm;padding: 2mm;border: 1.0mm solid #ffd700;break-inside: avoid;page-break-inside: avoid;position: relative;display: flex;flex-direction: column;box-sizing: border-box;overflow: hidden;}
                         .print-card-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.5; z-index: 0; }
                         .print-card-content { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; gap: 0.8mm; }
                         .print-card.magic-card { background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border-color: #9b59b6; }
@@ -1924,29 +1921,16 @@
                         .print-card-image div { font-size: 2mm; color: #999; text-align: center; }
                         .print-overlay-stats { position: absolute; top: 1mm; right: 1mm; background: rgba(0,0,0,0.7); padding: 0.8mm 1.2mm; border-radius: 1.5mm; }
                         .print-overlay-stat { color: white; font-size: 2.5mm; display: flex; gap: 0.8mm; font-weight: bold; line-height: 1.2; }
-                        .print-archetype {
-                            position: absolute;
-                            bottom: 1mm;
-                            left: 1mm;
-                            background: rgba(0,0,0,0.75);
-                            color: #ffd700;
-                            padding: 0.5mm 1mm;
-                            border-radius: 2mm;
-                            font-size: 1.4mm;
-                            font-weight: bold;
-                            z-index: 2;
-                            max-width: 22mm;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                        }
-                        .print-effects { flex: 1; background: rgba(255,255,255,0.45); border-radius: 1.5mm; padding: 1mm; min-height: 0; display: flex; flex-direction: column; overflow: visible; }
+                        .print-archetype {position: absolute;bottom: 1mm; left: 1mm; background: rgba(0,0,0,0.75); color: #ffd700;padding: 0.5mm 1mm; border-radius: 2mm; font-size: 1.4mm;z-index: 2;max-width: 22mm;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight: bold;}
+                        .print-effects { flex: 1;  margin-top: 10px; background: rgba(255,255,255,0.7); border-radius: 12px;            padding: 5px;            backdrop-filter: blur(2px);            border: 2px solid;            transition: border-color 0.3s;}
+                        .print-card:not(.magic-card) .print-effects { border-color: #ffd700; /* Dourado para Criaturas */}
+                        .print-card.magic-card .print-effects {border-color: #9b59b6; /* Roxo para Magias */}
                         .print-effect-section { background: rgba(255,255,255,0.85); margin: 0.6mm 0; padding: 0.8mm; border-radius: 1.2mm; border-left: 0.6mm solid; }
                         .print-effect-section.attack-effect { border-left-color: #e74c3c; }
                         .print-effect-section.defense-effect { border-left-color: #3498db; }
                         .print-effect-section.other-effect { border-left-color: #9b59b6; }
                         .print-effect-title { font-weight: bold; margin-bottom: 0.3mm; font-size: 1.2mm; }
-                        .print-effect-text { color: #555; font-size: 1.6mm; line-height: 1.2; word-break: break-word; white-space: pre-wrap; }
+                        .print-effect-text { color: #555; font-size: 1.5mm; line-height: 1.2; word-break: break-word; white-space: pre-wrap; font-weight: bold;}
                         .print-dice-image { width: 1.8mm; height: 1.8mm; display: inline-block; vertical-align: middle; }
                         .print-dice-image img { width: 100%; height: 120%; object-fit: contain;image-rendering: high-quality;}
                         .print-type-badge { position: absolute; bottom: 1.2mm; right: 1.2mm; background: rgba(0,0,0,0.6); color: white; padding: 0.4mm 0.8mm; border-radius: 1.5mm; font-size: 1.8mm; font-weight: bold; z-index: 2; }
@@ -1997,7 +1981,7 @@
                                     <div class="print-type-badge">${card.type === 'magic' ? '✨ Magia' : '🦎 Criatura'}</div>
                                 </div>
                             </div>
-                            <div class="print-effects">
+                            <div class="print-effects ${card.type === 'magic' ? 'magic-card' : ''}">
                                 ${card.type === 'creature' ? `
                                 <div class="print-effect-section attack-effect">
                                     <div class="print-effect-title">⚔️ Efeito de Ataque</div>
@@ -2322,6 +2306,62 @@ function clearForm() {
             }
         });
 
+        function exportSelectedData() {
+    // Obter apenas as cartas selecionadas na área de impressão
+    const selectedCards = [];
+   
+    cards.forEach(card => {
+        const selection = printSelections[card.id];
+        if (selection && selection.selected) {
+            // Incluir a quantidade também
+            selectedCards.push({
+                ...card,
+                exportQuantity: selection.quantity
+            });
+        }
+    });
+    
+    if (selectedCards.length === 0) {
+        showNotification('Nenhuma carta selecionada para exportar!', 'error');
+        return;
+    }
+
+    var cardArchetype = selectedCards[0].archetype;
+    
+    const exportData = {
+        version: "1.0",
+        exportDate: new Date().toISOString(),
+        totalCards: selectedCards.length,
+        totalCopies: selectedCards.reduce((sum, card) => sum + (card.exportQuantity || 1), 0),
+        cards: selectedCards.map(card => ({
+            id: card.id,
+            name: card.name,
+            archetype: card.archetype,
+            type: card.type,
+            attack: card.attack,
+            defense: card.defense,
+            mana: card.mana,
+            imageUrl: card.imageUrl,
+            attackEffect: card.attackEffect,
+            defenseEffect: card.defenseEffect,
+            mainEffect: card.mainEffect
+        }))
+    };
+    
+    const dataStr = JSON.stringify(exportData, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `battle_dice_export_${new Date().toISOString().split('T')[0]}_${selectedCards.length}cartas_de_`+cardArchetype+`.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    showNotification(`📤 ${selectedCards.length} cartas selecionadas exportadas (${exportData.totalCopies} cópias no total)!`, 'success');
+}
+
          // Função para exportar dados
         function exportData() {
             if (cards.length === 0) {
@@ -2604,9 +2644,7 @@ function updateArchetypeFilter() {
         const style = document.createElement('style');
         style.textContent = `@keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`;
         document.head.appendChild(style);
-
-
-    </script>
+</script>
     
 </body>
 </html>
