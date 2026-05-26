@@ -2038,30 +2038,30 @@
       "mainEffect": "No final do turno jogue um dado se o resultado for [2][4][6], envie esta carta para o descarte e depois invoque Goku SS4 do deck, da mão ou descarte."
     },
     {
-      "id": 5330920292105.625,
+      "id": 7110746506415.121,
       "name": "Esfera do Dragão 7",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "MANA": 5,
+      "mana": 3,
       "imageUrl": "https://i.pinimg.com/736x/ec/8e/c5/ec8ec55eb1b4d4dfa3f7b2cbffe5bc6c.jpg",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Adicione do deck para a mão uma carta SAIYAJIN e ela terá o custo reduzido em 2.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
+      "mainEffect": "Devolva todas as esferas do dragão que estejam no descarte para o deck e ganhe 1 PV para cada carta devolvida, embaralhe o deck."
     },
     {
-      "id": 5330919970953.591,
+      "id": 7110746190298.379,
       "name": "Esfera do Dragão 5",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "MANA": 3,
+      "mana": 5,
       "imageUrl": "https://i.pinimg.com/474x/79/74/9b/79749b36d62c1e961dae33d3bb82ee52.jpg",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Revele 5 cartas do topo do seu deck, escolha um SAIYAJIN e adicione para sua mão, embaralhe o restante das cartas no deck.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
+      "mainEffect": "Revele uma carta da sua mão e depois envie até 6 esferas do dragão do deck para o descarte e depois reduza o custo da carta revelada em 1 para cada carta enviada.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
       "id": 5330919940719.953,
@@ -2129,7 +2129,7 @@
       "mainEffect": "+3 ATK para todas criaturas em campo até o final do turno.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 5330916668242.684,
+      "id": 7110742886225.883,
       "name": "Instinto Superior",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2137,9 +2137,9 @@
       "defense": 6,
       "mana": 8,
       "imageUrl": "https://criticalhits.com.br/wp-content/uploads/2024/02/Dragon-Ball-Goku-Instinto-Superi-scaled.webp",
-      "attackEffect": "[1][2][3] +1 ATK x Numero de sayajins no descarte.\n[4][5] +2 ATK x Numero de sayajins no descarte.\n[6] +3 ATK x Numero de sayajins no descarte.",
+      "attackEffect": "[1][2][3] +1 ATK x Numero de SAIYAJIN no descarte.\n[4][5] +2 ATK x Numero de SAIYAJIN no descarte.\n[6] +3 ATK x Numero de SAIYAJIN no descarte.",
       "defenseEffect": "Você e seu oponente jogam um dado cada, se obtiver o maior valor, o ataque da criatura é cortado pela metade.",
-      "mainEffect": "Está carta é tratada como Goku enquanto estiver em campo.\nQuando derrotado, escolha 2 Saiyajins na pilha de descarte e retorne para o deck, exceto Instinto Superior."
+      "mainEffect": "Esta carta é tratada como Goku enquanto estiver em campo.\nQuando derrotado, adicione Goku do descarte para mão."
     },
     {
       "id": 5330916551388.059,
