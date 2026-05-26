@@ -1,8 +1,424 @@
 {
   "version": "1.0",
-  "exportDate": "2026-05-08T18:26:31.052Z",
+  "exportDate": "2026-05-26T18:22:53.011Z",
   "cards": [
-        {
+    {
+      "id": 1779739360591,
+      "name": "Battle Chip - Pistola del sol",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 2,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSzfh5iDSgqNdNws4UH9VvRSn-fZ9qODBALg&s",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Escolha um NETWARRIOR em campo: Neste turno ele causa dano ao PV adversário igual a diferença (após as resoluções de efeito) entre o ATK e a DEF contra uma criatura oponente. \nSe Ganhar a batalha: Adicione um NETWARRIOR do deck ou descarte para a mão cujo custo seja até [6]"
+    },
+    {
+      "id": 1779739080855,
+      "name": "Django",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 5,
+      "defense": 5,
+      "mana": 6,
+      "imageUrl": "https://static.wikia.nocookie.net/megaman/images/7/77/GunSolEX_chip_artwork_copy.jpg/revision/latest?cb=20230514112424",
+      "attackEffect": "[1]...[4] +1 ATK para cada magia que contenha \"Battle Chip\" no nome no descarte\n[5][6] Jogue uma magia NETWARRIOR do descarte pagando PV ao invés do custo.",
+      "defenseEffect": "[1]...[4] +1 DEF para cada magia que contenha \"Battle Chip\" no nome no descarte\n[5][6] Ao ser derrotado: Jogue uma criatura NETWARRIOR do descarte pagando PV ao invés do custo.",
+      "mainEffect": "AO ENTRAR: Adicione uma magia NETWARRIOR do deck ou descarte para a mão"
+    },
+    {
+      "id": 1779736085515,
+      "name": "Battle Chip - Canhão",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 4,
+      "imageUrl": "https://static.wikitide.net/deathbattlewiki/thumb/3/33/MegaMan.EXE_-_Cannon_Mode.jpg/185px-MegaMan.EXE_-_Cannon_Mode.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Descarte um NETWARRIOR da mão para ganhar ATK e DEF igual aos da criatura descartada"
+    },
+    {
+      "id": 1779735941510,
+      "name": "Numberman",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 1,
+      "defense": 3,
+      "mana": 2,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyVXHI-KodpGMjFeMZYfW79BM-0a4ZRhhr-Q&s",
+      "attackEffect": "[1]...[4] compre 1 carta + 1 MANA\n[5][6] Role um dado, caso o resultado seja menor ou igual ao custo de mana do defensor envie o defensor para o descarte",
+      "defenseEffect": "[1]...[4] compre 1 carta + 1 MANA\n[5][6] Role um dado, caso o resultado seja par esta carta não é destruída",
+      "mainEffect": "UMA VEZ POR TURNO: Role um dado duas vezes, escolha um NETWARRIOR no descarte, cujo custo seja menor que a soma do resultado, e adicione à sua mão"
+    },
+    {
+      "id": 1779723285260,
+      "name": "Leomon",
+      "archetype": "Digimon",
+      "type": "creature",
+      "attack": 5,
+      "defense": 6,
+      "mana": 5,
+      "imageUrl": "https://i.pinimg.com/736x/65/b8/23/65b823ce3d273ac17718cdc67d1397dc.jpg",
+      "attackEffect": "[1][2] +2 ATK | [6] +4 ATK\n[3][4][5] Adicione uma magia DIGIMON do deck ou descarte para a mão\n",
+      "defenseEffect": "[1][2] +2 DEF | [6] +4 DEF\n[3][4][5] Adicione um DIGIMON do deck ou descarte para a mão",
+      "mainEffect": "EM CAMPO: Reduza o custo de magias DIGIMON em 1 para cada DIGIMON em campo (mín. 1)"
+    },
+    {
+      "id": 1779718411493,
+      "name": "Beelzemon",
+      "archetype": "Digimon",
+      "type": "creature",
+      "attack": 6,
+      "defense": 6,
+      "mana": 12,
+      "imageUrl": "https://preview.redd.it/beelzemon-fanart-by-me-v0-34yeclp6e8pb1.jpg?auto=webp&s=c03bf28c3410c9524400a44e587b38a8d9f84340",
+      "attackEffect": "[1]...[4] -2 DEF defensor | [5] Anule o efeito do defensor\n[6] Se ganhar a batalha: pode fazer um novo ataque",
+      "defenseEffect": "[1]...[4] -2 ATK atacante | [5] Anule o efeito do atacante\n[6] Cancele a batalha e volte o atacante para a mão",
+      "mainEffect": "Descarte X DIGIMON do campo para o descarte:\n* reduza o custo desta carta em 2 para cada X\n* +2 ATK/+2 DEF (PERMANENTE)  para cada X"
+    },
+    {
+      "id": 1779716234382,
+      "name": "Impmon",
+      "archetype": "Digimon",
+      "type": "creature",
+      "attack": 3,
+      "defense": 1,
+      "mana": 3,
+      "imageUrl": "https://wikimon.net/images/thumb/4/4a/Impmon_NightofFire.jpg/300px-Impmon_NightofFire.jpg",
+      "attackEffect": "[1][2][3] +1 ATK -1 PV adversário\n[4][5][6] +2 ATK -2 PV adversário",
+      "defenseEffect": "AO SER DERROTADO:\n[1]...[5] Role um dado duas vezes e some o resultado, adicione um DIGIMON do deck ou descarte com custo menor ou igual ao resultado obtido\n[6] -5 PV: jogue um DIGIMON do descarte sem pagar o custo",
+      "mainEffect": "[UMA VEZ POR TURNO]: Envie uma carta do topo do deck para o descarte, compre 1 carta"
+    },
+    {
+      "id": 1779715863078,
+      "name": "Domadores de Digimon",
+      "archetype": "Digimon",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 5,
+      "imageUrl": "https://i.ytimg.com/vi/Se-2l5A2wu4/maxresdefault.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "[PERMANENTE] Toda vez que você descartar um DIGIMON para jogar outro: compre uma carta (para cada DIGIMON descartado) e a criatura jogada ganha +3 ATK +3 DEF até o fim do próximo turno."
+    },
+    {
+      "id": 1779496220299,
+      "name": "Escudo de Alucard",
+      "archetype": "Vampiro",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 4,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXmXPs5muOK7CUGwXlhnIKvutcjJNy5gIDxw&s",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "+4 DEF\nSe não for derrotado: Ganhe PV igual ao ATK do atacante "
+    },
+    {
+      "id": 1779496044516,
+      "name": "Agua Benta",
+      "archetype": "Vampiro",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 3,
+      "imageUrl": "https://cdna.artstation.com/p/assets/images/images/009/590/940/medium/remy-hua-holywater-v1-1-finalpic2.jpg?1519832614",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "-3 DEF defensor + 3 PV"
+    },
+    {
+      "id": 1779495983694,
+      "name": "Fonte de sangue",
+      "archetype": "Vampiro",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 5,
+      "imageUrl": "https://pbs.twimg.com/tweet_video_thumb/EIFkuEsWoAEyPXu.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "[PERMANENTE] Quando um vampiro for derrotado em batalha: +PV igual ao seu custo de mana. Você pode usar este efeito uma vez por turno."
+    },
+    {
+      "id": 1779495863113,
+      "name": "Maria Renard",
+      "archetype": "Vampiro",
+      "type": "creature",
+      "attack": 3,
+      "defense": 6,
+      "mana": 4,
+      "imageUrl": "https://i.ytimg.com/vi/s519wYMe-MU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDxnm0AavBhULHajE2g16JYc48VmA",
+      "attackEffect": "[1]...[4] +2 PV +1 ATK\n[5][6] +4 PV +2 ATK",
+      "defenseEffect": "[1]...[4] Se o resultado do dado do ataque for menor que o da defesa volte o atacante para a mão\n[5][6] + 3 DEF +PV igual ao ATK do atacante ",
+      "mainEffect": "AO ENTRAR: Escolha um VAMPIRO em campo e ganhe PV igual ao seu custo de mana. \n"
+    },
+    {
+      "id": 1779495387248,
+      "name": "Shanoa",
+      "archetype": "Vampiro",
+      "type": "creature",
+      "attack": 6,
+      "defense": 4,
+      "mana": 6,
+      "imageUrl": "https://i.redd.it/ul4uda3m5s2a1.png",
+      "attackEffect": "[1][2][3] +2 ATK | [4][5] +4 ATK\n[6] +3 ATK para cada VAMPIRO em campo",
+      "defenseEffect": "[1]...[4] +2 DEF para cada VAMPIRO em campo\n[5][6] -5 PV Jogue esta carta do descarte sem pagar o custo",
+      "mainEffect": "AO ENTRAR: Role um dado até 2 vezes, adicione magias \"VAMPIRO\" do seu descarte ou deck cuja soma dos custos seja menor ou igual ao resultado obtido. Ganhe MANA igual ao número de VAMPIRO em campo."
+    },
+    {
+      "id": 1779495033071,
+      "name": "Alucard",
+      "archetype": "Vampiro",
+      "type": "creature",
+      "attack": 5,
+      "defense": 3,
+      "mana": 4,
+      "imageUrl": "https://i.pinimg.com/736x/da/3c/fb/da3cfbbdf9ff02b41eb7bf28db325b76.jpg",
+      "attackEffect": "[1][2][3] +2 ATK | [4][5] -2PV +3 ATK \n[6] -3PV Jogue uma magia vampiro do descarte sem pagar custo",
+      "defenseEffect": "[1]...[3] descarte um vampiro da mão para não ser destruído\n[4]...[6] -4PV jogue esta carta do descarte sem pagar custo",
+      "mainEffect": "AO ENTRAR: Adicione uma magia \"VAMPIRO\" do deck para mão"
+    },
+    {
+      "id": 1779308352065,
+      "name": "Gutsman",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 5,
+      "defense": 2,
+      "mana": 4,
+      "imageUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/beb7090c-3ad3-41a8-9415-9f809b8a3d1a/d6t8b8-fe6af7f8-f2e9-4774-b585-1b379a252da0.jpg/v1/fill/w_730,h_950,q_75,strp/gutsman_exe_by_banenascent_d6t8b8-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTUwIiwicGF0aCI6Ii9mL2JlYjcwOTBjLTNhZDMtNDFhOC05NDE1LTlmODA5YjhhM2QxYS9kNnQ4YjgtZmU2YWY3ZjgtZjJlOS00Nzc0LWI1ODUtMWIzNzlhMjUyZGEwLmpwZyIsIndpZHRoIjoiPD03MzAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.FvOQqC_pxQjvyrGwsXu0K_74J5W9ET_fsJRhuMMJaR4",
+      "attackEffect": "[1][3][5] +2 ATK\n[2][4][6] +3 ATK",
+      "defenseEffect": "[1][3][5] Adicione um NETWARRIOR do deck para a mão\n[2][4][6] Adicione um NETWARRIOR do descarte para a mão",
+      "mainEffect": "[AO ENTRAR] Adicione uma magia NETWARRIOR do deck para a mão"
+    },
+    {
+      "id": 1779308068774,
+      "name": "Glide",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 1,
+      "defense": 2,
+      "mana": 1,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDzzEFARsDryao03izPlnVp40muGeXFT6U1g&s",
+      "attackEffect": "[1][3][5] -1 DEF defensor\n[2][4][6] -2 DEF defensor",
+      "defenseEffect": "[1][3][5] Adicione um NETWARRIOR do deck para a mão\n[2][4][6] Adicione uma magia NETWARRIOR do deck para a mão",
+      "mainEffect": "[UMA VEZ POR TURNO] Você pode fazer o oponente rolar um dado novamente"
+    },
+    {
+      "id": 1779306293956,
+      "name": "Roll",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 2,
+      "defense": 4,
+      "mana": 3,
+      "imageUrl": "https://static.wikia.nocookie.net/megaman/images/f/f6/MMBN4RollBattleChip.jpg/revision/latest/scale-to-width-down/250?cb=20230513105827",
+      "attackEffect": "[1][2][3] +1 PV + 1 ATK\n[4][5][6] +2 PV igual a DEF do defensor",
+      "defenseEffect": "[1][2][3] +1 PV + 2 DEF\n[4][5][6] +2 PV Adicione um NETWARRIOR do deck para a mão com custo menor ou igual a [6]",
+      "mainEffect": "[AO ENTRAR] Escolha um NETWARRIOR em campo ganhe PV igual seu custo de mana"
+    },
+    {
+      "id": 1779305528662,
+      "name": "Battle Chip - Invisível",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 2,
+      "imageUrl": "https://static.wikitide.net/megamanwiki/1/13/Megaman_Invisible_chip_artwork_copy.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Perca PV igual a DEF de um NETWARRIOR, ele não pode ser derrotado nesta batalha"
+    },
+    {
+      "id": 1779305328229,
+      "name": "Battle Chip - Espada Larga",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 3,
+      "imageUrl": "https://static.wikia.nocookie.net/battlenetwork/images/0/0d/MMBNLC_Battle_Chip_Image_-_Wide_Sword.png/revision/latest/smart/width/386/height/259?cb=20241030012540",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "+2 ATK\nSe ganhar a batalha: Envie para o descarte uma criatura adversária com DEF igual ou menor que a DEF do defensor"
+    },
+    {
+      "id": 1779305249784,
+      "name": "Battle Chip - Espada Amaldiçoada",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 4,
+      "imageUrl": "https://static.wikitide.net/megamanwiki/8/8a/C022Muramasa.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "+2 ATK ou +2 DEF\nSe ganhar a batalha: Diminua o ATK ou a DEF das outras criaturas do oponente em 3"
+    },
+    {
+      "id": 1779303835240,
+      "name": "Battle Chip - Espada Variável",
+      "archetype": "Magia",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 3,
+      "imageUrl": "https://static.wikia.nocookie.net/megaman/images/1/12/C016PaladinSword.jpg/revision/latest/scale-to-width-down/250?cb=20120508021342",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Role um dado, ganhe ATK igual ao resultado obtido +1\nSe ganhar a batalha: Adicione uma carta NETWARRIOR do deck ou descarte para a mão com custo igual ao resultado obtido"
+    },
+    {
+      "id": 1779303741782,
+      "name": "Battle Chip - Programa Avançado",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 6,
+      "imageUrl": "https://dreager1.com/wp-content/uploads/2010/07/programadvance-lifesword.jpg?w=640",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "+1 ATK para cada magia com \"Battle Chip\" no nome no descarte.\nSe ganhar a batalha: Adicione 3 magias NETWARRIOR do descarte para o deck e compre 1 carta"
+    },
+    {
+      "id": 1779303596720,
+      "name": "Battle Chip - Barreira",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 2,
+      "imageUrl": "https://images6.alphacoders.com/824/824251.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "+3 DEF\nSe ganhar a batalha: ganhe PV igual ao ATK do atacante"
+    },
+    {
+      "id": 1779303525420,
+      "name": "Battle Chip - Espada Elétrica",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 3,
+      "imageUrl": "https://i.pinimg.com/474x/98/8b/30/988b30a6b147e8098761eeae3b67e142.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "+3 ATK\nSe ganhar a batalha: Escolha uma criatura do adversário e diminua o PV dele igual ao custo de mana"
+    },
+    {
+      "id": 1779303228636,
+      "name": "Megaman",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 5,
+      "defense": 4,
+      "mana": 4,
+      "imageUrl": "https://preview.redd.it/ive-liked-mega-man-for-a-while-but-just-recently-got-into-v0-vnjbqww3xoe21.png?width=640&crop=smart&auto=webp&s=abe7605f006d5ed3b04008e68d772839f4a93aa6",
+      "attackEffect": "[1][2] +2 ATK\n[3][4] +3 ATK + 1 MANA\n[5][6] +4 ATK + 2 MANA",
+      "defenseEffect": "[1][2] +2 DEF\n[3][4] +3 DEF + 1 MANA\n[5][6] +4 DEF + 2 MANA",
+      "mainEffect": "AO ENTRAR: Adicione uma carta NETWARRIOR do deck para a mão com o custo menor que [6]"
+    },
+    {
+      "id": 1779302776167,
+      "name": "Colonel",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 10,
+      "defense": 8,
+      "mana": 10,
+      "imageUrl": "https://64.media.tumblr.com/64e7877abd75534e3815129f2bfebfb7/tumblr_mupkljCSQm1sl8dkao1_640.jpg",
+      "attackEffect": "[1][3][5] +3 ATK\n[2][4][6] Volte um NETWARRIOR do descarte para o deck para ganhar ATK igual ao seu ATK",
+      "defenseEffect": "[1][3][5] +3 DEF\n[2][4][6] Volte um NETWARRIOR do descarte para o deck para ganhar DEF igual a sua DEF",
+      "mainEffect": "[EM CAMPO] +3 DEF para os outros NETWARRIOR. Suas magias com \"Battle Chip\" no nome custam 2 a menos de MANA (min. 1)"
+    },
+    {
+      "id": 1779302455667,
+      "name": "Protoman",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 7,
+      "defense": 5,
+      "mana": 6,
+      "imageUrl": "https://pbs.twimg.com/media/Frs0g1pakAADViF.jpg",
+      "attackEffect": "[1][3][5] +3 ATK\n[2][4][6] +4 ATK",
+      "defenseEffect": "[1][3][5] +2 DEF +2 MANA\n[2][4][6] Envie uma criatura NETWARRIOR do deck para o descarte para ganhar DEF igual a sua DEF",
+      "mainEffect": "AO ENTRAR: Adicione 2 magias NETWARRIOR do descarte, ou do deck para a mão."
+    },
+    {
+      "id": 1779301738931,
+      "name": "Dark Megaman",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 10,
+      "defense": 6,
+      "mana": 7,
+      "imageUrl": "data:image/jpeg;base64,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",
+      "attackEffect": "[1][2] -1 MANA para +3 ATK\n[3][4] -2 MANA para +5 ATK\n[5][6] Descarte uma magia NETWARRIOR para ganhar ATK igual ao seu custo",
+      "defenseEffect": "[1]...[4] -2 MANA para o Adversário, Adicione uma magia NETWARRIOR do descarte para a mão\n[5][6] Se derrotado: Descarte uma magia NETWARRIOR para enviar o oponente para o descarte",
+      "mainEffect": "UMA VEZ POR TURNO: Você pode descartar uma magia NETWARRIOR para ganhar MANA igual ao seu custo"
+    },
+    {
+      "id": 1779301064297,
+      "name": "Bass",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 8,
+      "defense": 8,
+      "mana": 8,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuV-5w-6Jad9DJXzwxn7N3PnNzuOYEU3xC2Q&s",
+      "attackEffect": "[1][2][3] +3 ATK\n[4][5][6] +1 ATK para cada  magia com \"Battle Chip\" no nome no descarte",
+      "defenseEffect": "[1][2][3] +2 DEF\n[4][5][6] +1 DEF para cada magia com \"Battle Chip\" no nome no descarte. Retorne uma magia NETWARRIOR do descarte para a mão",
+      "mainEffect": "AO SER DERROTADO: Envie todos os NETWARRIORS em campo para o descarte para jogar esta carta do descarte sem custo"
+    },
+    {
+      "id": 1779300653074,
+      "name": "Acessando o mundo virtual",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 5,
+      "imageUrl": "https://static.wikia.nocookie.net/megaman/images/9/92/MMBN6FJackIn.gif/revision/latest?cb=20140523160157",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "[PERMANENTE] Uma vez por turno, se você jogou uma criatura NETWARRIOR ganhe MANA igual ao número de criaturas NETWARRIOR em campo +1."
+    },
+    {
+      "id": 1779300461989,
+      "name": "Aparelho de Transmissão",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 5,
+      "imageUrl": "https://i.ytimg.com/vi/fNVKwUhqotE/maxresdefault.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "[PERMANENTE] Se um NETWARRIOR está batalhando e você utilizar uma magia que contenha \"Battle Chip\" no nome: você pode alterar o resultado de um dado para + 1 ou -1 para qualquer lado."
+    },
+    {
+      "id": 1779300164382,
+      "name": "Tomar Área",
+      "archetype": "Netwarrior",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 5,
+      "imageUrl": "https://static.wikia.nocookie.net/megaman/images/8/86/TEPPEN_3ME_050_art.png/revision/latest/scale-to-width-down/1200?cb=20230715084808",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "[PERMANENTE] Você pode fazer com que seu adversário role um dado novamente. Você pode usar este efeito no seu turno o número de vezes igual a quantidade de criaturas NETWARRIOR em campo."
+    },
+    {
       "id": 1779129200708,
       "name": "União dos Mamodos",
       "archetype": "Mamodo",
@@ -107,33 +523,33 @@
       "mainEffect": "AO ENTRAR: Descarte um MAMODO e jogue um MAMODO da sua mão com custo menor ou igual do que a criatura descartada"
     },
     {
-      "id": 1778262375809,
+      "id": 3556528390324.093,
       "name": "Cell Forma Perfeita",
       "archetype": "Androide",
       "type": "creature",
       "attack": 5,
       "defense": 7,
-      "mana": 8,
+      "MANA": 8,
       "imageUrl": "https://i.redd.it/80srurhh8cze1.jpeg",
-      "attackEffect": "[1][2] Ganha +1Atk para cada criatura na sua pilha de descarte.\n[3][4][5] +3Atk",
-      "defenseEffect": "[1][2][4][6] +2Def\n[3][5] +4Def",
-      "mainEffect": "Ganha +2Atk e 2Def para cada criatura que derrotou."
+      "attackEffect": "[1][2] Ganha +1 ATK para cada criatura na sua pilha de descarte. | [3][4][5] +3 ATK",
+      "defenseEffect": "[1][2][4][6] +2 DEF | [3][5] +4 DEF",
+      "mainEffect": "Ganha +2 ATK/+2 DEF para cada criatura que esta carta derrotou (Permanente)."
     },
     {
-      "id": 1778261303038,
+      "id": 3556527311366.5293,
       "name": "Super Boo",
       "archetype": "Majin",
       "type": "creature",
       "attack": 5,
       "defense": 5,
-      "mana": 6,
+      "MANA": 6,
       "imageUrl": "https://i.pinimg.com/736x/43/3c/bb/433cbb426c2bce1d180e4324b18ec8c6.jpg",
-      "attackEffect": "[1][2] +2Atk | [3][4] +3Atk\n[5][6] Revele a carta no topo do deck e ganha Atk igual o custo de mana.",
-      "defenseEffect": "[1][2] +2Def | [3][4] +3Def\n[5][6] Você pode descartar uma carta da sua mão para não ser destruído nessa batalha.",
-      "mainEffect": "Uma vez por turno você pode usar o efeito principal de uma de suas criaturas que estejam em campo ou na pilha de descarte."
+      "attackEffect": "[1][2] +2 ATK | [3][4] +3 ATK\n[5][6] Revele a carta no topo do seu deck e ganha Atk igual ao custo de MANA e depois embaralhe.",
+      "defenseEffect": "[1][2] +2 DEF | [3][4] +3 DEF\n[5][6] Você pode descartar uma criatura da sua mão para não ser destruído em batalha nesse turno.",
+      "mainEffect": "Só pode ser usado no seu turno, ganhe o efeito principal de uma criatura na sua pilha de descarte ao enviar a carta para o deck, após resolver o efeito, embaralhe."
     },
     {
-      "id": 1778260680762,
+      "id": 3556526571386.6465,
       "name": "Vou te comer",
       "archetype": "Majin",
       "type": "magic",
@@ -146,20 +562,20 @@
       "mainEffect": "Aumenta Atk e Def em +3, se for usado em Majin aumenta em +5."
     },
     {
-      "id": 1778259966530,
+      "id": 3556525977692.234,
       "name": "Androide 17",
       "archetype": "Androide",
       "type": "creature",
       "attack": 5,
       "defense": 2,
-      "mana": 2,
+      "MANA": 2,
       "imageUrl": "https://www.comboinfinito.com.br/principal/wp-content/uploads/2018/03/dragon-ball-super-android-17.jpg",
-      "attackEffect": "[2][4] +1Atk | [5][6] +2Atk | [1][3] Adicione Androide 18 do deck para mão.",
-      "defenseEffect": "[1][6] +2Def | [3][5] +3Def | [2][4] Devolva uma magia da sua pilha de descarte para o deck",
-      "mainEffect": "Seu oponente perde 1 de mana sempre que usar uma magia, esse efeito só acontece no turno do oponente."
+      "attackEffect": "[2][4] +1 ATK | [5][6] +2 ATK | [1][3] Adicione Androide 18 do deck para mão.",
+      "defenseEffect": "[1][6] +2 DEF | [3][5] +3 DEF | [2][4] Devolva uma magia da sua pilha de descarte para o deck e depois embaralhe.",
+      "mainEffect": "Seu oponente perde 1 de MANA sempre que usar uma magia, esse efeito só acontece no turno do oponente."
     },
     {
-      "id": 1778258835065,
+      "id": 3556524725440.458,
       "name": "Kid Boo",
       "archetype": "Majin",
       "type": "creature",
@@ -172,46 +588,46 @@
       "mainEffect": "Custa -2 de mana para cada carta de criatura na pilha de descarte do oponente."
     },
     {
-      "id": 1777914154512,
+      "id": 3556180168122.585,
       "name": "Androide 18",
       "archetype": "Androide",
       "type": "creature",
       "attack": 2,
       "defense": 4,
-      "mana": 2,
+      "MANA": 2,
       "imageUrl": "https://www.fatosdesconhecidos.com.br/wp-content/uploads/2018/05/Androide18-2.png",
-      "attackEffect": "[1][2] +2Atk | [3][4] +3Atk | [5][6] Adicione Androide 17 do deck para mão.",
-      "defenseEffect": "[1][2] +1Def | [3][4] +2Def | [5][6] Devolva um Androide  da sua pilha de descarte para o deck.",
+      "attackEffect": "[1][2] +2 ATK | [3][4] +3 ATK | [5][6] Adicione Androide 17 do deck para mão.",
+      "defenseEffect": "[1][2] +1 DEF | [3][4] +2 DEF | [5][6] Devolva um Androide do descarte para o deck e depois embaralhe.",
       "mainEffect": "Se o seu Pv for maior que 10, reduza o custo das suas cartas em 1.\nSe o seu Pv for menor ou igual a 10, reduza o custo das suas cartas em 2."
     },
     {
-      "id": 1777913078908,
+      "id": 3556179091316.694,
       "name": "Semente dos Deuses",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 5,
       "defense": 5,
-      "mana": 2,
+      "MANA": 2,
       "imageUrl": "https://static.wixstatic.com/media/d3cd60_2da47199fdda4d86a366d311963f9b5d~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Jogue um dado e ganhe mana de acordo com o resultado."
+      "mainEffect": "Jogue um dado e ganhe MANA de acordo com o resultado +1."
     },
     {
-      "id": 1777483410569,
+      "id": 3555749420230.6465,
       "name": "Cell Semi-Perfeito",
       "archetype": "Androide",
       "type": "creature",
       "attack": 5,
       "defense": 7,
-      "mana": 6,
+      "MANA": 6,
       "imageUrl": "https://static0.srcdn.com/wordpress/wp-content/uploads/2017/11/Semi-Perfect-Cell-from-Dragon-Ball.jpg?q=50&fit=crop&w=825&dpr=1.5",
       "attackEffect": "[1][3][5] +3 ATK\n[2][4][6] +5 ATK",
       "defenseEffect": "[1][2][3] +3 DEF\n[4][5][6] +4 DEF",
-      "mainEffect": "Toda vez que seu oponente ativar um efeito de ataque ou defesa, ambos os jogadores devem jogar um dado, se o seu valor for maior o efeito é negado."
+      "mainEffect": "Durante a fase de ataque da suas criaturas, se o valor do seu dado for maior que do oponente entre e efeito de ataque e defensivo, negue o efeito defensivo."
     },
     {
-      "id": 1777085837628,
+      "id": 3555351731742.6543,
       "name": "Mestre do Rodizio",
       "archetype": "Cliente",
       "type": "creature",
@@ -224,59 +640,59 @@
       "mainEffect": "Ganha +1 ATK e DEF para cada alimento na pilha de descarte."
     },
     {
-      "id": 1777069224869,
+      "id": 3555335231347.538,
       "name": "Fat Boo",
       "archetype": "Majin",
       "type": "creature",
       "attack": 4,
       "defense": 5,
-      "mana": 5,
+      "MANA": 5,
       "imageUrl": "https://static.wikia.nocookie.net/dragonball/images/9/97/Super_Hero_-_Good_Buu_sleeping.png/revision/latest/scale-to-width-down/985?cb=20240213212315",
       "attackEffect": "[1][2][3] +2 ATK | [4][6] +3 ATK | [5] Adicione uma criatura que tenha Boo no nome da sua pilha de descarte para mão.",
       "defenseEffect": "[1][2][3] +2 DEF | [3][4] +3 DEF | [6] Não é destruído nessa batalha.",
-      "mainEffect": "No seu turno: Ganha +3 ATK se seu oponente controlar uma criatura que tenha defesa maior que seu ataque.\nTurno do oponente: Ganha +3 DEF se seu oponente controlar uma criatura que tenha ataque maior que sua defesa."
+      "mainEffect": "No seu turno: +3 ATK se o oponente controlar uma criatura que tenha defesa maior que seu ataque.\nTurno do oponente: +3 DEF se o oponente controlar uma criatura que tenha ataque maior que sua defesa."
     },
     {
-      "id": 1776987432734,
+      "id": 3555253447088.833,
       "name": "Cell Imperfeito",
       "archetype": "Androide",
       "type": "creature",
       "attack": 1,
       "defense": 1,
-      "mana": 1,
+      "MANA": 1,
       "imageUrl": "https://preview.redd.it/an-interesting-thing-about-imperfect-cell-v0-nezlg7h7ert91.jpg?width=1080&crop=smart&auto=webp&s=3a848ceb8cd6166cb969bd30b01fe9f9d42f9f10",
-      "attackEffect": "[1] Retorne uma carta da mão do seu oponente para o mão. [2][5] Revele uma carta da sua mão e reduza o custo em -1. [3][4] Ganhe +1 de mana.",
-      "defenseEffect": "[2][3][5] Seu oponente perde -1 de mana.\n[1][4][6] Escolha uma carta aleatória da mão do seu oponente, revele e o custo aumenta em +1, se houver mais de uma cópia, todas aumentam o custo.",
-      "mainEffect": "Esta carta só pode ser destruída em batalha no turno do oponente ao tirar [1] ou [6] quando atacar."
+      "attackEffect": "[1] Retorne uma carta da mão do seu oponente para o fundo do deck. [2][5] Revele uma carta da sua mão e reduza o custo em -1. [3][4] Ganhe +1 de MANA.",
+      "defenseEffect": "[2][3][5] Oponente -1 MANA. [1][4][6] Escolha uma carta da mão do seu oponente, revele e o custo aumenta em +1.",
+      "mainEffect": "Esta carta só pode ser destruída por magia, efeito ou em batalha ao tirar [1][6]"
     },
     {
-      "id": 1776986851830,
+      "id": 3555252866387.92,
       "name": "Androide 19",
       "archetype": "Androide",
       "type": "creature",
       "attack": 4,
       "defense": 3,
-      "mana": 3,
+      "MANA": 3,
       "imageUrl": "https://pixelnerd.com.br/wp-content/uploads/2023/03/19150840051639386540.jpg",
-      "attackEffect": "[1][3][5] -1 de DEF para todas as criaturas do oponente.\n[2][4][6] -2 de DEF para criatura do seu oponente.",
-      "defenseEffect": "[1][5][6] Busque no seu deck por um androide, exceto Androide 19.\n[2][3][4] Criatura atacante -2 ATK.",
-      "mainEffect": "Quando você invocar uma criatura ganhe 1 de mana.\nQuando seu oponente invoca uma criatura perde 1 de mana.\nVocê só pode usar cada um dos efeitos uma vez por turno."
+      "attackEffect": "[1][3][5] -1 DEF para todas as criaturas do oponente.\n[2][4][6] -2 DEF para criatura do seu oponente.",
+      "defenseEffect": "[1][5][6] Busque no seu deck por um androide, exceto Androide 19 e adicione à mão.\n[2][3][4] Criatura atacante -2 ATK.",
+      "mainEffect": "Quando você invocar uma criatura ganhe 1 de MANA.\nQuando oponente invoca uma criatura perde -1 MANA.\nVocê só pode usar cada um dos efeitos uma vez por turno."
     },
     {
-      "id": 1776971720940,
+      "id": 3555237728486.8643,
       "name": "Saibaimen",
       "archetype": "Androide",
       "type": "creature",
       "attack": 1,
       "defense": 1,
-      "mana": 2,
+      "MANA": 2,
       "imageUrl": "https://static.wikia.nocookie.net/dragonball/images/8/8b/SaiabamenInfoBox.jpeg/revision/latest?cb=20141227155300&path-prefix=pt-br",
-      "attackEffect": "[1][2] Seu oponente não compra carta no próximo turno. [3][4] Descarte uma carta aleatória da mão do seu oponente. [5][6] Perde mana igual a metade do ataque da criatura atacante.",
-      "defenseEffect": "[1][2] Compre uma carta. | [3][4] Ganhe 2 de mana. | [5][6] Destrua a criatura que atacou essa carta.",
-      "mainEffect": "Após aplicar o efeito de defesa ou ataque esta carta deve ser enviada para a pilha de descarte."
+      "attackEffect": "[1][2] Oponente não compra carta no próximo turno. [3][4] Descarte uma carta da mão do seu oponente. [5][6] Perde MANA igual a metade do ataque da criatura atacante.",
+      "defenseEffect": "[1][2] Compre uma carta. | [3][4] Ganhe 2 de MANA. | [5][6] Destrua a criatura que atacou essa carta.",
+      "mainEffect": "Após aplicar o efeito de defesa ou ataque esta carta deve ser enviada para o descarte."
     },
     {
-      "id": 1778177163991,
+      "id": 3556443052387.3984,
       "name": "cover",
       "archetype": "",
       "type": "magic",
@@ -289,7 +705,7 @@
       "mainEffect": ""
     },
     {
-      "id": 1777993942612,
+      "id": 3556259833006.208,
       "name": "Equipamento de Recuperação",
       "archetype": "Digimon",
       "type": "magic",
@@ -302,7 +718,7 @@
       "mainEffect": "Retorne duas cartas DIGIMON do descarte para o deck, compre 1 carta. \nEscolha um DIGIMON em campo, Se ele vencer uma batalha: Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão"
     },
     {
-      "id": 1777993801934,
+      "id": 3556259695082.6367,
       "name": "Equipamento de Socorro",
       "archetype": "Digimon",
       "type": "magic",
@@ -315,7 +731,7 @@
       "mainEffect": "Escolha um DIGIMON em campo, Se ele vencer uma batalha: \nGanhe PV igual a DEF do defensor e Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão "
     },
     {
-      "id": 1777993573160,
+      "id": 3556259464418.869,
       "name": "Equipamento de batalha",
       "archetype": "Digimon",
       "type": "magic",
@@ -328,7 +744,7 @@
       "mainEffect": "+2 ATK ou +2 DEF para um DIGIMON\nSe ele vencer uma batalha: Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão"
     },
     {
-      "id": 1777993455002,
+      "id": 3556259349659.936,
       "name": "Culumon",
       "archetype": "Digimon",
       "type": "creature",
@@ -337,11 +753,11 @@
       "mana": 2,
       "imageUrl": "https://static.wikia.nocookie.net/digimon/images/6/68/Calumon.png/revision/latest?cb=20150410061244&path-prefix=es",
       "attackEffect": "[1]...[5] +1 PV\n[6] Ganhe PV igual ao DEF do defensor",
-      "defenseEffect": "[1][2][3] +1 PV\n[4][5] +2 PV | [6] Ganhe PV igual ao ATK do atacante",
+      "defenseEffect": "[1][2][3] +1 PV\n[4][5] +2 PV\n[6] Ganhe PV igual ao ATK do atacante",
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON com custo menor ou igual a [6] do deck para a mão"
     },
     {
-      "id": 1777993278614,
+      "id": 3556259168209.2773,
       "name": "Kyubimon",
       "archetype": "Digimon",
       "type": "creature",
@@ -354,7 +770,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma magia DIGIMON do descarte ou do deck para a mão"
     },
     {
-      "id": 1777993074546,
+      "id": 3556258971357.795,
       "name": "Gargomon",
       "archetype": "Digimon",
       "type": "creature",
@@ -362,12 +778,12 @@
       "defense": 6,
       "mana": 4,
       "imageUrl": "https://cosplayfu-website.s3.amazonaws.com/_Upload/b/83800-Gargomon-Cosplay-from-Digimon-Tamers-1-2.jpg",
-      "attackEffect": "[1][2][3] +1 ATK\n[4][5] +2 ATK | [6] +Volte o defensor para a mão",
-      "defenseEffect": "[1][2][3] +1 DEF\n[4][5] +2 DEF | [6] +Volte o atacante para a mão",
-      "mainEffect": "AO ENTRAR: Descarte um DIGIMON do campo para voltar para a mão uma criatura com o custo menor ou igual do que o descartado"
+      "attackEffect": "[1][2][3] +1 ATK\n[4][5] +2 ATK | [6] Volte o defensor para a mão",
+      "defenseEffect": "[1][2][3] +1 DEF\n[4][5] +2 DEF | [6] Volte o atacante para a mão",
+      "mainEffect": "AO ENTRAR: Descarte um DIGIMON da mão para voltar para a mão do dono uma criatura em campo com o custo menor ou igual do que o descartado"
     },
     {
-      "id": 1777992921537,
+      "id": 3556258809092.294,
       "name": "Growlmon",
       "archetype": "Digimon",
       "type": "creature",
@@ -380,7 +796,7 @@
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON do descarte para a mão."
     },
     {
-      "id": 1777901674346,
+      "id": 3556167568089.3535,
       "name": "O determinado Zatch",
       "archetype": "Mamodo",
       "type": "creature",
@@ -393,7 +809,7 @@
       "mainEffect": "AO ENTRAR: escolha uma outra criatura MAMODO em campo, enquanto esta carta estiver em campo a outra criatura não pode ser atacada.\nNO DESCARTE: Este card  é considerado como Zatch Bell."
     },
     {
-      "id": 1777899935471,
+      "id": 3556165825892.213,
       "name": "Tia",
       "archetype": "Mamodo",
       "type": "creature",
@@ -406,7 +822,7 @@
       "mainEffect": "AO ENTRAR: envie um MAMODO do deck para o descarte e  ganhe PV igual seu custo de mana"
     },
     {
-      "id": 1777148857185,
+      "id": 3555414748934.8467,
       "name": "cover",
       "archetype": "",
       "type": "magic",
@@ -419,7 +835,7 @@
       "mainEffect": ""
     },
     {
-      "id": 1777066783961,
+      "id": 3555332677877.3027,
       "name": "O livro dos Mamodos",
       "archetype": "Mamodo",
       "type": "magic",
@@ -432,7 +848,7 @@
       "mainEffect": "Adicione uma criatura MAMODO do deck ou descarte para a mão"
     },
     {
-      "id": 1777066724690,
+      "id": 3555332612120.694,
       "name": "Kiyo e Zatch",
       "archetype": "Mamodo",
       "type": "creature",
@@ -445,7 +861,7 @@
       "mainEffect": "EM CAMPO: +2 ATK e +2 DEF para outros MAMODOS em campo. \nNão pode ser atacado se houver outros MAMODOS em campo."
     },
     {
-      "id": 1777066616037,
+      "id": 3555332509719.768,
       "name": "Mestres de Mamodo",
       "archetype": "Mamodo",
       "type": "magic",
@@ -458,7 +874,7 @@
       "mainEffect": "Perca -5PV: Adicione um MAMODO do descarte para mão com custo menor que [4]. Se jogar ele neste turno ele ganha +5 ATK."
     },
     {
-      "id": 1777066435282,
+      "id": 3555332325265.498,
       "name": "Traição",
       "archetype": "Mamodo",
       "type": "magic",
@@ -471,8 +887,8 @@
       "mainEffect": "Envie um MAMODO do deck para o descarte, ganhe ATK e DEF igual aos da criatura descartada"
     },
     {
-      "id": 1777066353476,
-      "name": "Dufort",
+      "id": 3555332240866.4194,
+      "name": "Aniquilação",
       "archetype": "Mamodo",
       "type": "magic",
       "attack": 5,
@@ -481,15 +897,15 @@
       "imageUrl": "https://static.wikia.nocookie.net/zatchbell/images/7/77/Jigadirasu_Uru_Zakeruga.png/revision/latest/scale-to-width-down/985?cb=20250911213809",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Jogue até duas criaturas MAMODO do descarte cuja soma dos custos seja até 8 sem pagar o custo. Diminua o ATK de uma criatura adversária pela soma dos ATK das criaturas escolhidas."
+      "mainEffect": "Se você controlar um MAMODO: Destrua todas as criaturas em campo. Adicione um MAMODO com custo menor ou igual a [4] do descarte para a mão."
     },
     {
-      "id": 1777066131704,
+      "id": 3555332027238.5283,
       "name": "Zeno Bell",
       "archetype": "Mamodo",
       "type": "creature",
-      "attack": 7,
-      "defense": 4,
+      "attack": 9,
+      "defense": 5,
       "mana": 8,
       "imageUrl": "https://cdn.anisearch.com/images/character/cover/88/88518_400.webp",
       "attackEffect": "[1]...[4] +3 ATK\n[5][6] Envie um MAMODO para o descarte para ganhar ATK igual ao seu ATK",
@@ -497,8 +913,8 @@
       "mainEffect": "EM CAMPO: +1 ATK para cada MAMODO no descarte\nSE FOR DERROTADO: Envie um MAMODO para o descarte no lugar desta carta"
     },
     {
-      "id": 1777065892168,
-      "name": "Draco",
+      "id": 3555331788530.7246,
+      "name": "Brago",
       "archetype": "Mamodo",
       "type": "creature",
       "attack": 6,
@@ -510,7 +926,7 @@
       "mainEffect": "AO SER DERROTADO: Envie para o descarte todas as suas criaturas (min. 1) para jogar esta carta em campo sem pagar seu custo"
     },
     {
-      "id": 1777065647776,
+      "id": 3555331536818.8086,
       "name": "Relíquia de amizade",
       "archetype": "Mamodo",
       "type": "magic",
@@ -523,7 +939,7 @@
       "mainEffect": "Adicione uma magia MAMODO do descarte para a mão e então você pode enviar uma criatura MAMODO do campo para o descarte para ganhar mana igual seu custo."
     },
     {
-      "id": 1777065550941,
+      "id": 3555331440221.5815,
       "name": "Tia e Megumi",
       "archetype": "Mamodo",
       "type": "creature",
@@ -536,7 +952,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma magia MAMODO do deck para a mão"
     },
     {
-      "id": 3554102876153.8306,
+      "id": 5332368771297.213,
       "name": "Ponygon",
       "archetype": "Mamodo",
       "type": "creature",
@@ -545,11 +961,11 @@
       "mana": 1,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz1PRYF5aAfVumEOBMWMFVvZiNjgn7GI0CswOQMowei7kUcqj-9Y7Qoos&s=10",
       "attackEffect": "[1]...[3] compre 1 carta\n[4]...[6] + 1 ATK (permanente) - 1 PV",
-      "defenseEffect": "[1]...[3] Se ATK atacante maior que 3, cancele a batalha\n[4]...[6] Adicione um Zatch Bell do deck para a mão",
-      "mainEffect": "AO SER DERROTADO: Jogue um Zatch Bell do descarte ou da mão sem pagar o custo"
+      "defenseEffect": "[1]...[3] Se ATK atacante maior que 3, cancele a batalha\n[4]...[6] Adicione uma carta que contenha \"Zatch\" no nome do deck para a mão com custo menor ou igual a [6]",
+      "mainEffect": "AO SER DERROTADO: Jogue uma carta que contenha \"Zatch\" no nome da mão sem pagar o custo"
     },
     {
-      "id": 3554102419600.701,
+      "id": 5332368316268.679,
       "name": "Amizade cativante",
       "archetype": "Mamodo",
       "type": "magic",
@@ -562,7 +978,7 @@
       "mainEffect": "Adicione 2 criaturas Mamodo do deck ou descarte para a mão cujo custo somado seja [4]"
     },
     {
-      "id": 3554102278829.7637,
+      "id": 5332368172023.656,
       "name": "Zaguruzen",
       "archetype": "Mamodo",
       "type": "magic",
@@ -575,7 +991,7 @@
       "mainEffect": "+4 ATK\nSe a criatura alvo vencer a batalha: adicione para a mão um MAMODO do descarte."
     },
     {
-      "id": 3554102069928.903,
+      "id": 5332367957524.184,
       "name": "Zatch Bell",
       "archetype": "Mamodo",
       "type": "creature",
@@ -588,7 +1004,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma magia MAMODO do deck ou descarte para a mão. Descarte um MAMODO do campo para ganhar mana igual ao seu custo."
     },
     {
-      "id": 3554040176799.6934,
+      "id": 5332306074020.058,
       "name": "Gummymon",
       "archetype": "Digimon",
       "type": "creature",
@@ -601,7 +1017,7 @@
       "mainEffect": "AO SER DERROTADO: Adicione uma carta DIGIMON do deck para a mão com custo menor que [6]"
     },
     {
-      "id": 3554040085575.332,
+      "id": 5332305974160.092,
       "name": "Viximon",
       "archetype": "Digimon",
       "type": "creature",
@@ -614,7 +1030,7 @@
       "mainEffect": "AO ENTRAR: Adicione do deck para a mão uma magia DIGIMON com custo menor que [6]"
     },
     {
-      "id": 3554039974753.1484,
+      "id": 5332305866708.93,
       "name": "Gigimon",
       "archetype": "Digimon",
       "type": "creature",
@@ -627,7 +1043,7 @@
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON do deck para a mão com custo menor que [6]"
     },
     {
-      "id": 3554039777147.793,
+      "id": 5332305672093.139,
       "name": "Raptando os novatos",
       "archetype": "Digimon",
       "type": "magic",
@@ -640,7 +1056,7 @@
       "mainEffect": "Descarte 1 Digimon do campo e mova para o descarte um digimon adversário com custo menos que seu custo de mana"
     },
     {
-      "id": 3554039685193.665,
+      "id": 5332305578087.973,
       "name": "Assombração digital",
       "archetype": "Digimon",
       "type": "magic",
@@ -653,7 +1069,7 @@
       "mainEffect": "Escolha 1 DIGIMON, neste turno, se ele vencer uma batalha: ganhe PV igual a defesa do defensor"
     },
     {
-      "id": 3554039571440.178,
+      "id": 5332305461331.647,
       "name": "Mundo digital",
       "archetype": "Digimon",
       "type": "magic",
@@ -666,7 +1082,7 @@
       "mainEffect": "Soma ou subtraia até +3 ou -3 no resultado de um dado. Perca -2 PV vezes a quantidade escolhida"
     },
     {
-      "id": 3554039423413.392,
+      "id": 5332305312742.363,
       "name": "Taomon",
       "archetype": "Digimon",
       "type": "creature",
@@ -679,12 +1095,12 @@
       "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta pelo custo de mana do DIGIMON enviado (min 1.)"
     },
     {
-      "id": 3554039116999.3535,
+      "id": 5332305004879.372,
       "name": "Sakuyamon",
       "archetype": "Digimon",
       "type": "creature",
       "attack": 7,
-      "defense": 12,
+      "defense": 10,
       "mana": 10,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGE6-JML1oRSBrqrhrsfnboJDIHtjqgylbWA&s",
       "attackEffect": "[1]...[3] +2 ATK |  [4][5] +3 ATK\n[6] Descarte uma magia DIGIMON do deck, ganhe ATK igual seu custo de mana",
@@ -692,7 +1108,7 @@
       "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta em [3]"
     },
     {
-      "id": 3554038833858.325,
+      "id": 5332304722182.957,
       "name": "Renamon",
       "archetype": "Digimon",
       "type": "creature",
@@ -705,33 +1121,33 @@
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON do deck para a mão"
     },
     {
-      "id": 3554038381992.7974,
+      "id": 5332304278615.898,
       "name": "Rapidimon",
       "archetype": "Digimon",
       "type": "creature",
-      "attack": 9,
+      "attack": 6,
       "defense": 4,
-      "mana": 8,
+      "mana": 6,
       "imageUrl": "https://cdn.anisearch.com/images/character/screen/31/31632/full/237759.webp",
-      "attackEffect": "[1]...[4] +2 ATK\n[5][6] Volte um DIGIMON no seu campo para a mão, ganhe ATK igual seu custo de mana",
-      "defenseEffect": "[1]...[3] +2 DEF | [4] +3 DEF\n[5][6] Volte um DIGIMON no seu campo para a mão, ganhe DEF igual seu custo de mana",
-      "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta em [3]"
+      "attackEffect": "[1]...[4] +2 ATK\n[5][6] Volte um DIGIMON no descarte para a mão, ganhe ATK igual seu custo de mana",
+      "defenseEffect": "[1]...[3] +2 DEF | [4] +3 DEF\n[5][6] Volte um DIGIMON no seu descarte para a mão, ganhe DEF igual seu custo de mana",
+      "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta pelo custo de mana do DIGIMON enviado (min 1)"
     },
     {
-      "id": 3554037996387.4385,
+      "id": 5332303885463.23,
       "name": "MegaGargomon",
       "archetype": "Digimon",
       "type": "creature",
-      "attack": 4,
-      "defense": 6,
-      "mana": 7,
+      "attack": 7,
+      "defense": 8,
+      "mana": 8,
       "imageUrl": "https://i.pinimg.com/736x/63/8c/ce/638cce546f4778a84425b098e396531d.jpg",
-      "attackEffect": "[1]...[4] +2 ATK\n[5][6] -5 PV, volte o defensor para a mão",
-      "defenseEffect": "[1]...[4] +3 DEF\n[5][6] -5 PV, volte o atacante para a mão",
-      "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta pelo custo de mana do DIGIMON enviado"
+      "attackEffect": "[1]...[4] +2 ATK\n[5][6] -2 PV, volte o defensor para a mão",
+      "defenseEffect": "[1]...[4] +3 DEF\n[5][6] -2 PV, volte o atacante para a mão",
+      "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta em [3]"
     },
     {
-      "id": 3554037686739.194,
+      "id": 5332303575302.691,
       "name": "Terriermon",
       "archetype": "Digimon",
       "type": "creature",
@@ -744,7 +1160,7 @@
       "mainEffect": "AO ENTRAR: Adicionei uma magia DIGIMON do descarte para a mão"
     },
     {
-      "id": 3554036217465.043,
+      "id": 5332302107157.707,
       "name": "Cura necessária",
       "archetype": "",
       "type": "magic",
@@ -757,7 +1173,7 @@
       "mainEffect": "Recupere 2 PV. Você pode pagar até mais 4 de MANA, recupere o mesmo tanto de PV"
     },
     {
-      "id": 3554032034469.454,
+      "id": 5332297925774.427,
       "name": "Investigando com demônios",
       "archetype": "Infernal",
       "type": "magic",
@@ -770,7 +1186,7 @@
       "mainEffect": "Role um dado: olhe a quantidade de cartas no topo do deck igual ao resultado, adicione uma carta INFERNAL com custo menor ou igual que o custo da maior carta que o adversário controla para a mão. Perca PV igual ao seu custo de mana."
     },
     {
-      "id": 3554031709458.7246,
+      "id": 5332297602913.112,
       "name": "Negociando com demônios",
       "archetype": "Infernal",
       "type": "magic",
@@ -783,7 +1199,7 @@
       "mainEffect": "Role um dado: seu adversário perde PV igual ao resultado obtido"
     },
     {
-      "id": 3554031469823.3926,
+      "id": 5332297366976.438,
       "name": "King Hellboy",
       "archetype": "Infernal",
       "type": "creature",
@@ -796,7 +1212,7 @@
       "mainEffect": "AO SER DERROTADO: Pague -6 PV para jogar estar carta em campo do descarte"
     },
     {
-      "id": 3554031028234.913,
+      "id": 5332296921630.402,
       "name": "Abe Sapien",
       "archetype": "Infernal",
       "type": "creature",
@@ -809,7 +1225,7 @@
       "mainEffect": "AO SER DERROTADO: Volte uma magia INFERNAL do descarte para a mão"
     },
     {
-      "id": 3554030442102.1807,
+      "id": 5332296338135.522,
       "name": "Liz Sherman",
       "archetype": "Infernal",
       "type": "creature",
@@ -822,7 +1238,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma carta INFERNAL do deck para a mão"
     },
     {
-      "id": 3554029929336.3994,
+      "id": 5332295818655.93,
       "name": "Lutando contra demônios",
       "archetype": "Infernal",
       "type": "magic",
@@ -835,7 +1251,7 @@
       "mainEffect": "Descarte um Infernal: cause dano ao PV adversário igual ao custo de mana da carta descartada"
     },
     {
-      "id": 3554029839571.4966,
+      "id": 5332295733117.902,
       "name": "Tiro Infernal",
       "archetype": "Infernal",
       "type": "magic",
@@ -848,7 +1264,7 @@
       "mainEffect": "Cause 3 de dano ao PV adversário"
     },
     {
-      "id": 3554029551831.9297,
+      "id": 5332295449099.388,
       "name": "Hellboy",
       "archetype": "Infernal",
       "type": "creature",
@@ -861,25 +1277,25 @@
       "mainEffect": "AO ENTRAR: Pague até 5 de MANA para diminuir o PV adversário pelo mesmo número"
     },
     {
-      "id": 3554029146501.024,
+      "id": 5332295041613.867,
       "name": "Digivice boost",
       "archetype": "Digimon",
       "type": "magic",
       "attack": 5,
       "defense": 5,
-      "mana": 2,
+      "mana": 3,
       "imageUrl": "https://static.wikia.nocookie.net/digimonat/images/3/35/Adventure_20_-_DigiVice_Taichi.jpg/revision/latest?cb=20210929033406&path-prefix=pt",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Descarte um DIGIMON do campo, jogue um DIGIMON da sua mão com custo reduzido igual ao custo da criatura descartada"
+      "mainEffect": "Descarte um DIGIMON da mão e ganhe mana igual ao custo da criatura descartada"
     },
     {
-      "id": 3554028845357.3276,
+      "id": 5332294737438.521,
       "name": "Dukemon Carmesin",
       "archetype": "Digimon",
       "type": "creature",
-      "attack": 12,
-      "defense": 10,
+      "attack": 10,
+      "defense": 8,
       "mana": 12,
       "imageUrl": "https://i.pinimg.com/736x/93/39/b7/9339b70556e768efcac646150ea21dae.jpg",
       "attackEffect": "[1]...[4] Adicione uma magia DIGIMON do deck para a mão +2 MANA\n[5][6] Pague X de mana +2 ATK para cada X",
@@ -887,7 +1303,7 @@
       "mainEffect": "Você pode descartar um DIGIMON em campo para reduzir o custo de mana desta carta em [4]"
     },
     {
-      "id": 3554028530821.043,
+      "id": 5332294425645.607,
       "name": "Dukemon",
       "archetype": "Digimon",
       "type": "creature",
@@ -900,7 +1316,7 @@
       "mainEffect": "Você pode descartar um DIGIMON em campo para reduzir o custo de mana desta carta pelo custo de mana da carta descartada (min 1)"
     },
     {
-      "id": 3554028391290.885,
+      "id": 5332294286696.048,
       "name": "War Growlmon",
       "archetype": "Digimon",
       "type": "creature",
@@ -913,7 +1329,7 @@
       "mainEffect": "Você pode descartar um DIGIMON em campo para reduzir o custo de mana desta carta pelo custo de mana da carta descartada (min 1)"
     },
     {
-      "id": 3554028220421.583,
+      "id": 5332294115633.652,
       "name": "Guilmon",
       "archetype": "Digimon",
       "type": "creature",
@@ -926,7 +1342,7 @@
       "mainEffect": "AO SER DERROTADO: Adicione um DIGIMON com custo [4] ou [5] do deck ou descarte para a mão"
     },
     {
-      "id": 3554026201036.882,
+      "id": 5332292092076.73,
       "name": "Mestre Ancião",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -939,7 +1355,7 @@
       "mainEffect": "AO ENTRAR: Role um dado e adicione uma carta CAVALEIRO do descarte com custo menor ou igual ao resultado"
     },
     {
-      "id": 3554025803603.2188,
+      "id": 5332291694055.723,
       "name": "Cavaleiro de Áries",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -952,7 +1368,7 @@
       "mainEffect": "AO SER DERROTADO: adicione um DEUSA ATENA do deck ou descarte para a mão"
     },
     {
-      "id": 5330983589098.945,
+      "id": 7109249476946.83,
       "name": "Cavaleiro de Cobra",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -965,20 +1381,20 @@
       "mainEffect": "AO ENTRAR: Adicione uma carta CAVALEIRO com custo de mana menor que 4 do descarte para a mão."
     },
     {
-      "id": 3554024082816.7896,
+      "id": 5332289973651.243,
       "name": "Mestre de Águia",
       "archetype": "Cavaleiro",
       "type": "creature",
       "attack": 5,
       "defense": 4,
-      "mana": 4,
+      "mana": 5,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRocSMj-Jn0Btm44YVkSlDbi_h35fzl_UEt_Q&s",
-      "attackEffect": "[1][2][3] +2 ATK\n[4][5] +3 ATK\n[6] Envie uma Criatura CAVALEIRO do campo para o descarte para ganhar ATK igual ao seu ATK",
-      "defenseEffect": "[1][2][3] +2 DEF\n[4][5] +2 DEF para cada CAVALEIRO DE PÉGASO no campo ou descarte\n[6] Envie uma Criatura CAVALEIRO do campo para o descarte para ganhar DEF igual ao seu DEF",
-      "mainEffect": "AO ENTRAR: Adicione um CAVALEIRO DE PÉGASO do deck ou descarte para a mão.\nNO CAMPO: Todos CAVALEIRO DE PÉGASO ganham +2ATk +2 DEF"
+      "attackEffect": "[1][2][3] +2 ATK | [4][5] +3 ATK\n[6] Envie uma Criatura CAVALEIRO da mão para o descarte para ganhar ATK igual ao seu ATK",
+      "defenseEffect": "[1][2][3] +2 DEF | [4][5] +3 DEF \n[6] Envie uma Criatura CAVALEIRO da mão para o descarte para ganhar DEF igual ao seu DEF",
+      "mainEffect": "AO ENTRAR: Adicione um CAVALEIRO do deck ou descarte para a mão.\nNO CAMPO: Todos CAVALEIRO ganham +2 ATK +2 DEF"
     },
     {
-      "id": 3554023779075.259,
+      "id": 5332289671972.038,
       "name": "Meteoro de Pégaso",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -991,7 +1407,7 @@
       "mainEffect": "+3 ATK\nSE Cavaleiro de Pégaso está balhando e VENCER a batalha: Adicione um MESTRE DE AGUIA do deck para a mão e ganhe 2 de mana"
     },
     {
-      "id": 3554023502626.852,
+      "id": 5332289394914.644,
       "name": "Tempestade Nebulosa",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -1004,7 +1420,7 @@
       "mainEffect": "SE Cavaleiro de Andrômeda está em campo: reduza o custo desta carta em 2.\nRole um dado e diminua a DEF de todas criaturas adversárias pelo resultado obtido. Retorne para a mão todas as criaturas que tiveram a DEF zerada por este efeito."
     },
     {
-      "id": 3554022837817.1006,
+      "id": 5332288727845.015,
       "name": "Cavaleiro Aprendiz",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1017,7 +1433,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma criatura CAVALEIRO do deck ou descarte para a mão com custo de mana menor que 5"
     },
     {
-      "id": 3554015251209.5156,
+      "id": 5332281146463.539,
       "name": "Cavaleiro de Cisne",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1030,7 +1446,7 @@
       "mainEffect": "AO ENTRAR: Role um dado, volte uma magia Cavaleiro do descarte para a mão com custo de mana menor ou igual que o resultado obtido"
     },
     {
-      "id": 5327758428936.691,
+      "id": 7106024316493.25,
       "name": "Mago da IA",
       "type": "",
       "attack": 0,
@@ -1042,7 +1458,7 @@
       "mainEffect": "[1][2] Ganhe 1 de vida | [3][4][5][6] Ganhe 2 de vida"
     },
     {
-      "id": 5327758272432.442,
+      "id": 7106024159909.727,
       "name": "Mago Vampiresco",
       "type": "creature",
       "attack": 5,
@@ -1054,7 +1470,7 @@
       "mainEffect": "CONTÍNUO: Quando derrotar uma criatura, ganhe PV igual a mana do defensor derrotado"
     },
     {
-      "id": 5327738620801.784,
+      "id": 7106004515465.918,
       "name": "Ganância",
       "type": "magic",
       "attack": 0,
@@ -1066,7 +1482,7 @@
       "mainEffect": "Role um dado. Compre cartas igual ao número obtido."
     },
     {
-      "id": 5327738454008.506,
+      "id": 7106004346164.963,
       "name": "Magia da fortuna",
       "type": "magic",
       "attack": 0,
@@ -1078,7 +1494,7 @@
       "mainEffect": "[1] compre 3 cartas\n[2] [3] [4] [5] compre 1 carta\n[6] descarte 1 carta"
     },
     {
-      "id": 5327731834679.977,
+      "id": 7105997731402.383,
       "name": "Mago Vampiresco",
       "type": "creature",
       "attack": 5,
@@ -1090,7 +1506,7 @@
       "mainEffect": "CONTÍNUO: Quando derrotar uma criatura, ganhe PV igual a mana do defensor derrotado"
     },
     {
-      "id": 5327728756944.516,
+      "id": 7105994648845.052,
       "name": "Mago da IA",
       "attack": 5,
       "defense": 5,
@@ -1100,7 +1516,7 @@
       "defenseEffect": "🎲 Ao defender, role um dado de 6 faces:\n• Se 1-2: +2 de defesa\n• Se 3-5: +5 de defesa\n• Se 6: +8 de defesa"
     },
     {
-      "id": 5327729070131.714,
+      "id": 7105994966965.439,
       "name": "livro do caos",
       "attack": 5,
       "defense": 5,
@@ -1110,7 +1526,7 @@
       "defenseEffect": ""
     },
     {
-      "id": 5327729875828.906,
+      "id": 7105995770890.65,
       "name": "Livro da sabedoria",
       "attack": 0,
       "defense": 0,
@@ -1120,7 +1536,7 @@
       "defenseEffect": ""
     },
     {
-      "id": 5327731245934.817,
+      "id": 7105997141512.32,
       "name": "Magia avançada",
       "type": "magic",
       "attack": 0,
@@ -1132,7 +1548,7 @@
       "mainEffect": "[1] compre 3 cartas\n[2] [3] [4] [5] compre 1 carta\n[6] descarte 1 carta"
     },
     {
-      "id": 3552338102274.696,
+      "id": 5330603990913.631,
       "name": "Fogarimon",
       "archetype": "",
       "type": "creature",
@@ -1145,7 +1561,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 3552337980217.3916,
+      "id": 5330603868398.846,
       "name": "Vortexmon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -1158,7 +1574,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 3552337859574.2236,
+      "id": 5330603755545.713,
       "name": "Rinovortexmon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -1171,7 +1587,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 3552337708109.966,
+      "id": 5330603596687.1045,
       "name": "Voltramon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -1184,7 +1600,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 3552337601111.711,
+      "id": 5330603494106.148,
       "name": "Anfibimon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -1197,7 +1613,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 3552337384646.4775,
+      "id": 5330603276449.38,
       "name": "Inferno Furia",
       "archetype": "Fakemon",
       "type": "magic",
@@ -1210,7 +1626,7 @@
       "mainEffect": "Escolha um DIGIMON em campo e role um dado\n[2][4][6] todas as criaturas adversárias perdem ATK igual ao seu ATK\n[1][3][5] todas as criaturas adversárias perdem ATK igual a sua DEF"
     },
     {
-      "id": 3552337276110.3384,
+      "id": 5330603166634.227,
       "name": "Lamina de Dados",
       "archetype": "Fakemon",
       "type": "magic",
@@ -1223,7 +1639,7 @@
       "mainEffect": "+3 ATK para o DIGIMON alvo. Se o DIGIMON alvo ganhar o combate: adicione uma magia DIGIMON do deck para a mão."
     },
     {
-      "id": 3552337196421.876,
+      "id": 5330603092023.053,
       "name": "Barragem Espinhosa",
       "archetype": "Fakemon",
       "type": "magic",
@@ -1236,7 +1652,7 @@
       "mainEffect": "Escolha um Digimon em campo. Neste turno ele não pode atacar. Cause dano ao PV de ambos jogadores igual ao seu ATK."
     },
     {
-      "id": 3552337130711.9688,
+      "id": 5330603018869.178,
       "name": "Super Carga Elétrica",
       "archetype": "Fakemon",
       "type": "magic",
@@ -1249,7 +1665,7 @@
       "mainEffect": "Role um dado: ganhe ATK ou DEF igual ao resultado obtido"
     },
     {
-      "id": 3552337083345.969,
+      "id": 5330602970889.611,
       "name": "Portal Espiritual",
       "archetype": "Fakemon",
       "type": "magic",
@@ -1262,7 +1678,7 @@
       "mainEffect": "Adicione uma carta DIGIMON do deck para sua mão"
     },
     {
-      "id": 3552336384402.967,
+      "id": 5330602278964.092,
       "name": "Fofuxo",
       "archetype": "Medabot",
       "type": "creature",
@@ -1275,7 +1691,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você pode pagar PV para jogar uma carta MEDABOT ao invés do seu custo de mana."
     },
     {
-      "id": 3552336186876.1094,
+      "id": 5330602077089.547,
       "name": "Ciandog",
       "archetype": "Medabot",
       "type": "creature",
@@ -1288,7 +1704,7 @@
       "mainEffect": "AO ENTRAR: descarte uma carta da mão: adicione uma criatura MEDABOT do deck para mão"
     },
     {
-      "id": 3552335985261.6504,
+      "id": 5330601875052.483,
       "name": "Peppacat",
       "archetype": "Medabot",
       "type": "creature",
@@ -1301,7 +1717,7 @@
       "mainEffect": ""
     },
     {
-      "id": 3552335874797.9756,
+      "id": 5330601770028.199,
       "name": "Explosão de mísseis",
       "archetype": "Medabot",
       "type": "magic",
@@ -1314,7 +1730,7 @@
       "mainEffect": "Role um dado, diminua a defesa de todas criaturas adversárias igual ao resultado obtido."
     },
     {
-      "id": 3552335621631.9883,
+      "id": 5330601516794.069,
       "name": "Canhões não bastam",
       "archetype": "Medabot",
       "type": "magic",
@@ -1327,7 +1743,7 @@
       "mainEffect": "Descarte 3 cartas do topo do deck, escolha uma carta entre as descartadas e adicione a mão. Escolha um MEDABOT para ganhar ATK ou DEF igual ao custo de mana da carta escolhida."
     },
     {
-      "id": 3552335590897.465,
+      "id": 5330601484686.787,
       "name": "Fênix",
       "archetype": "Medabot",
       "type": "creature",
@@ -1340,7 +1756,7 @@
       "mainEffect": ""
     },
     {
-      "id": 3552335350942.5537,
+      "id": 5330601246831.357,
       "name": "Lâmina de combate",
       "archetype": "Medabot",
       "type": "magic",
@@ -1353,7 +1769,7 @@
       "mainEffect": "Descarte um MEDABOT da mão, escolha uma criatura para ganhar ATK igual ao custo de mana da carta descartada."
     },
     {
-      "id": 3552335165526.5835,
+      "id": 5330601058418.518,
       "name": "Agilidade robótica",
       "archetype": "Medabot",
       "type": "magic",
@@ -1366,7 +1782,7 @@
       "mainEffect": "Role um dado, adicione do seu descarte para mão uma carta MEDABOT com custo de mana menor que o resultado obtido"
     },
     {
-      "id": 3552335084094.3115,
+      "id": 5330600973112.466,
       "name": "Kabuto",
       "archetype": "Medabot",
       "type": "creature",
@@ -1379,7 +1795,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma carta MEDABOT do deck para mão"
     },
     {
-      "id": 3552334927186.2983,
+      "id": 5330600816411.959,
       "name": "Barreira de energia",
       "archetype": "Medabot",
       "type": "magic",
@@ -1392,7 +1808,7 @@
       "mainEffect": "Adicione +3 ao bônus de ATK ou DEF para um MEDABOT"
     },
     {
-      "id": 3552231861625.287,
+      "id": 5330497750121.021,
       "name": "Cavaleiro de Andrômeda",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1405,7 +1821,7 @@
       "mainEffect": "CASO SEJA DERROTADO: Adicione um CAVALEIRO DE FENIX do deck ou descarte para a mão. No seu próximo turno ganhe +3 de MANA"
     },
     {
-      "id": 3552231651616.8,
+      "id": 5330497546868.117,
       "name": "Mago do Caos",
       "archetype": "Mago",
       "type": "creature",
@@ -1418,7 +1834,7 @@
       "mainEffect": "AO ENTRAR: [1]...[6] olhe no topo do seu deck igual ao resultado, adicione quaisquer cartas \"MAGO\" para a mão."
     },
     {
-      "id": 3552231097215.302,
+      "id": 5330496984698.141,
       "name": "Cavaleiro de Dragão",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1431,7 +1847,7 @@
       "mainEffect": "APÒS O COMBATE: Se Cavaleiro de Dragão não for derrotado nesta batalha, adicione uma criatura \"Cavaleiro\" do deck para a mão."
     },
     {
-      "id": 3552231085009.8145,
+      "id": 5330496980847.223,
       "name": "Luffy",
       "archetype": "Pirata",
       "type": "creature",
@@ -1444,7 +1860,7 @@
       "mainEffect": "QUANDO ENTRAR EM CAMPO: Adicione do deck para mão uma carta \"Pirata\"."
     },
     {
-      "id": 3552231071691.4805,
+      "id": 5330496966796.327,
       "name": "Dragão Azul",
       "archetype": "Dragão Azul",
       "type": "creature",
@@ -1457,7 +1873,7 @@
       "mainEffect": "AO ENTRAR NO CAMPO: escolha uma criatura oponente, role um dado, se cair um valor menor que o custo de mana dele, envie a criatura para o descarte "
     },
     {
-      "id": 3552230624447.744,
+      "id": 5330496512824.4,
       "name": "Mago da Destruição",
       "archetype": "Mago",
       "type": "creature",
@@ -1470,7 +1886,7 @@
       "mainEffect": "AO ENTRAR EM CAMPO: Compre 3 cartas e descarte 2"
     },
     {
-      "id": 3552229737792.127,
+      "id": 5330495625778.124,
       "name": "Deusa Atena",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1483,7 +1899,7 @@
       "mainEffect": "ENQUANTO ESTIVER EM CAMPO: Todos os outros Cavaleiros ganham +3 ATK e +3 DEF"
     },
     {
-      "id": 3552162242315.7583,
+      "id": 5330428139379.39,
       "name": "Cavaleiro de Andrômeda",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1496,7 +1912,7 @@
       "mainEffect": "CASO SEJA DERROTADO: Adicione um CAVALEIRO DE FENIX do deck ou descarte para a mão. No seu próximo turno ganhe +3 de MANA"
     },
     {
-      "id": 3552161831885.6445,
+      "id": 5330427720788.114,
       "name": "Cavaleiro de Fênix",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1509,7 +1925,7 @@
       "mainEffect": "QUANDO FOR DERROTADO: Descarte 2 cartas da mão para jogar esta carta em campo"
     },
     {
-      "id": 3552161611776.2817,
+      "id": 5330427504161.835,
       "name": "Escudo de Cavaleiro",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -1522,7 +1938,7 @@
       "mainEffect": "+ 2 DEF para o alvo. Se for um CAVALEIRO +5"
     },
     {
-      "id": 3552146217484.2153,
+      "id": 5330412105137.381,
       "name": "Beyblade - batalha",
       "type": "magic",
       "attack": 0,
@@ -1534,7 +1950,7 @@
       "mainEffect": "Role um dado (de qualquer lado) novamente."
     },
     {
-      "id": 3552146172590.6133,
+      "id": 5330412068402.434,
       "name": "Beyblade -  Dragon",
       "type": "creature",
       "attack": 4,
@@ -1546,7 +1962,7 @@
       "mainEffect": "QUANDO FOR DERROTADO: Adicione uma carta \"Beyblade\" do deck para a mão."
     },
     {
-      "id": 3552145055820.815,
+      "id": 5330410952061.276,
       "name": "O Samurai",
       "type": "creature",
       "attack": 5,
@@ -1558,7 +1974,7 @@
       "mainEffect": ""
     },
     {
-      "id": 3552144583133.117,
+      "id": 5330410474315.145,
       "name": "Medabot - Kabuto",
       "type": "creature",
       "attack": 4,
@@ -1570,7 +1986,7 @@
       "mainEffect": "NA INVOCAÇÂO: Role um dado, caso o resultado seja [6] adicione 2 cartas \"MEDAPEÇA\" do seu deck à sua mão. Caso contrário adicione 1 carta \"MEDAPEÇA\""
     },
     {
-      "id": 3552144215251.169,
+      "id": 5330410105331.789,
       "name": "Treinamento de Cavaleiro",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -1583,7 +1999,7 @@
       "mainEffect": "+1 ou -1 (para qualquer um dos lados) no resultado de um dado em um combate envolvendo um cavaleiro."
     },
     {
-      "id": 3552143839983.1875,
+      "id": 5330409729405.727,
       "name": "Armadura dourada",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -1596,7 +2012,7 @@
       "mainEffect": "Neste turno soma ou subtraia +1 ou +2 a um lançamento de dado de uma carta \"Cavaleiro\""
     },
     {
-      "id": 3552142728992.05,
+      "id": 5330408624406.822,
       "name": "Cavaleiro de Pégaso",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1609,111 +2025,111 @@
       "mainEffect": ""
     },
     {
-      "id": 3552659733882.168,
+      "id": 5330925746247.595,
       "name": "Goku SS2",
       "archetype": "Saiyajin",
       "type": "creature",
       "attack": 4,
       "defense": 3,
-      "mana": 3,
+      "MANA": 3,
       "imageUrl": "https://preview.redd.it/i-think-ssj2-is-gokus-best-looking-form-v0-nkkfzfj5vnte1.jpeg?auto=webp&s=22c3fe7e5d66338da8e1af04208567a24b792073",
-      "attackEffect": "[1][2][3][4] +2 de ataque | [5][6] +3 de ataque",
-      "defenseEffect": "[1][2][3][4] +2 de defesa | [5][6] +3 de defesa",
-      "mainEffect": "Antes de terminar o turno jogue um dado, se o resultado for [2][4][6], troque essa carta pelo Goku SS4, no deck ou na mão."
+      "attackEffect": "[1][2][3][4] +2 ATK | [5][6] +3 ATK",
+      "defenseEffect": "[1][2][3][4] +2 DEF | [5][6] +3 DEF",
+      "mainEffect": "No final do turno jogue um dado se o resultado for [2][4][6], envie esta carta para o descarte e depois invoque Goku SS4 do deck, da mão ou descarte."
     },
     {
-      "id": 3552654281459.2847,
+      "id": 5330920292105.625,
       "name": "Esfera do Dragão 7",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "mana": 5,
+      "MANA": 5,
       "imageUrl": "https://i.pinimg.com/736x/ec/8e/c5/ec8ec55eb1b4d4dfa3f7b2cbffe5bc6c.jpg",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Busque no seu deck por uma carta de criatura ou magia, ela terá o custo de mana reduzido em 2, mas não pode ser jogado no mesmo turno em que essa carta foi usada."
+      "mainEffect": "Adicione do deck para a mão uma carta SAIYAJIN e ela terá o custo reduzido em 2.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 3552653956887.016,
+      "id": 5330919970953.591,
       "name": "Esfera do Dragão 5",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "mana": 3,
+      "MANA": 3,
       "imageUrl": "https://i.pinimg.com/474x/79/74/9b/79749b36d62c1e961dae33d3bb82ee52.jpg",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Compre 1 carta\nSe você usou esta carta, pode buscar pela Esfera do Dragão 6, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
+      "mainEffect": "Revele 5 cartas do topo do seu deck, escolha um SAIYAJIN e adicione para sua mão, embaralhe o restante das cartas no deck.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 3552653925693.456,
+      "id": 5330919940719.953,
       "name": "Esfera do Dragão 6",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "mana": 4,
+      "MANA": 6,
       "imageUrl": "https://i.pinimg.com/736x/90/1e/12/901e1204c9964641a7b2f91799050ecd.jpg",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Devolva uma carta de criatura da pilha de descarte para sua mão.\nSe você usou esta carta, pode buscar pela Esfera do Dragão 7, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
+      "mainEffect": "Jogue um SAIYAJIN do descarte para o campo sem pagar o custo.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 3552653597722.9727,
+      "id": 5330919612637.691,
       "name": "Esfera do Dragão 4",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "mana": 2,
+      "MANA": 2,
       "imageUrl": "https://i.pinimg.com/1200x/7a/7f/76/7a7f76ea01702078582a1ae8b7344fb3.jpg",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Todas as suas criaturas ganham 2 de defesa.\nSe você usou esta carta, pode buscar pela Esfera do Dragão 5, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
+      "mainEffect": "+1 DEF até o final do turno do oponente para cada carta com esfera do dragão no nome que esteja no descarte.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 3552652225725.1094,
+      "id": 5330918234109.061,
       "name": "Esfera do Dragão 3",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "mana": 1,
+      "MANA": 1,
       "imageUrl": "https://i.pinimg.com/736x/32/eb/b8/32ebb8536d0fa4108eef460694586d39.jpg",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Ganha 3 de mana,\nSe você usou esta carta, pode buscar pela Esfera do Dragão 4, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
+      "mainEffect": "+1 MANA para cada carta com esfera do dragão no nome que esteja no descarte.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 3552652086663.877,
+      "id": 5330918095801.037,
       "name": "Esfera do Dragão 2",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "mana": 2,
+      "MANA": 2,
       "imageUrl": "https://i.pinimg.com/1200x/ea/f9/0a/eaf90a261d94356cc81aee3b2144d442.jpg",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Suas criaturas em campo ganham +3 de ataque.\nSe você usou esta carta, pode buscar pela Esfera do Dragão 3, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
+      "mainEffect": "+1 ATK para cada carta com esfera do dragão no nome que esteja no descarte.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 3552651876812.466,
+      "id": 5330917887174.974,
       "name": "Esfera do Dragão 1",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "mana": 1,
+      "MANA": 1,
       "imageUrl": "https://static.wikia.nocookie.net/tkoc/images/b/b7/DragonBall.1Star.Ep10.png/revision/latest/scale-to-width-down/640?cb=20160814143049&path-prefix=pt-br",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Suas criaturas em campo ganham +2 de ataque.\nSe você usou esta carta, pode buscar pela Esfera do Dragão 2, e adiciona-la para sua mão. Se esse efeito aconteceu, você não pode usar neste turno outra magia que tenha Esfera do Dragão no nome."
+      "mainEffect": "+3 ATK para todas criaturas em campo até o final do turno.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 3552650779360.67,
+      "id": 5330916668242.684,
       "name": "Instinto Superior",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1726,72 +2142,72 @@
       "mainEffect": "Está carta é tratada como Goku enquanto estiver em campo.\nQuando derrotado, escolha 2 Saiyajins na pilha de descarte e retorne para o deck, exceto Instinto Superior."
     },
     {
-      "id": 3552650538007.8145,
+      "id": 5330916551388.059,
       "name": "Vegeta SS2",
       "archetype": "Saiyajin",
       "type": "creature",
       "attack": 5,
       "defense": 4,
-      "mana": 3,
+      "MANA": 3,
       "imageUrl": "https://i.pinimg.com/736x/88/d2/b3/88d2b37bc9f5137fdbd12d05fe04ad83.jpg",
-      "attackEffect": "[1][2][3] +1 de ataque | [4][5][ +2 de ataque | [6] +3 de ataque.",
-      "defenseEffect": "[1][2][3] +1 de defesa | [4][5][6] +2 de defesa ",
-      "mainEffect": "Está carta ganha 2 de ataque adicional para cartas magicas que aumentam o ataque."
+      "attackEffect": "[1][2][3] +1 ATK | [4][5] +2 ATK | [6] +3 ATK",
+      "defenseEffect": "[1][2][3] +1 DEF | [4][5][6] +2 DEF",
+      "mainEffect": "Quando esta carta tiver o ATK aumentado pelo efeito de outra carta, ganhe +2 ATK até o final do turno."
     },
     {
-      "id": 3552650486802.3574,
-      "name": "Trunks",
+      "id": 5330916502078.072,
+      "name": "Trunks e Goten",
       "archetype": "Saiyajin",
       "type": "creature",
       "attack": 3,
-      "defense": 1,
-      "mana": 2,
+      "defense": 2,
+      "MANA": 2,
       "imageUrl": "https://images.steamusercontent.com/ugc/2262562348006379500/095A86A63499F5C39CDE68F3ECC6B994D0FCCBBE/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
       "attackEffect": "[1][3][5] +1 ATK",
       "defenseEffect": "[2][4][6] +1 DEF",
-      "mainEffect": "Quando está carta entra em jogo, você pode procurar pelo Goten no deck e adiciona-lo a sua mão."
+      "mainEffect": "AO ENTRAR: Adicione Goten do deck ou descarte para a mão."
     },
     {
-      "id": 3552650333887.791,
-      "name": "Gohan",
+      "id": 5330916341654.306,
+      "name": "Kid Gohan",
       "archetype": "Saiyajin",
       "type": "creature",
       "attack": 1,
       "defense": 1,
-      "mana": 1,
+      "MANA": 1,
       "imageUrl": "https://i.redd.it/hd-arts-of-the-new-prime-battle-lr-kid-gohan-v0-ua22jtr3x2e71.jpg?width=1704&format=pjpg&auto=webp&s=d5fb33a1432cb31ffb80bc7882d49cdeefdd0400",
-      "attackEffect": "[1][2][3] +1 de ataque | [4][5][6] +2 de ataque ",
-      "defenseEffect": "[1][2][3] +1 de defesa | [4][5][6] +2 de defesa ",
-      "mainEffect": "Quando enviado para a pilha de descarte, você pode procurar no deck por Goku e adiciona-lo a sua mão."
+      "attackEffect": "[1][2][3] +1 ATK | [4][5][6] +2 ATK ",
+      "defenseEffect": "[1][2][3] +1 DEF | [4][5][6] +2 DEF ",
+      "mainEffect": "Quando enviado para o descarte, adicione do deck uma carta que tenha Goku no nome para a mão."
     },
     {
-      "id": 3552650183140.0947,
+      "id": 5330916195082.282,
       "name": "Goten",
       "archetype": "Saiyajin",
       "type": "creature",
       "attack": 2,
       "defense": 1,
-      "mana": 1,
+      "MANA": 1,
       "imageUrl": "https://images5.alphacoders.com/676/676448.jpg",
       "attackEffect": "[1][3][5] +1 ATK",
       "defenseEffect": "[2][4][6] +1 DEF",
-      "mainEffect": "Quando está carta entrar em jogo, você pode buscar no deck por uma carta mágica de sua escolha."
+      "mainEffect": "AO ENTRAR: Role um dado e adicione uma magia do deck com custo igual ou menor do valor obtido."
     },
     {
-      "id": 3552569651558.334,
+      "id": 5330835661123.496,
       "name": "Vegeta SS God.",
       "archetype": "Saiyajin",
       "type": "creature",
       "attack": 6,
       "defense": 6,
-      "mana": 5,
+      "MANA": 5,
       "imageUrl": "https://i.pinimg.com/736x/9d/e1/69/9de16998da81f1a42146337b0cff114c.jpg",
-      "attackEffect": "[1][2][3] +1 ATK | [4][5] +3 ATK\n[6] +5 ATK se qualquer Goku estiver em campo. ",
-      "defenseEffect": "[1][2] +1 DEF | [3][4] 2+ DEF | [5][6] +3 DEF",
-      "mainEffect": "Enquanto estiver em jogo, suas cartas tem custo de mana reduzido em 1."
+      "attackEffect": "[1][2] +2 ATK | [4][5] +3 ATK\n[3][6] +5ATK se qualquer criatura que tenha Goku no nome estiver em campo. ",
+      "defenseEffect": "[1][2] +1 DEF | [3][4] +2 DEF | [5][6] +3 DEF",
+      "mainEffect": "EM CAMPO: suas cartas tem custo de MANA reduzido em 1."
     },
     {
-      "id": 3552568768565.8887,
+      "id": 5330834663344.987,
       "name": "Vegeta",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1801,10 +2217,10 @@
       "imageUrl": "https://store-images.s-microsoft.com/image/apps.61650.13950574652412843.980882b0-20b4-46ce-8e9a-97010e12505f.b84aead3-ac2f-47bb-b4bc-1b5d07546be3?q=90&w=480&h=270",
       "attackEffect": "[4][5][6] +2 de ataque",
       "defenseEffect": "[1][2][3] +1 de defesa",
-      "mainEffect": "Se esta carta for destruída, procure no deck pelo Vegeta SS2."
+      "mainEffect": "AO SER DERROTADO: adicione do deck para a mão Vegeta SS2."
     },
     {
-      "id": 3552566499306.927,
+      "id": 5330832394841.588,
       "name": "Broly",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -1817,20 +2233,20 @@
       "mainEffect": "Quando entrar em jogo, todas as criaturas do oponente perdem 2 de defesa."
     },
     {
-      "id": 3552401520693.516,
+      "id": 5330667532023.686,
       "name": "Taiyoken",
       "archetype": "Saiyajin",
       "type": "magic",
       "attack": 0,
       "defense": 0,
-      "mana": 2,
+      "MANA": 2,
       "imageUrl": "https://static.wikia.nocookie.net/dragonball/images/d/d3/Solarflare_tien.jpg/revision/latest?cb=20150125123524&path-prefix=pt-br",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Durante a fase de combate, para cada criatura que seu oponente controlar, será necessário tirar um número par no dado para atacar."
+      "mainEffect": "Durante a fase de combate do seu oponente, jogue um dado para cada criatura que for atacar, se o valor for par negue o ataque."
     },
     {
-      "id": 3552400436639.0166,
+      "id": 5330666324020.332,
       "name": "Kienzan",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -1840,33 +2256,33 @@
       "imageUrl": "https://static.wikia.nocookie.net/dragonball/images/8/80/Disco_Destructor.png/revision/latest?cb=20170810173551&path-prefix=es",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Escolha um criatura do oponente e reduza o ataque e defesa pela metade até o final do turno."
+      "mainEffect": "Escolha um criatura do oponente e reduza o ataque e defesa pela metade (arredondada pra cima) até o final do turno."
     },
     {
-      "id": 3552297885429.8613,
+      "id": 5330563900051.006,
       "name": "Goku SS4",
       "archetype": "Saiyajin",
       "type": "creature",
       "attack": 6,
       "defense": 5,
-      "mana": 5,
+      "MANA": 5,
       "imageUrl": "https://i.redd.it/which-form-had-a-cooler-reveal-v0-cwjoc8pozpke1.png?width=706&format=png&auto=webp&s=4384e91f596b610615b31fa67c83d0fa571e8b79",
-      "attackEffect": "[1][2][3] +1 de ataque | [4][5] +2 de ataque e 1 de mana | [6] +3 de ataque e 2 de mana.",
-      "defenseEffect": "[1][2][3] +1 de defesa | [4][5] +2 de defesa e 1 de mana | [6] +3 de defesa e 1 de mana.",
-      "mainEffect": "No final do turno jogue um dado, se [1] ou [6], troque essa carta pelo Instinto Superior, na mão ou no deck. "
+      "attackEffect": "[1][2][3] +1 ATK | [4][5] +2 ATK e MANA+1 | [6] +3 ATK  e MANA+2.",
+      "defenseEffect": "[1][2][3] +1 DEF | [4][5] +2 DEF e MANA+1 | [6] +3 DEF e MANA+2",
+      "mainEffect": "No final do turno jogue um dado se o resultado for [1][6], envie esta carta para pilha de descarte e depois invoque Instinto Superior do deck, da mão ou do descarte."
     },
     {
-      "id": 3552297755509.3057,
+      "id": 5330563771180.149,
       "name": "Goku",
       "archetype": "Saiyajin",
       "type": "creature",
       "attack": 3,
       "defense": 3,
-      "mana": 2,
+      "MANA": 2,
       "imageUrl": "https://recreio.com.br/wp-content/uploads/2024/05/goku_capa-1.jpg",
-      "attackEffect": "[1][2][3] +1 de ataque | [4][5][6] +2 de ataque",
-      "defenseEffect": "[1][2][3] +1 de defesa | [4][5][6] +2 de defesa",
-      "mainEffect": "Antes de terminar o turno jogue um dado, se o resultado for [1][3][5], troque essa carta pelo Goku SS2, no deck ou na mão."
+      "attackEffect": "[1][2][3] +1 ATK | [4][5][6] +2 ATK",
+      "defenseEffect": "[1][2][3] +1 DEF | [4][5][6] +2 DEF",
+      "mainEffect": "No final do turno jogue um dado se o resultado for [1][3][5][6], envie esta carta para o descarte e depois jogue Goku SS2 do deck, da mão ou do descarte."
     }
   ]
 }
