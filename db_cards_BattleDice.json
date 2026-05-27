@@ -510,17 +510,17 @@
       "mainEffect": "+3 ATK\nSe ganhar a batalha: Escolha uma criatura do adversário e diminua o PV dele igual ao custo de mana"
     },
     {
-      "id": 1779303228636,
+      "id": 3559193774410.05,
       "name": "Megaman",
       "archetype": "Netwarrior",
       "type": "creature",
       "attack": 5,
       "defense": 4,
-      "mana": 4,
-      "imageUrl": "https://preview.redd.it/ive-liked-mega-man-for-a-while-but-just-recently-got-into-v0-vnjbqww3xoe21.png?width=640&crop=smart&auto=webp&s=abe7605f006d5ed3b04008e68d772839f4a93aa6",
+      "mana": 5,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZtUreFL6Z7ZAaOgqOX55HqXMglxr_BbJ1eQ&s",
       "attackEffect": "[1][2] +2 ATK\n[3][4] +3 ATK + 1 MANA\n[5][6] +4 ATK + 2 MANA",
       "defenseEffect": "[1][2] +2 DEF\n[3][4] +3 DEF + 1 MANA\n[5][6] +4 DEF + 2 MANA",
-      "mainEffect": "AO ENTRAR: Adicione uma carta NETWARRIOR do deck para a mão com o custo menor que [6]"
+      "mainEffect": "AO ENTRAR: Adicione uma carta NETWARRIOR do deck para a mão com o custo menor ou igual a [6]"
     },
     {
       "id": 1779302776167,
