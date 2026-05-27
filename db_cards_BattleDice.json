@@ -341,6 +341,45 @@
       "mainEffect": "AO ENTRAR: Adicione uma magia \"VAMPIRO\" do deck para mão"
     },
     {
+      "id": 1779840566147,
+      "name": "Pharaohman",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 0,
+      "defense": 0,
+      "mana": 9,
+      "imageUrl": "https://static.wikia.nocookie.net/megaman/images/c/c6/TEPPEN_3ME_009_art.png/revision/latest/scale-to-width-down/250?cb=20230715040843",
+      "attackEffect": "[1]...[4]+ 3 ATK +2 MANA\n[5][6] Copie o efeito de ATK de um NETWARRIOR no descarte",
+      "defenseEffect": "[1]...[4]+ 3 DEF +2 MANA\n[5][6] Copie o efeito de DEF de um NETWARRIOR no descarte",
+      "mainEffect": "AO ENTRAR: Retorne X NETWARRIOR do descarte para o deck, + X ATK + X DEF (permanente). Compre 2 cartas. \nEM CAMPO: Cartas NETWARRIOR custam 1 a menos"
+    },
+    {
+      "id": 1779839907481,
+      "name": "Tomahawkman",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 6,
+      "defense": 4,
+      "mana": 5,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrexMQpa3u-sEp_Z0YeWnenz6T5dlZFHzYKQ&s",
+      "attackEffect": "[1][2][3] +2 ATK | [4][5] + 3 ATK cause dano igual a diferença entre o ATK e DEF\n[6]+4 ATK  -3 PV cause dano igual a diferença entre o ATK e DEF",
+      "defenseEffect": "[1][2] Se for derrotado: -3 ATK para todas as criaturas adversárias\n[3][4][5][6] descarte um NETWARRIOR da mão para ganhar DEF igual sua DEF\n",
+      "mainEffect": "UMA VEZ POR TURNO: Descarte um NETWARRIOR da mão, todas as criaturas adversárias perdem DEF igual ao ATK da carta descartada"
+    },
+    {
+      "id": 1779839482848,
+      "name": "Shadowman",
+      "archetype": "Netwarrior",
+      "type": "creature",
+      "attack": 3,
+      "defense": 1,
+      "mana": 3,
+      "imageUrl": "https://pbs.twimg.com/media/Gh-jiGwb0AA-8o8.jpg",
+      "attackEffect": "[1]...[4]Descarte um NETWARRIOR da mão +X ATK para cada 2 de custo da carta descartada\n[5][6] Role um dado, se o resultado for maior ou igual a DEF do defensor envie-o para o descarte",
+      "defenseEffect": "[1]...[4] Descarte um NETWARRIOR da mão +X DEF para cada 2 de custo da carta descartada\n[5][6] Role um dado, se o resultado for maior ou igual ao ATK do atacante envie-o para o descarte",
+      "mainEffect": "AO ENTRAR: Adicione um NETWARRIOR do descarte para a mão"
+    },
+    {
       "id": 1779308352065,
       "name": "Gutsman",
       "archetype": "Netwarrior",
