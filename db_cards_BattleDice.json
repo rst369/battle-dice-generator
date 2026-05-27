@@ -2,6 +2,19 @@
   "version": "1.0",
   "exportDate": "2026-05-26T18:22:53.011Z",
   "cards": [
+      {
+        "id": 1779891693270,
+        "name": "Megaman CrossFusion",
+        "archetype": "Netwarrior",
+        "type": "creature",
+        "attack": 8,
+        "defense": 7,
+        "mana": 8,
+        "imageUrl": "https://static.wikia.nocookie.net/megaman/images/9/97/EXEAxessAnime-PromoImage-Ep01-2.jpg/revision/latest/scale-to-width/360?cb=20230125094127",
+        "attackEffect": "[1]...[4] Volte magia NETWARRIOR do descarte pro deck pra copiar o efeito\n[5][6] Descarte uma magia NETWARRIOR do deck: +ATK igual seu custo",
+        "defenseEffect": "[1]...[4] Volte um NETWARRIOR do descarte pro deck pra copiar o efeito de DEF\n[5][6] Descarte um NETWARRIOR do deck: +DEF igual seu custo",
+        "mainEffect": "UMA VEZ POR TURNO: Volte um NETWARRIOR do descarte pro deck para ganhar MANA igual seu custo"
+      },
      {
       "id": 1779822426524,
       "name": "Regras - Batalha",
