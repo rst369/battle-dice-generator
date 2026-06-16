@@ -326,6 +326,98 @@
             margin-top: 2px;
         }
 
+        /* Controles de quantidade */
+        .card-select-item .qty-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .card-select-item .qty-controls button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-select-item .qty-controls button:hover {
+            background: #ffd700;
+            color: #1a1a2e;
+            border-color: #ffd700;
+        }
+
+        .card-select-item .qty-controls .qty-value {
+            color: #ffd700;
+            font-weight: bold;
+            min-width: 24px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .card-select-item .qty-controls .qty-value.zero {
+            color: #666;
+        }
+
+        /* Indicador visual de cartas selecionadas com quantidade */
+        .card-select-item.has-copies {
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .card-select-item .card-count-badge {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background: rgba(255, 215, 0, 0.9);
+            color: #1a1a2e;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            border: 1px solid #ffd700;
+        }
+
+        /* Badge de quantidade na seleção */
+        .card-select-item .card-count-badge {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            background: linear-gradient(135deg, #ffd700, #f0a500);
+            color: #1a1a2e;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            border: 2px solid #ffd700;
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+            z-index: 2;
+        }
+
+        /* Efeito de hover com quantidade */
+        .card-select-item.has-copies:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+        }
+
         /* Áreas do Jogo */
         .game-areas {
             display: grid;
@@ -827,19 +919,6 @@
             </select>
         </div>
 
-        <!-- Controles Principais -->
-        <div class="controls" id="controls" style="display:none;">
-            <button class="success" onclick="shuffleAndDraw()">🔄 Embaralhar e Comprar</button>
-            <button onclick="drawOne()">🎴 Comprar +1</button>
-            <button class="secondary" onclick="resetHand()">🔄 Resetar Mão</button>
-            <button class="danger" onclick="clearAll()">🗑️ Limpar Tudo</button>
-            <div class="info">
-                Deck: <span id="deckCount">0</span> | 
-                Mão: <span id="handCount">0</span> | 
-                Campo: <span id="fieldCount">0</span>
-            </div>
-        </div>
-
         <!-- Seleção de Cartas -->
         <div class="card-selection" id="cardSelection">
             <div class="card-selection-header">
@@ -855,6 +934,21 @@
                 </div>
             </div>
         </div>
+
+        <!-- Controles Principais -->
+        <div class="controls" id="controls" style="display:none;">
+            <button class="success" onclick="shuffleAndDraw()">🔄 Embaralhar e Comprar</button>
+            <button onclick="drawOne()">🎴 Comprar +1</button>
+            <button class="secondary" onclick="resetHand()">🔄 Resetar Mão</button>
+            <button class="danger" onclick="clearAll()">🗑️ Limpar Tudo</button>
+            <div class="info">
+                Deck: <span id="deckCount">0</span> | 
+                Mão: <span id="handCount">0</span> | 
+                Campo: <span id="fieldCount">0</span>
+            </div>
+        </div>
+
+       
 
         <!-- Áreas do Jogo -->
         <div class="game-areas">
@@ -922,7 +1016,6 @@
         // ESTADO GLOBAL
         // ============================================================
         let allCards = [];
-        let selectedCards = [];
         let deck = [];
         let hand = [];
         let field = [];
@@ -931,11 +1024,14 @@
         let filterName = '';
         let filterMana = '';
         let filterType = '';
+        // Substitua a declaração de selectedCards
+        let cardQuantities = {}; // { cardId: quantidade }
+        let selectedCards = []; // Será calculado baseado nas quantidades
 
         // ============================================================
         // FUNÇÕES DE IMPORTAÇÃO
         // ============================================================
-        function handleFileImport(event) {
+       function handleFileImport(event) {
             const file = event.target.files[0];
             if (!file) return;
 
@@ -957,7 +1053,10 @@
                     }
 
                     allCards = cards;
-                    selectedCards = [...allCards];
+                    // Resetar quantidades
+                    cardQuantities = {};
+                    updateSelectedCards();
+                    
                     updateImportStatus(true, `✅ ${allCards.length} cartas importadas com sucesso!`);
                     populateArchetypes();
                     renderCardSelection();
@@ -1050,48 +1149,72 @@
         }
 
         function selectAll() {
-            selectedCards = [...getFilteredCards()];
+            // Adiciona 1 cópia de cada carta filtrada
+            const filtered = getFilteredCards();
+            filtered.forEach(card => {
+                if (getCardQuantity(card.id) === 0) {
+                    setCardQuantity(card.id, 1);
+                }
+            });
             renderCardSelection();
-            addLog(`📋 ${selectedCards.length} cartas selecionadas`);
+            addLog(`📋 1 cópia de cada uma das ${filtered.length} cartas selecionada`);
         }
 
         function selectNone() {
-            selectedCards = [];
+            cardQuantities = {};
+            updateSelectedCards();
             renderCardSelection();
             addLog('📋 Nenhuma carta selecionada');
         }
 
-        function renderCardSelection() {
+        // Função para adicionar cópias em lote
+        function addMultipleCopies(cardId, copies) {
+            const current = getCardQuantity(cardId);
+            setCardQuantity(cardId, current + copies);
+        }
+
+        // Função para definir quantidade exata
+        function setExactQuantity(cardId, quantity) {
+            setCardQuantity(cardId, quantity);
+        }
+
+       function renderCardSelection() {
             const grid = document.getElementById('cardSelectionGrid');
             grid.innerHTML = '';
             const filtered = getFilteredCards();
 
             if (filtered.length === 0) {
                 grid.innerHTML = '<div class="empty-msg" style="grid-column:1/-1;text-align:center;color:#666;padding:40px;">Nenhuma carta encontrada com os filtros aplicados.</div>';
-                document.getElementById('selectedCount').textContent = selectedCards.length;
+                document.getElementById('selectedCount').textContent = getTotalSelectedCards();
                 document.getElementById('totalCards').textContent = allCards.length;
                 return;
             }
 
             filtered.forEach((card) => {
-                const isSelected = selectedCards.some(c => c.id === card.id);
+                const quantity = getCardQuantity(card.id);
+                const hasCopies = quantity > 0;
                 const div = document.createElement('div');
-                div.className = 'card-select-item' + (isSelected ? ' selected' : '');
+                div.className = 'card-select-item' + (hasCopies ? ' has-copies' : '');
                 div.innerHTML = `
                     <div class="card-cost">${card.mana}</div>
+                    ${hasCopies ? `<div class="card-count-badge">${quantity}</div>` : ''}
                     <img src="${card.imageUrl}" alt="${card.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22%3E%3Crect width=%2280%22 height=%2280%22 fill=%22%23333%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.35em%22 fill=%22%23fff%22%3E${card.name.charAt(0)}%3C/text%3E%3C/svg%3E'">
                     <div class="card-name">${card.name}</div>
                     <div class="card-type">${card.type} • ${card.mana}⚡</div>
                     ${card.archetype ? `<div class="card-archetype">${card.archetype}</div>` : ''}
+                    <div class="qty-controls">
+                        <button onclick="event.stopPropagation(); adjustCardQuantity(${card.id}, -1)">−</button>
+                        <span class="qty-value ${quantity === 0 ? 'zero' : ''}" id="qty-${card.id}">${quantity}</span>
+                        <button onclick="event.stopPropagation(); adjustCardQuantity(${card.id}, 1)">+</button>
+                    </div>
                 `;
-                div.onclick = () => toggleCardSelection(card.id);
+                // Remove o clique para seleção simples, agora usa os botões +/- 
                 grid.appendChild(div);
             });
 
-            document.getElementById('selectedCount').textContent = selectedCards.length;
+            document.getElementById('selectedCount').textContent = getTotalSelectedCards();
             document.getElementById('totalCards').textContent = allCards.length;
         }
-
         // ============================================================
         // FUNÇÕES DO DECK
         // ============================================================
@@ -1103,11 +1226,15 @@
             return arr;
         }
 
-        function shuffleAndDraw() {
+       function shuffleAndDraw() {
+            // Recalcula selectedCards baseado nas quantidades
+            updateSelectedCards();
+            
             if (selectedCards.length === 0) {
-                addLog('⚠️ Nenhuma carta selecionada! Selecione cartas para formar o deck.');
+                addLog('⚠️ Nenhuma carta selecionada! Use os botões + para adicionar cópias ao deck.');
                 return;
             }
+            
             hand = [];
             field = [];
             deck = selectedCards.map(c => ({ ...c }));
@@ -1119,9 +1246,11 @@
 
             updateDrawQueue();
             renderAll();
-            addLog(`🔄 Deck embaralhado. 4 cartas compradas. ${deck.length} cartas no deck.`);
+            addLog(`🔄 Deck embaralhado. ${selectedCards.length} cartas no deck. 4 cartas compradas.`);
             updateCounts();
         }
+
+
 
         function drawOne() {
             if (deck.length === 0) {
@@ -1148,13 +1277,21 @@
         }
 
         function clearAll() {
+            allCards = [];
+            cardQuantities = {};
+            selectedCards = [];
+            deck = [];
             hand = [];
             field = [];
-            deck = [];
             drawQueue = [];
+            document.getElementById('filtersArea').style.display = 'none';
+            document.getElementById('controls').style.display = 'none';
+            document.getElementById('archetypeFilter').innerHTML = '<option value="">Todos os Arquétipos</option>';
+            renderCardSelection();
             renderAll();
             updateCounts();
-            addLog('🗑️ Tudo limpo.');
+            updateImportStatus(false, '🗑️ Dados removidos.');
+            addLog('🗑️ Todos os dados foram removidos.');
         }
 
         // ============================================================
@@ -1444,6 +1581,61 @@
             });
         }
 
+        // Funções de quantidade
+        function getCardQuantity(cardId) {
+            return cardQuantities[cardId] || 0;
+        }
+
+        function setCardQuantity(cardId, quantity) {
+            if (quantity < 0) quantity = 0;
+            cardQuantities[cardId] = quantity;
+            updateSelectedCards();
+            renderCardSelection();
+            updateCounts();
+        }
+
+        function adjustCardQuantity(cardId, delta) {
+            const current = getCardQuantity(cardId);
+            const newQty = Math.max(0, current + delta);
+            setCardQuantity(cardId, newQty);
+            addLog(`${delta > 0 ? '➕' : '➖'} ${delta > 0 ? 'Adicionada' : 'Removida'} cópia de ${getCardName(cardId)} (${newQty})`);
+        }
+
+        function getCardName(cardId) {
+            const card = allCards.find(c => c.id === cardId);
+            return card ? card.name : 'Carta';
+        }
+
+        function updateSelectedCards() {
+            selectedCards = [];
+            for (const [cardId, quantity] of Object.entries(cardQuantities)) {
+                if (quantity > 0) {
+                    const card = allCards.find(c => c.id === parseInt(cardId));
+                    if (card) {
+                        for (let i = 0; i < quantity; i++) {
+                            selectedCards.push({ ...card, copyId: `${card.id}-${i}` });
+                        }
+                    }
+                }
+            }
+        }
+
+        function getTotalSelectedCards() {
+            let total = 0;
+            for (const qty of Object.values(cardQuantities)) {
+                total += qty;
+            }
+            return total;
+        }
+
+        function getUniqueSelectedCards() {
+            let count = 0;
+            for (const qty of Object.values(cardQuantities)) {
+                if (qty > 0) count++;
+            }
+            return count;
+        }
+
         // ============================================================
         // INICIALIZAÇÃO
         // ============================================================
@@ -1452,6 +1644,21 @@
             addLog('🎮 Sistema iniciado. Importe um arquivo JSON para começar.');
             document.getElementById('controls').style.display = 'none';
         });
+
+        // Função para adicionar 3 cópias de uma vez (atalho)
+        function addThreeCopies(cardId) {
+            const current = getCardQuantity(cardId);
+            setCardQuantity(cardId, current + 3);
+            const card = allCards.find(c => c.id === cardId);
+            addLog(`➕ 3 cópias de ${card ? card.name : 'Carta'} adicionadas (${getCardQuantity(cardId)})`);
+        }
+
+        // Função para remover todas as cópias de uma carta
+        function removeAllCopies(cardId) {
+            setCardQuantity(cardId, 0);
+            const card = allCards.find(c => c.id === cardId);
+            addLog(`🗑️ Todas as cópias de ${card ? card.name : 'Carta'} removidas`);
+        }
 
     </script>
 </body>
