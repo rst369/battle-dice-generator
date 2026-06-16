@@ -537,6 +537,33 @@
             margin-bottom: 3px;
         }
 
+        /* Adicione estas novas regras */
+        .card-tooltip .tooltip-attack-effect {
+            color: #ff6b6b;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-break: break-word;
+            padding-left: 5px;
+            border-left: 2px solid #ff6b6b;
+        }
+
+        .card-tooltip .tooltip-defense-effect {
+            color: #4ecdc4;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-break: break-word;
+            padding-left: 5px;
+            border-left: 2px solid #4ecdc4;
+        }
+
+        .card-tooltip .tooltip-combat-separator {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin: 8px 0;
+        }
+
         .card-tooltip .tooltip-stats {
             color: #aaa;
             font-size: 0.8rem;
@@ -547,6 +574,47 @@
 
         .card-tooltip .tooltip-stats span {
             margin-right: 12px;
+        }
+
+        /* Cores para efeitos de combate no tooltip */
+        .card-tooltip .tooltip-effect-attack {
+            color: #ff6b6b;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-break: break-word;
+            padding: 6px 10px;
+            background: rgba(255, 107, 107, 0.08);
+            border-radius: 6px;
+            border-left: 3px solid #ff6b6b;
+        }
+
+        .card-tooltip .tooltip-effect-defense {
+            color: #4ecdc4;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-break: break-word;
+            padding: 6px 10px;
+            background: rgba(78, 205, 196, 0.08);
+            border-radius: 6px;
+            border-left: 3px solid #4ecdc4;
+        }
+
+        .card-tooltip .tooltip-combat-label {
+            font-size: 0.65rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 8px 0 4px 0;
+        }
+
+        .card-tooltip .tooltip-combat-label.attack {
+            color: #ff6b6b;
+        }
+
+        .card-tooltip .tooltip-combat-label.defense {
+            color: #4ecdc4;
         }
 
         /* Botões de ação nas cartas */
@@ -832,8 +900,20 @@
     <div class="card-tooltip" id="cardTooltip">
         <div class="tooltip-title" id="tooltipTitle">Nome da Carta</div>
         <div class="tooltip-type" id="tooltipType">Tipo • Custo</div>
-        <div class="tooltip-effect-label">✨ Efeito:</div>
+        
+        <!-- Efeito Principal -->
+        <div class="tooltip-effect-label">✨ Efeito Principal:</div>
         <div class="tooltip-effect" id="tooltipEffect">Descrição do efeito</div>
+        
+        <!-- Efeitos de Ataque e Defesa (para criaturas) -->
+        <div id="tooltipCombatEffects" style="display:none;">
+            <div class="tooltip-effect-label" style="margin-top:8px;">⚔ Efeito de Ataque:</div>
+            <div class="tooltip-effect" id="tooltipAttackEffect" style="color:#ff6b6b;">-</div>
+            
+            <div class="tooltip-effect-label" style="margin-top:6px;">🛡 Efeito de Defesa:</div>
+            <div class="tooltip-effect" id="tooltipDefenseEffect" style="color:#4ecdc4;">-</div>
+        </div>
+        
         <div class="tooltip-stats" id="tooltipStats"></div>
     </div>
 
@@ -1211,6 +1291,7 @@
             element.addEventListener('mousemove', moveTooltip);
         }
 
+        
         function showTooltip(event, card) {
             const tooltip = document.getElementById('cardTooltip');
             document.getElementById('tooltipTitle').textContent = card.name || 'Sem nome';
@@ -1219,9 +1300,41 @@
             if (card.archetype) typeInfo += ` • ${card.archetype}`;
             document.getElementById('tooltipType').textContent = typeInfo;
 
+            // Efeito Principal
             const effectText = card.mainEffect || card.effect || 'Sem efeito descrito.';
             document.getElementById('tooltipEffect').textContent = effectText;
 
+            // ===== NOVO: Efeitos de Ataque e Defesa =====
+            const combatEffectsDiv = document.getElementById('tooltipCombatEffects');
+            const attackEffectEl = document.getElementById('tooltipAttackEffect');
+            const defenseEffectEl = document.getElementById('tooltipDefenseEffect');
+
+            if (card.type === 'creature' && (card.attackEffect || card.defenseEffect)) {
+                console.log(card.attackEffect);
+                combatEffectsDiv.style.display = 'block';
+                
+                // Efeito de Ataque
+                if (card.attackEffect) {
+                    attackEffectEl.textContent = card.attackEffect;
+                    attackEffectEl.style.display = 'block';
+                } else {
+                    attackEffectEl.textContent = 'Sem efeito de ataque';
+                    attackEffectEl.style.display = 'block';
+                }
+                
+                // Efeito de Defesa
+                if (card.defenseEffect) {
+                    defenseEffectEl.textContent = card.defenseEffect;
+                    defenseEffectEl.style.display = 'block';
+                } else {
+                    defenseEffectEl.textContent = 'Sem efeito de defesa';
+                    defenseEffectEl.style.display = 'block';
+                }
+            } else {
+                combatEffectsDiv.style.display = 'none';
+            }
+
+            // Stats (ATK/DEF)
             const statsDiv = document.getElementById('tooltipStats');
             if (card.type === 'creature' && card.attack !== undefined && card.defense !== undefined) {
                 statsDiv.innerHTML = `<span>⚔ ATK: ${card.attack}</span><span>🛡 DEF: ${card.defense}</span>`;
