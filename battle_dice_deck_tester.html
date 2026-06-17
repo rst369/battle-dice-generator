@@ -875,6 +875,53 @@
                 max-width: 280px;
                 padding: 12px 15px;
             }
+
+            /* Botões de gerenciamento de memória */
+            .import-controls button {
+                background: linear-gradient(135deg, #4a90d9, #357abd);
+                color: #fff;
+                border: none;
+                padding: 10px 25px;
+                border-radius: 30px;
+                font-weight: bold;
+                font-size: 0.9rem;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .import-controls button:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(74, 144, 217, 0.3);
+            }
+
+            .import-controls button.danger {
+                background: linear-gradient(135deg, #e74c3c, #c0392b);
+            }
+
+            .import-controls button.danger:hover {
+                box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+            }
+
+            .memory-status {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.03);
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .memory-status .hint {
+                color: #666;
+                font-size: 0.8rem;
+                align-self: center;
+            }
+
+            .memory-status .hint .highlight {
+                color: #ffd700;
+            }
         }
     </style>
 </head>
@@ -888,7 +935,22 @@
             <h3>📥 Importar Dados</h3>
             <div class="import-controls">
                 <input type="file" id="jsonFileInput" accept=".json" onchange="handleFileImport(event)">
+                <button class="secondary" onclick="exportToJson()" style="padding:8px 20px;">📤 Exportar JSON</button>
+                <button class="danger" onclick="clearAllData()" style="padding:8px 20px;">🗑️ Limpar Dados</button>
                 <div id="importStatus" class="import-status info">Aguardando importação...</div>
+            </div>
+            <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+                <button class="secondary" onclick="loadCardsFromMemory(); updateImportStatus(true, '💾 Dados carregados da memória.');" 
+                        style="padding:5px 15px; font-size:0.8rem;">
+                    💾 Carregar da Memória
+                </button>
+                <button class="danger" onclick="if(confirm('Tem certeza que deseja limpar a memória?')){clearMemory(); updateImportStatus(false, '🗑️ Memória limpa.');}" 
+                        style="padding:5px 15px; font-size:0.8rem;">
+                    🗑️ Limpar Memória
+                </button>
+                <span style="color:#666; font-size:0.8rem; align-self:center;">
+                    Dados salvos automaticamente
+                </span>
             </div>
         </div>
 
@@ -1031,7 +1093,8 @@
         // ============================================================
         // FUNÇÕES DE IMPORTAÇÃO
         // ============================================================
-       function handleFileImport(event) {
+        // Função handleFileImport atualizada
+        function handleFileImport(event) {
             const file = event.target.files[0];
             if (!file) return;
 
@@ -1053,15 +1116,17 @@
                     }
 
                     allCards = cards;
-                    // Resetar quantidades
                     cardQuantities = {};
                     updateSelectedCards();
                     
-                    updateImportStatus(true, `✅ ${allCards.length} cartas importadas com sucesso!`);
+                    // SALVAR NA MEMÓRIA
+                    saveCardsToMemory();
+                    
+                    updateImportStatus(true, `✅ ${allCards.length} cartas importadas e salvas!`);
                     populateArchetypes();
                     renderCardSelection();
                     updateCounts();
-                    addLog(`📥 ${allCards.length} cartas importadas do arquivo JSON.`);
+                    addLog(`📥 ${allCards.length} cartas importadas e salvas na memória.`);
                     document.getElementById('filtersArea').style.display = 'flex';
                     document.getElementById('controls').style.display = 'flex';
                     resetGame();
@@ -1076,6 +1141,122 @@
             reader.readAsText(file);
             event.target.value = '';
         }
+
+        // Função adjustCardQuantity atualizada
+        function adjustCardQuantity(cardId, delta) {
+            const current = getCardQuantity(cardId);
+            const newQty = Math.max(0, current + delta);
+            setCardQuantity(cardId, newQty);
+            // SALVAR NA MEMÓRIA
+            saveCardsToMemory();
+            addLog(`${delta > 0 ? '➕' : '➖'} ${delta > 0 ? 'Adicionada' : 'Removida'} cópia de ${getCardName(cardId)} (${newQty})`);
+        }
+
+        // Função shuffleAndDraw atualizada
+        function shuffleAndDraw() {
+            updateSelectedCards();
+            
+            if (selectedCards.length === 0) {
+                addLog('⚠️ Nenhuma carta selecionada! Use os botões + para adicionar cópias ao deck.');
+                return;
+            }
+            
+            hand = [];
+            field = [];
+            deck = selectedCards.map(c => ({ ...c }));
+            shuffleArray(deck);
+
+            for (let i = 0; i < 4 && deck.length > 0; i++) {
+                hand.push(deck.shift());
+            }
+
+            updateDrawQueue();
+            renderAll();
+            // SALVAR ESTADO DO JOGO
+            saveGameState();
+            addLog(`🔄 Deck embaralhado. ${selectedCards.length} cartas no deck. 4 cartas compradas.`);
+            updateCounts();
+        }
+
+        // Função drawOne atualizada
+        function drawOne() {
+            if (deck.length === 0) {
+                addLog('⚠️ Deck vazio! Não há mais cartas para comprar.');
+                return;
+            }
+            const card = deck.shift();
+            hand.push(card);
+            updateDrawQueue();
+            renderAll();
+            // SALVAR ESTADO DO JOGO
+            saveGameState();
+            addLog('🎴 Comprou: ' + card.name);
+            updateCounts();
+        }
+
+        // Função moveCardToField atualizada
+        function moveCardToField(index) {
+            if (index < 0 || index >= hand.length) return;
+            const card = hand.splice(index, 1)[0];
+            field.push(card);
+            renderAll();
+            updateCounts();
+            // SALVAR ESTADO DO JOGO
+            saveGameState();
+            addLog('⚔️ ' + card.name + ' colocado em campo.');
+        }
+
+        // Função moveCardToHand atualizada
+        function moveCardToHand(index) {
+            if (index < 0 || index >= field.length) return;
+            const card = field.splice(index, 1)[0];
+            hand.push(card);
+            renderAll();
+            updateCounts();
+            // SALVAR ESTADO DO JOGO
+            saveGameState();
+            addLog('✋ ' + card.name + ' retornou para a mão.');
+        }
+
+        // Função resetHand atualizada
+        function resetHand() {
+            while (hand.length > 0) {
+                deck.push(hand.shift());
+            }
+            shuffleArray(deck);
+            updateDrawQueue();
+            renderAll();
+            // SALVAR ESTADO DO JOGO
+            saveGameState();
+            addLog('🔄 Mão resetada. Cartas devolvidas ao deck e embaralhadas.');
+            updateCounts();
+        }
+
+        // Função clearAllData atualizada
+        function clearAllData() {
+            allCards = [];
+            cardQuantities = {};
+            selectedCards = [];
+            deck = [];
+            hand = [];
+            field = [];
+            drawQueue = [];
+            
+            // LIMPAR MEMÓRIA
+            clearMemory();
+            
+            document.getElementById('filtersArea').style.display = 'none';
+            document.getElementById('controls').style.display = 'none';
+            document.getElementById('archetypeFilter').innerHTML = '<option value="">Todos os Arquétipos</option>';
+            renderCardSelection();
+            renderAll();
+            updateCounts();
+            updateImportStatus(false, '🗑️ Dados removidos da memória.');
+            addLog('🗑️ Todos os dados foram removidos da memória.');
+        }
+
+
+
 
         function updateImportStatus(success, message) {
             const status = document.getElementById('importStatus');
@@ -1226,56 +1407,6 @@
             return arr;
         }
 
-       function shuffleAndDraw() {
-            // Recalcula selectedCards baseado nas quantidades
-            updateSelectedCards();
-            
-            if (selectedCards.length === 0) {
-                addLog('⚠️ Nenhuma carta selecionada! Use os botões + para adicionar cópias ao deck.');
-                return;
-            }
-            
-            hand = [];
-            field = [];
-            deck = selectedCards.map(c => ({ ...c }));
-            shuffleArray(deck);
-
-            for (let i = 0; i < 4 && deck.length > 0; i++) {
-                hand.push(deck.shift());
-            }
-
-            updateDrawQueue();
-            renderAll();
-            addLog(`🔄 Deck embaralhado. ${selectedCards.length} cartas no deck. 4 cartas compradas.`);
-            updateCounts();
-        }
-
-
-
-        function drawOne() {
-            if (deck.length === 0) {
-                addLog('⚠️ Deck vazio! Não há mais cartas para comprar.');
-                return;
-            }
-            const card = deck.shift();
-            hand.push(card);
-            updateDrawQueue();
-            renderAll();
-            addLog('🎴 Comprou: ' + card.name);
-            updateCounts();
-        }
-
-        function resetHand() {
-            while (hand.length > 0) {
-                deck.push(hand.shift());
-            }
-            shuffleArray(deck);
-            updateDrawQueue();
-            renderAll();
-            addLog('🔄 Mão resetada. Cartas devolvidas ao deck e embaralhadas.');
-            updateCounts();
-        }
-
         function clearAll() {
             allCards = [];
             cardQuantities = {};
@@ -1297,23 +1428,8 @@
         // ============================================================
         // FUNÇÕES DE MOVIMENTAÇÃO
         // ============================================================
-        function moveCardToField(index) {
-            if (index < 0 || index >= hand.length) return;
-            const card = hand.splice(index, 1)[0];
-            field.push(card);
-            renderAll();
-            updateCounts();
-            addLog('⚔️ ' + card.name + ' colocado em campo.');
-        }
+        
 
-        function moveCardToHand(index) {
-            if (index < 0 || index >= field.length) return;
-            const card = field.splice(index, 1)[0];
-            hand.push(card);
-            renderAll();
-            updateCounts();
-            addLog('✋ ' + card.name + ' retornou para a mão.');
-        }
 
         function moveCardToDiscard(index, from) {
             let card;
@@ -1594,13 +1710,6 @@
             updateCounts();
         }
 
-        function adjustCardQuantity(cardId, delta) {
-            const current = getCardQuantity(cardId);
-            const newQty = Math.max(0, current + delta);
-            setCardQuantity(cardId, newQty);
-            addLog(`${delta > 0 ? '➕' : '➖'} ${delta > 0 ? 'Adicionada' : 'Removida'} cópia de ${getCardName(cardId)} (${newQty})`);
-        }
-
         function getCardName(cardId) {
             const card = allCards.find(c => c.id === cardId);
             return card ? card.name : 'Carta';
@@ -1636,16 +1745,7 @@
             return count;
         }
 
-        // ============================================================
-        // INICIALIZAÇÃO
-        // ============================================================
-        document.addEventListener('DOMContentLoaded', () => {
-            setupDragDrop();
-            addLog('🎮 Sistema iniciado. Importe um arquivo JSON para começar.');
-            document.getElementById('controls').style.display = 'none';
-        });
-
-        // Função para adicionar 3 cópias de uma vez (atalho)
+         // Função para adicionar 3 cópias de uma vez (atalho)
         function addThreeCopies(cardId) {
             const current = getCardQuantity(cardId);
             setCardQuantity(cardId, current + 3);
@@ -1659,6 +1759,146 @@
             const card = allCards.find(c => c.id === cardId);
             addLog(`🗑️ Todas as cópias de ${card ? card.name : 'Carta'} removidas`);
         }
+
+       
+
+        // ============================================================
+        // ARMAZENAMENTO EM MEMÓRIA (localStorage)
+        // ============================================================
+        const STORAGE_KEY = 'cardgame_imported_cards';
+        const QUANTITY_KEY = 'cardgame_card_quantities';
+
+        function saveCardsToMemory() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(allCards));
+                localStorage.setItem(QUANTITY_KEY, JSON.stringify(cardQuantities));
+                addLog('💾 Dados salvos na memória local.');
+            } catch (error) {
+                console.error('Erro ao salvar dados:', error);
+                addLog('⚠️ Erro ao salvar dados na memória.');
+            }
+        }
+
+        function loadCardsFromMemory() {
+            try {
+                const savedCards = localStorage.getItem(STORAGE_KEY);
+                const savedQuantities = localStorage.getItem(QUANTITY_KEY);
+                
+                if (savedCards) {
+                    allCards = JSON.parse(savedCards);
+                    if (savedQuantities) {
+                        cardQuantities = JSON.parse(savedQuantities);
+                    } else {
+                        cardQuantities = {};
+                    }
+                    updateSelectedCards();
+                    
+                    // Atualiza a interface
+                    if (allCards.length > 0) {
+                        populateArchetypes();
+                        renderCardSelection();
+                        updateCounts();
+                        document.getElementById('filtersArea').style.display = 'flex';
+                        document.getElementById('controls').style.display = 'flex';
+                        updateImportStatus(true, `💾 ${allCards.length} cartas carregadas da memória.`);
+                        addLog(`📂 ${allCards.length} cartas carregadas do armazenamento local.`);
+                        
+                        // Recupera o estado do jogo se houver cartas no deck
+                        const savedDeck = localStorage.getItem('cardgame_current_deck');
+                        const savedHand = localStorage.getItem('cardgame_current_hand');
+                        const savedField = localStorage.getItem('cardgame_current_field');
+                        
+                        if (savedDeck && savedHand) {
+                            try {
+                                deck = JSON.parse(savedDeck);
+                                hand = JSON.parse(savedHand);
+                                field = savedField ? JSON.parse(savedField) : [];
+                                renderAll();
+                                addLog('🔄 Estado do jogo restaurado.');
+                            } catch (e) {
+                                resetGame();
+                            }
+                        }
+                        return true;
+                    }
+                }
+                return false;
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                return false;
+            }
+        }
+
+        function clearMemory() {
+            try {
+                localStorage.removeItem(STORAGE_KEY);
+                localStorage.removeItem(QUANTITY_KEY);
+                localStorage.removeItem('cardgame_current_deck');
+                localStorage.removeItem('cardgame_current_hand');
+                localStorage.removeItem('cardgame_current_field');
+                addLog('🗑️ Dados removidos da memória.');
+                return true;
+            } catch (error) {
+                console.error('Erro ao limpar memória:', error);
+                return false;
+            }
+        }
+
+        // Salvar estado do jogo (deck, mão, campo)
+        function saveGameState() {
+            try {
+                localStorage.setItem('cardgame_current_deck', JSON.stringify(deck));
+                localStorage.setItem('cardgame_current_hand', JSON.stringify(hand));
+                localStorage.setItem('cardgame_current_field', JSON.stringify(field));
+            } catch (error) {
+                console.error('Erro ao salvar estado do jogo:', error);
+            }
+        }
+
+        function loadGameState() {
+            try {
+                const savedDeck = localStorage.getItem('cardgame_current_deck');
+                const savedHand = localStorage.getItem('cardgame_current_hand');
+                const savedField = localStorage.getItem('cardgame_current_field');
+                
+                if (savedDeck && savedHand) {
+                    deck = JSON.parse(savedDeck);
+                    hand = JSON.parse(savedHand);
+                    field = savedField ? JSON.parse(savedField) : [];
+                    renderAll();
+                    updateCounts();
+                    return true;
+                }
+                return false;
+            } catch (error) {
+                console.error('Erro ao carregar estado do jogo:', error);
+                return false;
+            }
+        }
+
+
+        // ============================================================
+        // INICIALIZAÇÃO
+        // ============================================================
+         document.addEventListener('DOMContentLoaded', () => {
+            setupDragDrop();
+            
+            // TENTAR CARREGAR DADOS DA MEMÓRIA
+            const hasSavedData = loadCardsFromMemory();
+            
+            if (hasSavedData) {
+                // Tenta carregar o estado do jogo
+                loadGameState();
+                addLog('💾 Dados restaurados da memória local.');
+                document.getElementById('controls').style.display = 'flex';
+            } else {
+                addLog('🎮 Sistema iniciado. Importe um arquivo JSON para começar.');
+                document.getElementById('controls').style.display = 'none';
+                document.getElementById('filtersArea').style.display = 'none';
+            }
+        });
+
+       
 
     </script>
 </body>
