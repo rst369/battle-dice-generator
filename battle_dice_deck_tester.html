@@ -1971,7 +1971,7 @@
             selectedCards = [];
             for (const [cardId, quantity] of Object.entries(cardQuantities)) {
                 if (quantity > 0) {
-                    const card = allCards.find(c => c.id === parseInt(cardId));
+                    const card = allCards.find(c => c.id === cardId);
                     if (card) {
                         for (let i = 0; i < quantity; i++) {
                             selectedCards.push({ ...card, copyId: `${card.id}-${i}` });

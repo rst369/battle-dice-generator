@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "exportDate": "2026-05-26T18:22:53.011Z",
+  "exportDate": "2026-05-26T18:22:53",
   "cards": [
       {
         "id": 1781626878827,
@@ -276,7 +276,7 @@
         "mainEffect": "UMA VEZ POR TURNO: aplique um dos efeitos baseado na quantidade de mana gasta pelo adversário:\n3: Ganhe 2 PV e compre 1 carta\n5: As cartas do adversário custam 2 de mana adicional\n8 ou mais: Adicione 2 magias MAGO do deck ou descarte para a mão"
       },
       {
-        "id": 7110388098267.334,
+        "id": 7110388098267,
         "name": "Mago do Caos",
         "archetype": "Mago",
         "type": "creature",
@@ -289,7 +289,7 @@
         "mainEffect": "AO ENTRAR: Role um dado, olhe no topo do seu deck igual ao resultado, adicione quaisquer cartas MAGO para a mão com custo menor ou igual ao resultado obtido. Embaralhe o deck."
       },
       {
-        "id": 7110387056373.025,
+        "id": 7110387056373,
         "name": "Mago da Destruição",
         "archetype": "Mago",
         "type": "creature",
@@ -1030,7 +1030,7 @@
       "mainEffect": "AO ENTRAR: Descarte um MAMODO e jogue um MAMODO da sua mão com custo menor ou igual do que a criatura descartada"
     },
     {
-      "id": 3556528390324.093,
+      "id": 3556528390324,
       "name": "Cell Forma Perfeita",
       "archetype": "Androide",
       "type": "creature",
@@ -1043,7 +1043,7 @@
       "mainEffect": "Ganha +2 ATK/+2 DEF para cada criatura que esta carta derrotou (Permanente)."
     },
     {
-      "id": 3556527311366.5293,
+      "id": 35565273113663,
       "name": "Super Boo",
       "archetype": "Majin",
       "type": "creature",
@@ -1056,7 +1056,7 @@
       "mainEffect": "Só pode ser usado no seu turno, ganhe o efeito principal de uma criatura na sua pilha de descarte ao enviar a carta para o deck, após resolver o efeito, embaralhe."
     },
     {
-      "id": 3556526571386.6465,
+      "id": 35565265713865,
       "name": "Vou te comer",
       "archetype": "Majin",
       "type": "magic",
@@ -1069,7 +1069,7 @@
       "mainEffect": "Aumenta Atk e Def em +3, se for usado em Majin aumenta em +5."
     },
     {
-      "id": 3556525977692.234,
+      "id": 3556525977692,
       "name": "Androide 17",
       "archetype": "Androide",
       "type": "creature",
@@ -1082,7 +1082,7 @@
       "mainEffect": "Seu oponente perde 1 de MANA sempre que usar uma magia, esse efeito só acontece no turno do oponente."
     },
     {
-      "id": 3556524725440.458,
+      "id": 3556524725440,
       "name": "Kid Boo",
       "archetype": "Majin",
       "type": "creature",
@@ -1095,7 +1095,7 @@
       "mainEffect": "Custa -2 de mana para cada carta de criatura na pilha de descarte do oponente."
     },
     {
-      "id": 3556180168122.585,
+      "id": 3556180168122,
       "name": "Androide 18",
       "archetype": "Androide",
       "type": "creature",
@@ -1108,7 +1108,7 @@
       "mainEffect": "Se o seu Pv for maior que 10, reduza o custo das suas cartas em 1.\nSe o seu Pv for menor ou igual a 10, reduza o custo das suas cartas em 2."
     },
     {
-      "id": 3556179091316.694,
+      "id": 3556179091316,
       "name": "Semente dos Deuses",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -1121,7 +1121,7 @@
       "mainEffect": "Jogue um dado e ganhe MANA de acordo com o resultado +1."
     },
     {
-      "id": 3555749420230.6465,
+      "id": 35557494202305,
       "name": "Cell Semi-Perfeito",
       "archetype": "Androide",
       "type": "creature",
@@ -1134,7 +1134,7 @@
       "mainEffect": "Durante a fase de ataque da suas criaturas, se o valor do seu dado for maior que do oponente entre e efeito de ataque e defensivo, negue o efeito defensivo."
     },
     {
-      "id": 3555351731742.6543,
+      "id": 35553517317423,
       "name": "Mestre do Rodizio",
       "archetype": "Cliente",
       "type": "creature",
@@ -1147,7 +1147,7 @@
       "mainEffect": "Ganha +1 ATK e DEF para cada alimento na pilha de descarte."
     },
     {
-      "id": 3555335231347.538,
+      "id": 3555335231347,
       "name": "Fat Boo",
       "archetype": "Majin",
       "type": "creature",
@@ -1160,7 +1160,7 @@
       "mainEffect": "No seu turno: +3 ATK se o oponente controlar uma criatura que tenha defesa maior que seu ataque.\nTurno do oponente: +3 DEF se o oponente controlar uma criatura que tenha ataque maior que sua defesa."
     },
     {
-      "id": 3555253447088.833,
+      "id": 3555253447088,
       "name": "Cell Imperfeito",
       "archetype": "Androide",
       "type": "creature",
@@ -1186,7 +1186,7 @@
       "mainEffect": "Quando você invocar uma criatura ganhe 1 de MANA.\nQuando oponente invoca uma criatura perde -1 MANA.\nVocê só pode usar cada um dos efeitos uma vez por turno."
     },
     {
-      "id": 3555237728486.8643,
+      "id": 35552377284863,
       "name": "Saibaimen",
       "archetype": "Androide",
       "type": "creature",
@@ -1199,7 +1199,7 @@
       "mainEffect": "Após aplicar o efeito de defesa ou ataque esta carta deve ser enviada para o descarte."
     },
     {
-      "id": 3556443052387.3984,
+      "id": 35564430523874,
       "name": "cover",
       "archetype": "",
       "type": "magic",
@@ -1212,7 +1212,7 @@
       "mainEffect": ""
     },
     {
-      "id": 3556259833006.208,
+      "id": 3556259833006,
       "name": "Equipamento de Recuperação",
       "archetype": "Digimon",
       "type": "magic",
@@ -1225,7 +1225,7 @@
       "mainEffect": "Retorne duas cartas DIGIMON do descarte para o deck, compre 1 carta. \nEscolha um DIGIMON em campo, Se ele vencer uma batalha: Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão"
     },
     {
-      "id": 3556259695082.6367,
+      "id": 35562596950827,
       "name": "Equipamento de Socorro",
       "archetype": "Digimon",
       "type": "magic",
@@ -1238,7 +1238,7 @@
       "mainEffect": "Escolha um DIGIMON em campo, Se ele vencer uma batalha: \nGanhe PV igual a DEF do defensor e Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão "
     },
     {
-      "id": 3556259464418.869,
+      "id": 3556259464418,
       "name": "Equipamento de batalha",
       "archetype": "Digimon",
       "type": "magic",
@@ -1251,7 +1251,7 @@
       "mainEffect": "+2 ATK ou +2 DEF para um DIGIMON\nSe ele vencer uma batalha: Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão"
     },
     {
-      "id": 3556259349659.936,
+      "id": 3556259349659,
       "name": "Culumon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1264,7 +1264,7 @@
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON com custo menor ou igual a [6] do deck para a mão"
     },
     {
-      "id": 3556259168209.2773,
+      "id": 35562591682093,
       "name": "Kyubimon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1277,7 +1277,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma magia DIGIMON do descarte ou do deck para a mão"
     },
     {
-      "id": 3556258971357.795,
+      "id": 3556258971357,
       "name": "Gargomon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1290,7 +1290,7 @@
       "mainEffect": "AO ENTRAR: Descarte um DIGIMON da mão para voltar para a mão do dono uma criatura em campo com o custo menor ou igual do que o descartado"
     },
     {
-      "id": 3556258809092.294,
+      "id": 3556258809092,
       "name": "Growlmon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1303,7 +1303,7 @@
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON do descarte para a mão."
     },
     {
-      "id": 3556167568089.3535,
+      "id": 35561675680895,
       "name": "O determinado Zatch",
       "archetype": "Mamodo",
       "type": "creature",
@@ -1316,7 +1316,7 @@
       "mainEffect": "AO ENTRAR: escolha uma outra criatura MAMODO em campo, enquanto esta carta estiver em campo a outra criatura não pode ser atacada.\nNO DESCARTE: Este card  é considerado como Zatch Bell."
     },
     {
-      "id": 3556165825892.213,
+      "id": 3556165825892,
       "name": "Tia",
       "archetype": "Mamodo",
       "type": "creature",
@@ -1329,7 +1329,7 @@
       "mainEffect": "AO ENTRAR: envie um MAMODO do deck para o descarte e  ganhe PV igual seu custo de mana"
     },
     {
-      "id": 3555414748934.8467,
+      "id": 35554147489347,
       "name": "cover",
       "archetype": "",
       "type": "magic",
@@ -1342,7 +1342,7 @@
       "mainEffect": ""
     },
     {
-      "id": 3555332677877.3027,
+      "id": 35553326778777,
       "name": "O livro dos Mamodos",
       "archetype": "Mamodo",
       "type": "magic",
@@ -1355,7 +1355,7 @@
       "mainEffect": "Adicione uma criatura MAMODO do deck ou descarte para a mão"
     },
     {
-      "id": 3555332612120.694,
+      "id": 3555332612120,
       "name": "Kiyo e Zatch",
       "archetype": "Mamodo",
       "type": "creature",
@@ -1368,7 +1368,7 @@
       "mainEffect": "EM CAMPO: +2 ATK e +2 DEF para outros MAMODOS em campo. \nNão pode ser atacado se houver outros MAMODOS em campo."
     },
     {
-      "id": 3555332509719.768,
+      "id": 3555332509719,
       "name": "Mestres de Mamodo",
       "archetype": "Mamodo",
       "type": "magic",
@@ -1381,7 +1381,7 @@
       "mainEffect": "Perca -5PV: Adicione um MAMODO do descarte para mão com custo menor que [4]. Se jogar ele neste turno ele ganha +5 ATK."
     },
     {
-      "id": 3555332325265.498,
+      "id": 3555332325265,
       "name": "Traição",
       "archetype": "Mamodo",
       "type": "magic",
@@ -1394,7 +1394,7 @@
       "mainEffect": "Envie um MAMODO do deck para o descarte, ganhe ATK e DEF igual aos da criatura descartada"
     },
     {
-      "id": 3555332240866.4194,
+      "id": 35553322408664,
       "name": "Aniquilação",
       "archetype": "Mamodo",
       "type": "magic",
@@ -1407,7 +1407,7 @@
       "mainEffect": "Se você controlar um MAMODO: Destrua todas as criaturas em campo. Adicione um MAMODO com custo menor ou igual a [4] do descarte para a mão."
     },
     {
-      "id": 3555332027238.5283,
+      "id": 35553320272383,
       "name": "Zeno Bell",
       "archetype": "Mamodo",
       "type": "creature",
@@ -1420,7 +1420,7 @@
       "mainEffect": "EM CAMPO: +1 ATK para cada MAMODO no descarte\nSE FOR DERROTADO: Envie um MAMODO para o descarte no lugar desta carta"
     },
     {
-      "id": 3555331788530.7246,
+      "id": 35553317885306,
       "name": "Brago",
       "archetype": "Mamodo",
       "type": "creature",
@@ -1433,7 +1433,7 @@
       "mainEffect": "AO SER DERROTADO: Envie para o descarte todas as suas criaturas (min. 1) para jogar esta carta em campo sem pagar seu custo"
     },
     {
-      "id": 3555331536818.8086,
+      "id": 35553315368186,
       "name": "Relíquia de amizade",
       "archetype": "Mamodo",
       "type": "magic",
@@ -1446,7 +1446,7 @@
       "mainEffect": "Adicione uma magia MAMODO do descarte para a mão e então você pode enviar uma criatura MAMODO do campo para o descarte para ganhar mana igual seu custo."
     },
     {
-      "id": 3555331440221.5815,
+      "id": 35553314402215,
       "name": "Tia e Megumi",
       "archetype": "Mamodo",
       "type": "creature",
@@ -1459,7 +1459,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma magia MAMODO do deck para a mão"
     },
     {
-      "id": 5332368771297.213,
+      "id": 5332368771297,
       "name": "Ponygon",
       "archetype": "Mamodo",
       "type": "creature",
@@ -1472,7 +1472,7 @@
       "mainEffect": "AO SER DERROTADO: Jogue uma carta que contenha \"Zatch\" no nome da mão sem pagar o custo"
     },
     {
-      "id": 5332368316268.679,
+      "id": 5332368316268,
       "name": "Amizade cativante",
       "archetype": "Mamodo",
       "type": "magic",
@@ -1485,7 +1485,7 @@
       "mainEffect": "Adicione 2 criaturas Mamodo do deck ou descarte para a mão cujo custo somado seja [4]"
     },
     {
-      "id": 5332368172023.656,
+      "id": 5332368172023,
       "name": "Zaguruzen",
       "archetype": "Mamodo",
       "type": "magic",
@@ -1498,7 +1498,7 @@
       "mainEffect": "+4 ATK\nSe a criatura alvo vencer a batalha: adicione para a mão um MAMODO do descarte."
     },
     {
-      "id": 5332367957524.184,
+      "id": 5332367957524,
       "name": "Zatch Bell",
       "archetype": "Mamodo",
       "type": "creature",
@@ -1511,7 +1511,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma magia MAMODO do deck ou descarte para a mão. Descarte um MAMODO do campo para ganhar mana igual ao seu custo."
     },
     {
-      "id": 5332306074020.058,
+      "id": 5332306074020,
       "name": "Gummymon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1524,7 +1524,7 @@
       "mainEffect": "AO SER DERROTADO: Adicione uma carta DIGIMON do deck para a mão com custo menor que [6]"
     },
     {
-      "id": 5332305974160.092,
+      "id": 5332305974160,
       "name": "Viximon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1550,7 +1550,7 @@
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON do deck para a mão com custo menor que [6]"
     },
     {
-      "id": 5332305672093.139,
+      "id": 5332305672093,
       "name": "Raptando os novatos",
       "archetype": "Digimon",
       "type": "magic",
@@ -1563,7 +1563,7 @@
       "mainEffect": "Descarte 1 Digimon do campo e mova para o descarte um digimon adversário com custo menos que seu custo de mana"
     },
     {
-      "id": 5332305578087.973,
+      "id": 5332305578087,
       "name": "Assombração digital",
       "archetype": "Digimon",
       "type": "magic",
@@ -1576,7 +1576,7 @@
       "mainEffect": "Escolha 1 DIGIMON, neste turno, se ele vencer uma batalha: ganhe PV igual a defesa do defensor"
     },
     {
-      "id": 5332305461331.647,
+      "id": 5332305461331,
       "name": "Mundo digital",
       "archetype": "Digimon",
       "type": "magic",
@@ -1589,7 +1589,7 @@
       "mainEffect": "Soma ou subtraia até +3 ou -3 no resultado de um dado. Perca -2 PV vezes a quantidade escolhida"
     },
     {
-      "id": 5332305312742.363,
+      "id": 5332305312742,
       "name": "Taomon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1602,7 +1602,7 @@
       "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta pelo custo de mana do DIGIMON enviado (min 1.)"
     },
     {
-      "id": 5332305004879.372,
+      "id": 5332305004879,
       "name": "Sakuyamon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1615,7 +1615,7 @@
       "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta em [3]"
     },
     {
-      "id": 5332304722182.957,
+      "id": 5332304722182,
       "name": "Renamon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1628,7 +1628,7 @@
       "mainEffect": "AO ENTRAR: Adicione um DIGIMON do deck para a mão"
     },
     {
-      "id": 5332304278615.898,
+      "id": 5332304278615,
       "name": "Rapidimon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1654,7 +1654,7 @@
       "mainEffect": "Você pode enviar um DIGIMON do campo para o descarte para reduzir o custo de mana desta carta em [3]"
     },
     {
-      "id": 5332303575302.691,
+      "id": 5332303575302,
       "name": "Terriermon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1667,7 +1667,7 @@
       "mainEffect": "AO ENTRAR: Adicionei uma magia DIGIMON do descarte para a mão"
     },
     {
-      "id": 5332302107157.707,
+      "id": 5332302107157,
       "name": "Cura necessária",
       "archetype": "",
       "type": "magic",
@@ -1680,7 +1680,7 @@
       "mainEffect": "Recupere 2 PV. Você pode pagar até mais 4 de MANA, recupere o mesmo tanto de PV"
     },
     {
-      "id": 5332297925774.427,
+      "id": 5332297925774,
       "name": "Investigando com demônios",
       "archetype": "Infernal",
       "type": "magic",
@@ -1693,7 +1693,7 @@
       "mainEffect": "Role um dado: olhe a quantidade de cartas no topo do deck igual ao resultado, adicione uma carta INFERNAL com custo menor ou igual que o custo da maior carta que o adversário controla para a mão. Perca PV igual ao seu custo de mana."
     },
     {
-      "id": 5332297602913.112,
+      "id": 5332297602913,
       "name": "Negociando com demônios",
       "archetype": "Infernal",
       "type": "magic",
@@ -1706,7 +1706,7 @@
       "mainEffect": "Role um dado: seu adversário perde PV igual ao resultado obtido"
     },
     {
-      "id": 5332297366976.438,
+      "id": 5332297366976,
       "name": "King Hellboy",
       "archetype": "Infernal",
       "type": "creature",
@@ -1719,7 +1719,7 @@
       "mainEffect": "AO SER DERROTADO: Pague -6 PV para jogar estar carta em campo do descarte"
     },
     {
-      "id": 5332296921630.402,
+      "id": 5332296921630,
       "name": "Abe Sapien",
       "archetype": "Infernal",
       "type": "creature",
@@ -1732,7 +1732,7 @@
       "mainEffect": "AO SER DERROTADO: Volte uma magia INFERNAL do descarte para a mão"
     },
     {
-      "id": 5332296338135.522,
+      "id": 5332296338135,
       "name": "Liz Sherman",
       "archetype": "Infernal",
       "type": "creature",
@@ -1758,7 +1758,7 @@
       "mainEffect": "Descarte um Infernal: cause dano ao PV adversário igual ao custo de mana da carta descartada"
     },
     {
-      "id": 5332295733117.902,
+      "id": 5332295733117,
       "name": "Tiro Infernal",
       "archetype": "Infernal",
       "type": "magic",
@@ -1771,7 +1771,7 @@
       "mainEffect": "Cause 3 de dano ao PV adversário"
     },
     {
-      "id": 5332295449099.388,
+      "id": 5332295449099,
       "name": "Hellboy",
       "archetype": "Infernal",
       "type": "creature",
@@ -1784,7 +1784,7 @@
       "mainEffect": "AO ENTRAR: Pague até 5 de MANA para diminuir o PV adversário pelo mesmo número"
     },
     {
-      "id": 5332295041613.867,
+      "id": 5332295041613,
       "name": "Digivice boost",
       "archetype": "Digimon",
       "type": "magic",
@@ -1797,7 +1797,7 @@
       "mainEffect": "Descarte um DIGIMON da mão e ganhe mana igual ao custo da criatura descartada"
     },
     {
-      "id": 5332294737438.521,
+      "id": 5332294737438,
       "name": "Dukemon Carmesin",
       "archetype": "Digimon",
       "type": "creature",
@@ -1810,7 +1810,7 @@
       "mainEffect": "Você pode descartar um DIGIMON em campo para reduzir o custo de mana desta carta em [4]"
     },
     {
-      "id": 5332294425645.607,
+      "id": 5332294425645,
       "name": "Dukemon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1823,7 +1823,7 @@
       "mainEffect": "Você pode descartar um DIGIMON em campo para reduzir o custo de mana desta carta pelo custo de mana da carta descartada (min 1)"
     },
     {
-      "id": 5332294286696.048,
+      "id": 5332294286696,
       "name": "War Growlmon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1836,7 +1836,7 @@
       "mainEffect": "Você pode descartar um DIGIMON em campo para reduzir o custo de mana desta carta pelo custo de mana da carta descartada (min 1)"
     },
     {
-      "id": 5332294115633.652,
+      "id": 5332294115633,
       "name": "Guilmon",
       "archetype": "Digimon",
       "type": "creature",
@@ -1862,7 +1862,7 @@
       "mainEffect": "AO ENTRAR: Role um dado e adicione uma carta CAVALEIRO do descarte com custo menor ou igual ao resultado"
     },
     {
-      "id": 5332291694055.723,
+      "id": 5332291694055,
       "name": "Cavaleiro de Áries",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1888,7 +1888,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma carta CAVALEIRO com custo de mana menor que 4 do descarte para a mão."
     },
     {
-      "id": 5332289973651.243,
+      "id": 5332289973651,
       "name": "Mestre de Águia",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1901,7 +1901,7 @@
       "mainEffect": "AO ENTRAR: Adicione um CAVALEIRO do deck ou descarte para a mão.\nNO CAMPO: Todos CAVALEIRO ganham +2 ATK +2 DEF"
     },
     {
-      "id": 5332289671972.038,
+      "id": 5332289671972,
       "name": "Meteoro de Pégaso",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -1914,7 +1914,7 @@
       "mainEffect": "+3 ATK\nSE Cavaleiro de Pégaso está balhando e VENCER a batalha: Adicione um MESTRE DE AGUIA do deck para a mão e ganhe 2 de mana"
     },
     {
-      "id": 5332289394914.644,
+      "id": 5332289394914,
       "name": "Tempestade Nebulosa",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -1927,7 +1927,7 @@
       "mainEffect": "SE Cavaleiro de Andrômeda está em campo: reduza o custo desta carta em 2.\nRole um dado e diminua a DEF de todas criaturas adversárias pelo resultado obtido. Retorne para a mão todas as criaturas que tiveram a DEF zerada por este efeito."
     },
     {
-      "id": 5332288727845.015,
+      "id": 5332288727845,
       "name": "Cavaleiro Aprendiz",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1940,7 +1940,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma criatura CAVALEIRO do deck ou descarte para a mão com custo de mana menor que 5"
     },
     {
-      "id": 5332281146463.539,
+      "id": 5332281146463,
       "name": "Cavaleiro de Cisne",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -1965,7 +1965,7 @@
       "mainEffect": "[1][2] Ganhe 1 de vida | [3][4][5][6] Ganhe 2 de vida"
     },
     {
-      "id": 7106024159909.727,
+      "id": 7106024159909,
       "name": "Mago Vampiresco",
       "type": "creature",
       "attack": 5,
@@ -1977,7 +1977,7 @@
       "mainEffect": "CONTÍNUO: Quando derrotar uma criatura, ganhe PV igual a mana do defensor derrotado"
     },
     {
-      "id": 7106004515465.918,
+      "id": 7106004515465,
       "name": "Ganância",
       "type": "magic",
       "attack": 0,
@@ -1989,7 +1989,7 @@
       "mainEffect": "Role um dado. Compre cartas igual ao número obtido."
     },
     {
-      "id": 7106004346164.963,
+      "id": 7106004346164,
       "name": "Magia da fortuna",
       "type": "magic",
       "attack": 0,
@@ -2001,7 +2001,7 @@
       "mainEffect": "[1] compre 3 cartas\n[2] [3] [4] [5] compre 1 carta\n[6] descarte 1 carta"
     },
     {
-      "id": 7105997731402.383,
+      "id": 7105997731402,
       "name": "Mago Vampiresco",
       "type": "creature",
       "attack": 5,
@@ -2013,7 +2013,7 @@
       "mainEffect": "CONTÍNUO: Quando derrotar uma criatura, ganhe PV igual a mana do defensor derrotado"
     },
     {
-      "id": 7105994648845.052,
+      "id": 7105994648845,
       "name": "Mago da IA",
       "attack": 5,
       "defense": 5,
@@ -2023,7 +2023,7 @@
       "defenseEffect": "🎲 Ao defender, role um dado de 6 faces:\n• Se 1-2: +2 de defesa\n• Se 3-5: +5 de defesa\n• Se 6: +8 de defesa"
     },
     {
-      "id": 7105994966965.439,
+      "id": 7105994966965,
       "name": "livro do caos",
       "attack": 5,
       "defense": 5,
@@ -2055,7 +2055,7 @@
       "mainEffect": "[1] compre 3 cartas\n[2] [3] [4] [5] compre 1 carta\n[6] descarte 1 carta"
     },
     {
-      "id": 5330603990913.631,
+      "id": 5330603990913,
       "name": "Fogarimon",
       "archetype": "",
       "type": "creature",
@@ -2068,7 +2068,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 5330603868398.846,
+      "id": 5330603868398,
       "name": "Vortexmon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -2081,7 +2081,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 5330603755545.713,
+      "id": 5330603755545,
       "name": "Rinovortexmon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -2094,7 +2094,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 5330603596687.1045,
+      "id": 53306035966875,
       "name": "Voltramon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -2107,7 +2107,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você você pode descartar uma carta DIGIMON para ganha mana igual ao seu custo de mana. Receba a mesma quantidade em dano ao PV."
     },
     {
-      "id": 5330603494106.148,
+      "id": 5330603494106,
       "name": "Anfibimon",
       "archetype": "Fakemon",
       "type": "creature",
@@ -2133,7 +2133,7 @@
       "mainEffect": "Escolha um DIGIMON em campo e role um dado\n[2][4][6] todas as criaturas adversárias perdem ATK igual ao seu ATK\n[1][3][5] todas as criaturas adversárias perdem ATK igual a sua DEF"
     },
     {
-      "id": 5330603166634.227,
+      "id": 5330603166634,
       "name": "Lamina de Dados",
       "archetype": "Fakemon",
       "type": "magic",
@@ -2146,7 +2146,7 @@
       "mainEffect": "+3 ATK para o DIGIMON alvo. Se o DIGIMON alvo ganhar o combate: adicione uma magia DIGIMON do deck para a mão."
     },
     {
-      "id": 5330603092023.053,
+      "id": 5330603092023,
       "name": "Barragem Espinhosa",
       "archetype": "Fakemon",
       "type": "magic",
@@ -2159,7 +2159,7 @@
       "mainEffect": "Escolha um Digimon em campo. Neste turno ele não pode atacar. Cause dano ao PV de ambos jogadores igual ao seu ATK."
     },
     {
-      "id": 5330603018869.178,
+      "id": 5330603018869,
       "name": "Super Carga Elétrica",
       "archetype": "Fakemon",
       "type": "magic",
@@ -2172,7 +2172,7 @@
       "mainEffect": "Role um dado: ganhe ATK ou DEF igual ao resultado obtido"
     },
     {
-      "id": 5330602970889.611,
+      "id": 5330602970889,
       "name": "Portal Espiritual",
       "archetype": "Fakemon",
       "type": "magic",
@@ -2185,7 +2185,7 @@
       "mainEffect": "Adicione uma carta DIGIMON do deck para sua mão"
     },
     {
-      "id": 5330602278964.092,
+      "id": 5330602278964,
       "name": "Fofuxo",
       "archetype": "Medabot",
       "type": "creature",
@@ -2198,7 +2198,7 @@
       "mainEffect": "UMA VEZ POR TURNO: Você pode pagar PV para jogar uma carta MEDABOT ao invés do seu custo de mana."
     },
     {
-      "id": 5330602077089.547,
+      "id": 5330602077089,
       "name": "Ciandog",
       "archetype": "Medabot",
       "type": "creature",
@@ -2211,7 +2211,7 @@
       "mainEffect": "AO ENTRAR: descarte uma carta da mão: adicione uma criatura MEDABOT do deck para mão"
     },
     {
-      "id": 5330601875052.483,
+      "id": 5330601875052,
       "name": "Peppacat",
       "archetype": "Medabot",
       "type": "creature",
@@ -2224,7 +2224,7 @@
       "mainEffect": ""
     },
     {
-      "id": 5330601770028.199,
+      "id": 5330601770028,
       "name": "Explosão de mísseis",
       "archetype": "Medabot",
       "type": "magic",
@@ -2237,7 +2237,7 @@
       "mainEffect": "Role um dado, diminua a defesa de todas criaturas adversárias igual ao resultado obtido."
     },
     {
-      "id": 5330601516794.069,
+      "id": 5330601516794,
       "name": "Canhões não bastam",
       "archetype": "Medabot",
       "type": "magic",
@@ -2250,7 +2250,7 @@
       "mainEffect": "Descarte 3 cartas do topo do deck, escolha uma carta entre as descartadas e adicione a mão. Escolha um MEDABOT para ganhar ATK ou DEF igual ao custo de mana da carta escolhida."
     },
     {
-      "id": 5330601484686.787,
+      "id": 5330601484686,
       "name": "Fênix",
       "archetype": "Medabot",
       "type": "creature",
@@ -2263,7 +2263,7 @@
       "mainEffect": ""
     },
     {
-      "id": 5330601246831.357,
+      "id": 5330601246831,
       "name": "Lâmina de combate",
       "archetype": "Medabot",
       "type": "magic",
@@ -2276,7 +2276,7 @@
       "mainEffect": "Descarte um MEDABOT da mão, escolha uma criatura para ganhar ATK igual ao custo de mana da carta descartada."
     },
     {
-      "id": 5330601058418.518,
+      "id": 5330601058418,
       "name": "Agilidade robótica",
       "archetype": "Medabot",
       "type": "magic",
@@ -2289,7 +2289,7 @@
       "mainEffect": "Role um dado, adicione do seu descarte para mão uma carta MEDABOT com custo de mana menor que o resultado obtido"
     },
     {
-      "id": 5330600973112.466,
+      "id": 5330600973112,
       "name": "Kabuto",
       "archetype": "Medabot",
       "type": "creature",
@@ -2302,7 +2302,7 @@
       "mainEffect": "AO ENTRAR: Adicione uma carta MEDABOT do deck para mão"
     },
     {
-      "id": 5330600816411.959,
+      "id": 5330600816411,
       "name": "Barreira de energia",
       "archetype": "Medabot",
       "type": "magic",
@@ -2315,7 +2315,7 @@
       "mainEffect": "Adicione +3 ao bônus de ATK ou DEF para um MEDABOT"
     },
     {
-      "id": 5330497750121.021,
+      "id": 5330497750121,
       "name": "Cavaleiro de Andrômeda",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -2328,7 +2328,7 @@
       "mainEffect": "CASO SEJA DERROTADO: Adicione um CAVALEIRO DE FENIX do deck ou descarte para a mão. No seu próximo turno ganhe +3 de MANA"
     },
     {
-      "id": 5330496984698.141,
+      "id": 5330496984698,
       "name": "Cavaleiro de Dragão",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -2341,7 +2341,7 @@
       "mainEffect": "APÒS O COMBATE: Se Cavaleiro de Dragão não for derrotado nesta batalha, adicione uma criatura \"Cavaleiro\" do deck para a mão."
     },
     {
-      "id": 5330496980847.223,
+      "id": 5330496980847,
       "name": "Luffy",
       "archetype": "Pirata",
       "type": "creature",
@@ -2354,7 +2354,7 @@
       "mainEffect": "QUANDO ENTRAR EM CAMPO: Adicione do deck para mão uma carta \"Pirata\"."
     },
     {
-      "id": 5330496966796.327,
+      "id": 5330496966796,
       "name": "Dragão Azul",
       "archetype": "Dragão Azul",
       "type": "creature",
@@ -2367,7 +2367,7 @@
       "mainEffect": "AO ENTRAR NO CAMPO: escolha uma criatura oponente, role um dado, se cair um valor menor que o custo de mana dele, envie a criatura para o descarte "
     },
     {
-      "id": 5330495625778.124,
+      "id": 5330495625778,
       "name": "Deusa Atena",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -2393,7 +2393,7 @@
       "mainEffect": "CASO SEJA DERROTADO: Adicione um CAVALEIRO DE FENIX do deck ou descarte para a mão. No seu próximo turno ganhe +3 de MANA"
     },
     {
-      "id": 5330427720788.114,
+      "id": 5330427720788,
       "name": "Cavaleiro de Fênix",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -2406,7 +2406,7 @@
       "mainEffect": "QUANDO FOR DERROTADO: Descarte 2 cartas da mão para jogar esta carta em campo"
     },
     {
-      "id": 5330427504161.835,
+      "id": 5330427504161,
       "name": "Escudo de Cavaleiro",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -2419,7 +2419,7 @@
       "mainEffect": "+ 2 DEF para o alvo. Se for um CAVALEIRO +5"
     },
     {
-      "id": 5330412105137.381,
+      "id": 5330412105137,
       "name": "Beyblade - batalha",
       "type": "magic",
       "attack": 0,
@@ -2431,7 +2431,7 @@
       "mainEffect": "Role um dado (de qualquer lado) novamente."
     },
     {
-      "id": 5330412068402.434,
+      "id": 5330412068402,
       "name": "Beyblade -  Dragon",
       "type": "creature",
       "attack": 4,
@@ -2443,7 +2443,7 @@
       "mainEffect": "QUANDO FOR DERROTADO: Adicione uma carta \"Beyblade\" do deck para a mão."
     },
     {
-      "id": 5330410952061.276,
+      "id": 5330410952061,
       "name": "O Samurai",
       "type": "creature",
       "attack": 5,
@@ -2455,7 +2455,7 @@
       "mainEffect": ""
     },
     {
-      "id": 5330410474315.145,
+      "id": 5330410474315,
       "name": "Medabot - Kabuto",
       "type": "creature",
       "attack": 4,
@@ -2467,7 +2467,7 @@
       "mainEffect": "NA INVOCAÇÂO: Role um dado, caso o resultado seja [6] adicione 2 cartas \"MEDAPEÇA\" do seu deck à sua mão. Caso contrário adicione 1 carta \"MEDAPEÇA\""
     },
     {
-      "id": 5330410105331.789,
+      "id": 5330410105331,
       "name": "Treinamento de Cavaleiro",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -2480,7 +2480,7 @@
       "mainEffect": "+1 ou -1 (para qualquer um dos lados) no resultado de um dado em um combate envolvendo um cavaleiro."
     },
     {
-      "id": 5330409729405.727,
+      "id": 5330409729405,
       "name": "Armadura dourada",
       "archetype": "Cavaleiro",
       "type": "magic",
@@ -2493,7 +2493,7 @@
       "mainEffect": "Neste turno soma ou subtraia +1 ou +2 a um lançamento de dado de uma carta \"Cavaleiro\""
     },
     {
-      "id": 5330408624406.822,
+      "id": 5330408624406,
       "name": "Cavaleiro de Pégaso",
       "archetype": "Cavaleiro",
       "type": "creature",
@@ -2506,7 +2506,7 @@
       "mainEffect": ""
     },
     {
-      "id": 5330925746247.595,
+      "id": 5330925746247,
       "name": "Goku SS2",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2519,7 +2519,7 @@
       "mainEffect": "No final do turno jogue um dado se o resultado for [2][4][6], envie esta carta para o descarte e depois invoque Goku SS4 do deck, da mão ou descarte."
     },
     {
-      "id": 7110746506415.121,
+      "id": 7110746506415,
       "name": "Esfera do Dragão 7",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -2532,7 +2532,7 @@
       "mainEffect": "Devolva todas as esferas do dragão que estejam no descarte para o deck e ganhe 1 PV para cada carta devolvida, embaralhe o deck."
     },
     {
-      "id": 7110746190298.379,
+      "id": 7110746190298,
       "name": "Esfera do Dragão 5",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -2545,7 +2545,7 @@
       "mainEffect": "Revele uma carta da sua mão e depois envie até 6 esferas do dragão do deck para o descarte e depois reduza o custo da carta revelada em 1 para cada carta enviada.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 5330919940719.953,
+      "id": 5330919940719,
       "name": "Esfera do Dragão 6",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -2558,7 +2558,7 @@
       "mainEffect": "Jogue um SAIYAJIN do descarte para o campo sem pagar o custo.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 5330919612637.691,
+      "id": 5330919612637,
       "name": "Esfera do Dragão 4",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -2571,7 +2571,7 @@
       "mainEffect": "+1 DEF até o final do turno do oponente para cada carta com esfera do dragão no nome que esteja no descarte.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 5330918234109.061,
+      "id": 5330918234109,
       "name": "Esfera do Dragão 3",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -2584,7 +2584,7 @@
       "mainEffect": "+1 MANA para cada carta com esfera do dragão no nome que esteja no descarte.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 5330918095801.037,
+      "id": 5330918095801,
       "name": "Esfera do Dragão 2",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -2597,7 +2597,7 @@
       "mainEffect": "+1 ATK para cada carta com esfera do dragão no nome que esteja no descarte.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 5330917887174.974,
+      "id": 5330917887174,
       "name": "Esfera do Dragão 1",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -2610,7 +2610,7 @@
       "mainEffect": "+3 ATK para todas criaturas em campo até o final do turno.\nVocê pode adicionar uma carta do deck para mão que tenha esfera do dragão no nome, mas não pode usá-la neste turno."
     },
     {
-      "id": 7110742886225.883,
+      "id": 7110742886225,
       "name": "Instinto Superior",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2623,7 +2623,7 @@
       "mainEffect": "Esta carta é tratada como Goku enquanto estiver em campo.\nQuando derrotado, adicione Goku do descarte para mão."
     },
     {
-      "id": 5330916551388.059,
+      "id": 5330916551388,
       "name": "Vegeta SS2",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2636,7 +2636,7 @@
       "mainEffect": "Quando esta carta tiver o ATK aumentado pelo efeito de outra carta, ganhe +2 ATK até o final do turno."
     },
     {
-      "id": 5330916502078.072,
+      "id": 5330916502078,
       "name": "Trunks e Goten",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2649,7 +2649,7 @@
       "mainEffect": "AO ENTRAR: Adicione Goten do deck ou descarte para a mão."
     },
     {
-      "id": 5330916341654.306,
+      "id": 5330916341654,
       "name": "Kid Gohan",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2662,7 +2662,7 @@
       "mainEffect": "Quando enviado para o descarte, adicione do deck uma carta que tenha Goku no nome para a mão."
     },
     {
-      "id": 5330916195082.282,
+      "id": 5330916195082,
       "name": "Goten",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2675,7 +2675,7 @@
       "mainEffect": "AO ENTRAR: Role um dado e adicione uma magia do deck com custo igual ou menor do valor obtido."
     },
     {
-      "id": 5330835661123.496,
+      "id": 5330835661123,
       "name": "Vegeta SS God",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2688,7 +2688,7 @@
       "mainEffect": "EM CAMPO: suas cartas tem custo de MANA reduzido em 1."
     },
     {
-      "id": 5330834663344.987,
+      "id": 5330834663344,
       "name": "Vegeta",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2701,7 +2701,7 @@
       "mainEffect": "AO SER DERROTADO: adicione do deck para a mão Vegeta SS2."
     },
     {
-      "id": 5330832394841.588,
+      "id": 5330832394841,
       "name": "Broly",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2714,7 +2714,7 @@
       "mainEffect": "Quando entrar em jogo, todas as criaturas do oponente perdem 2 de defesa."
     },
     {
-      "id": 5330667532023.686,
+      "id": 5330667532023,
       "name": "Taiyoken",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -2727,7 +2727,7 @@
       "mainEffect": "Durante a fase de combate do seu oponente, jogue um dado para cada criatura que for atacar, se o valor for par negue o ataque."
     },
     {
-      "id": 5330666324020.332,
+      "id": 5330666324020,
       "name": "Kienzan",
       "archetype": "Saiyajin",
       "type": "magic",
@@ -2740,7 +2740,7 @@
       "mainEffect": "Escolha um criatura do oponente e reduza o ataque e defesa pela metade (arredondada pra cima) até o final do turno."
     },
     {
-      "id": 5330563900051.006,
+      "id": 5330563900051,
       "name": "Goku SS4",
       "archetype": "Saiyajin",
       "type": "creature",
@@ -2753,7 +2753,7 @@
       "mainEffect": "No final do turno jogue um dado se o resultado for [1][6], envie esta carta para pilha de descarte e depois invoque Instinto Superior do deck, da mão ou do descarte."
     },
     {
-      "id": 5330563771180.149,
+      "id": 5330563771180,
       "name": "Goku",
       "archetype": "Saiyajin",
       "type": "creature",
