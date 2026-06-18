@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -765,7 +766,7 @@
             color: #fff;
         }
 
-        /* Fila de Compra */
+        /* Fila de Compra - Versão Completa do Deck */
         .draw-queue {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
@@ -778,30 +779,169 @@
             font-size: 1rem;
             color: #aaa;
             margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .draw-queue-title .queue-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .draw-queue-title .queue-actions button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .draw-queue-title .queue-actions button:hover {
+            background: #ffd700;
+            color: #1a1a2e;
+        }
+
+        .draw-queue-title .queue-actions button.success {
+            border-color: #2ecc71;
+            color: #2ecc71;
+        }
+
+        .draw-queue-title .queue-actions button.success:hover {
+            background: #2ecc71;
+            color: #fff;
         }
 
         .draw-queue-cards {
             display: flex;
-            gap: 10px;
             flex-wrap: wrap;
+            gap: 10px;
             min-height: 60px;
             padding: 10px;
             background: rgba(0, 0, 0, 0.2);
             border-radius: 10px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .draw-queue-cards::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .draw-queue-cards::-webkit-scrollbar-thumb {
+            background: #ffd700;
+            border-radius: 10px;
         }
 
         .draw-queue-cards .card-item {
-            width: 80px;
-            opacity: 0.7;
+            width: 90px;
+            opacity: 0.85;
+            cursor: pointer;
+        }
+
+        .draw-queue-cards .card-item:hover {
+            opacity: 1;
+            transform: translateY(-3px);
         }
 
         .draw-queue-cards .card-item img {
-            width: 65px;
-            height: 65px;
+            width: 70px;
+            height: 70px;
         }
 
         .draw-queue-cards .card-item .card-name {
-            font-size: 0.5rem;
+            font-size: 0.55rem;
+        }
+
+        .draw-queue-cards .card-item .card-actions {
+            margin-top: 4px;
+        }
+
+        .draw-queue-cards .card-item .card-actions button {
+            font-size: 0.45rem;
+            padding: 1px 6px;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-hand {
+            border-color: #4a90d9;
+            color: #4a90d9;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-hand:hover {
+            background: #4a90d9;
+            color: #fff;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-top {
+            border-color: #f39c12;
+            color: #f39c12;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-top:hover {
+            background: #f39c12;
+            color: #fff;
+        }
+
+        /* Botões compactos para o deck */
+        .draw-queue-cards .card-item .card-actions {
+            display: flex;
+            gap: 3px;
+            margin-top: 3px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .draw-queue-cards .card-item .card-actions button {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #aaa;
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 0.45rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: bold;
+        }
+
+        .draw-queue-cards .card-item .card-actions button:hover {
+            background: #ffd700;
+            color: #1a1a2e;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-hand {
+            border-color: #4a90d9;
+            color: #4a90d9;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-hand:hover {
+            background: #4a90d9;
+            color: #fff;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-top {
+            border-color: #f39c12;
+            color: #f39c12;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-top:hover {
+            background: #f39c12;
+            color: #fff;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-field {
+            border-color: #2ecc71;
+            color: #2ecc71;
+        }
+
+        .draw-queue-cards .card-item .card-actions button.to-field:hover {
+            background: #2ecc71;
+            color: #fff;
         }
 
         /* Log */
@@ -925,6 +1065,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -940,12 +1081,14 @@
                 <div id="importStatus" class="import-status info">Aguardando importação...</div>
             </div>
             <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
-                <button class="secondary" onclick="loadCardsFromMemory(); updateImportStatus(true, '💾 Dados carregados da memória.');" 
-                        style="padding:5px 15px; font-size:0.8rem;">
+                <button class="secondary"
+                    onclick="loadCardsFromMemory(); updateImportStatus(true, '💾 Dados carregados da memória.');"
+                    style="padding:5px 15px; font-size:0.8rem;">
                     💾 Carregar da Memória
                 </button>
-                <button class="danger" onclick="if(confirm('Tem certeza que deseja limpar a memória?')){clearMemory(); updateImportStatus(false, '🗑️ Memória limpa.');}" 
-                        style="padding:5px 15px; font-size:0.8rem;">
+                <button class="danger"
+                    onclick="if(confirm('Tem certeza que deseja limpar a memória?')){clearMemory(); updateImportStatus(false, '🗑️ Memória limpa.');}"
+                    style="padding:5px 15px; font-size:0.8rem;">
                     🗑️ Limpar Memória
                 </button>
                 <span style="color:#666; font-size:0.8rem; align-self:center;">
@@ -984,10 +1127,13 @@
         <!-- Seleção de Cartas -->
         <div class="card-selection" id="cardSelection">
             <div class="card-selection-header">
-                <span class="count-info">📋 Selecionadas: <span id="selectedCount">0</span> / <span id="totalCards">0</span></span>
+                <span class="count-info">📋 Selecionadas: <span id="selectedCount">0</span> / <span
+                        id="totalCards">0</span></span>
                 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                    <button class="secondary" onclick="selectAll()" style="padding:5px 15px;font-size:0.8rem;">Selecionar Todos</button>
-                    <button class="secondary" onclick="selectNone()" style="padding:5px 15px;font-size:0.8rem;">Desmarcar Todos</button>
+                    <button class="secondary" onclick="selectAll()"
+                        style="padding:5px 15px;font-size:0.8rem;">Selecionar Todos</button>
+                    <button class="secondary" onclick="selectNone()"
+                        style="padding:5px 15px;font-size:0.8rem;">Desmarcar Todos</button>
                 </div>
             </div>
             <div class="card-selection-grid" id="cardSelectionGrid">
@@ -1004,13 +1150,13 @@
             <button class="secondary" onclick="resetHand()">🔄 Resetar Mão</button>
             <button class="danger" onclick="clearAll()">🗑️ Limpar Tudo</button>
             <div class="info">
-                Deck: <span id="deckCount">0</span> | 
-                Mão: <span id="handCount">0</span> | 
+                Deck: <span id="deckCount">0</span> |
+                Mão: <span id="handCount">0</span> |
                 Campo: <span id="fieldCount">0</span>
             </div>
         </div>
 
-       
+
 
         <!-- Áreas do Jogo -->
         <div class="game-areas">
@@ -1038,11 +1184,21 @@
         <!-- Fila de Compra -->
         <div class="draw-queue">
             <div class="draw-queue-title">
-                📚 PRÓXIMAS CARTAS (Fila de Compra)
-                <span style="color: #ffd700; margin-left: 10px;" id="queueCount">0</span>
+                <span>
+                    📚 DECK COMPLETO
+                    <span style="color: #ffd700; margin-left: 10px;" id="queueCount">0</span>
+                    <span style="color: #666; font-size: 0.8rem; margin-left: 10px;">
+                        (Clique em "Pegar" para adicionar à mão)
+                    </span>
+                </span>
+                <div class="queue-actions">
+                    <button class="success" onclick="shuffleDeck()">🔄 Embaralhar</button>
+                    <button onclick="drawMultipleCards(3)">🎴 Comprar 3</button>
+                    <button onclick="drawMultipleCards(5)">🎴 Comprar 5</button>
+                </div>
             </div>
             <div class="draw-queue-cards" id="drawQueueContainer">
-                <div class="empty-msg" style="color: #666; font-style: italic;">Embaralhe o deck para ver as próximas cartas</div>
+                <div class="empty-msg" style="color: #666; font-style: italic;">Deck vazio</div>
             </div>
         </div>
 
@@ -1056,20 +1212,20 @@
     <div class="card-tooltip" id="cardTooltip">
         <div class="tooltip-title" id="tooltipTitle">Nome da Carta</div>
         <div class="tooltip-type" id="tooltipType">Tipo • Custo</div>
-        
+
         <!-- Efeito Principal -->
         <div class="tooltip-effect-label">✨ Efeito Principal:</div>
         <div class="tooltip-effect" id="tooltipEffect">Descrição do efeito</div>
-        
+
         <!-- Efeitos de Ataque e Defesa (para criaturas) -->
         <div id="tooltipCombatEffects" style="display:none;">
             <div class="tooltip-effect-label" style="margin-top:8px;">⚔ Efeito de Ataque:</div>
             <div class="tooltip-effect" id="tooltipAttackEffect" style="color:#ff6b6b;">-</div>
-            
+
             <div class="tooltip-effect-label" style="margin-top:6px;">🛡 Efeito de Defesa:</div>
             <div class="tooltip-effect" id="tooltipDefenseEffect" style="color:#4ecdc4;">-</div>
         </div>
-        
+
         <div class="tooltip-stats" id="tooltipStats"></div>
     </div>
 
@@ -1089,6 +1245,7 @@
         // Substitua a declaração de selectedCards
         let cardQuantities = {}; // { cardId: quantidade }
         let selectedCards = []; // Será calculado baseado nas quantidades
+        let deckFilterText = '';// Função para filtrar o deck visualmente (opcional)
 
         // ============================================================
         // FUNÇÕES DE IMPORTAÇÃO
@@ -1099,7 +1256,7 @@
             if (!file) return;
 
             const reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 try {
                     const data = JSON.parse(e.target.result);
                     let cards;
@@ -1118,10 +1275,10 @@
                     allCards = cards;
                     cardQuantities = {};
                     updateSelectedCards();
-                    
+
                     // SALVAR NA MEMÓRIA
                     saveCardsToMemory();
-                    
+
                     updateImportStatus(true, `✅ ${allCards.length} cartas importadas e salvas!`);
                     populateArchetypes();
                     renderCardSelection();
@@ -1135,7 +1292,7 @@
                     addLog(`❌ Erro ao importar: ${error.message}`);
                 }
             };
-            reader.onerror = function() {
+            reader.onerror = function () {
                 updateImportStatus(false, '❌ Erro ao ler o arquivo.');
             };
             reader.readAsText(file);
@@ -1155,12 +1312,12 @@
         // Função shuffleAndDraw atualizada
         function shuffleAndDraw() {
             updateSelectedCards();
-            
+
             if (selectedCards.length === 0) {
                 addLog('⚠️ Nenhuma carta selecionada! Use os botões + para adicionar cópias ao deck.');
                 return;
             }
-            
+
             hand = [];
             field = [];
             deck = selectedCards.map(c => ({ ...c }));
@@ -1241,10 +1398,10 @@
             hand = [];
             field = [];
             drawQueue = [];
-            
+
             // LIMPAR MEMÓRIA
             clearMemory();
-            
+
             document.getElementById('filtersArea').style.display = 'none';
             document.getElementById('controls').style.display = 'none';
             document.getElementById('archetypeFilter').innerHTML = '<option value="">Todos os Arquétipos</option>';
@@ -1359,7 +1516,7 @@
             setCardQuantity(cardId, quantity);
         }
 
-       function renderCardSelection() {
+        function renderCardSelection() {
             const grid = document.getElementById('cardSelectionGrid');
             grid.innerHTML = '';
             const filtered = getFilteredCards();
@@ -1415,20 +1572,20 @@
             hand = [];
             field = [];
             drawQueue = [];
-            document.getElementById('filtersArea').style.display = 'none';
+            document.getElementById('filtersArea').styles.display = 'none';
             document.getElementById('controls').style.display = 'none';
             document.getElementById('archetypeFilter').innerHTML = '<option value="">Todos os Arquétipos</option>';
             renderCardSelection();
             renderAll();
             updateCounts();
-            updateImportStatus(false, '🗑️ Dados removidos.');
+            //updateImportStatus(false, '🗑️ Dados removidos.');
             addLog('🗑️ Todos os dados foram removidos.');
         }
 
         // ============================================================
         // FUNÇÕES DE MOVIMENTAÇÃO
         // ============================================================
-        
+
 
 
         function moveCardToDiscard(index, from) {
@@ -1474,30 +1631,126 @@
             });
         }
 
+        function filterDeck(text) {
+            deckFilterText = text.toLowerCase();
+            updateDrawQueue();
+        }
+
         function updateDrawQueue() {
             const container = document.getElementById('drawQueueContainer');
             container.innerHTML = '';
-            if (deck.length === 0) {
-                container.innerHTML = '<div class="empty-msg" style="color: #666; font-style: italic;">Deck vazio</div>';
-                document.getElementById('queueCount').textContent = '0';
+
+            let filteredDeck = deck;
+            if (deckFilterText) {
+                filteredDeck = deck.filter(card =>
+                    card.name.toLowerCase().includes(deckFilterText)
+                );
+            }
+
+            if (filteredDeck.length === 0) {
+                container.innerHTML = '<div class="empty-msg" style="color: #666; font-style: italic;">' +
+                    (deck.length === 0 ? 'Deck vazio' : 'Nenhuma carta encontrada com este filtro') +
+                    '</div>';
+                document.getElementById('queueCount').textContent = deck.length;
                 return;
             }
             const preview = deck.slice(0, 5);
-            preview.forEach((card) => {
+
+            filteredDeck.forEach((card, index) => {
                 const div = document.createElement('div');
                 div.className = 'card-item';
-                div.style.width = '80px';
-                div.style.opacity = '0.8';
+                div.style.width = '90px';
+                div.style.opacity = '0.85';
+
                 div.innerHTML = `
-                    <div class="card-cost" style="width:20px;height:20px;font-size:0.6rem;">${card.mana}</div>
-                    <img src="${card.imageUrl}" alt="${card.name}" style="width:65px;height:65px;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2265%22 height=%2265%22%3E%3Crect width=%2265%22 height=%2265%22 fill=%22%23333%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2218%22 text-anchor=%22middle%22 dy=%22.35em%22 fill=%22%23fff%22%3E${card.name.charAt(0)}%3C/text%3E%3C/svg%3E'">
-                    <div class="card-name" style="font-size:0.5rem;">${card.name}</div>
-                `;
-                // Adiciona tooltip também na fila de compra
+            <div class="card-cost" style="width:22px;height:22px;font-size:0.65rem;">${card.mana}</div>
+            <img src="${card.imageUrl}" alt="${card.name}" style="width:70px;height:70px;" 
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2270%22 height=%2270%22%3E%3Crect width=%2270%22 height=%2270%22 fill=%22%23333%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.35em%22 fill=%22%23fff%22%3E${card.name.charAt(0)}%3C/text%3E%3C/svg%3E'">
+            <div class="card-name" style="font-size:0.55rem;">${card.name}</div>
+            ${card.type === 'creature' ? `<div class="card-stats" style="font-size:0.5rem;"><span>⚔${card.attack}</span><span>🛡${card.defense}</span></div>` : ''}
+            <div class="card-actions">
+                <button class="to-hand" onclick="drawSpecificCard(${index})">✋ Pegar</button>
+                <button class="to-top" onclick="moveCardToTop(${index})">⬆ Topo</button>
+            </div>
+        `;
+
+                // Adiciona tooltip
                 addTooltipEvents(div, card);
+
                 container.appendChild(div);
+
             });
+
             document.getElementById('queueCount').textContent = deck.length;
+        }
+        // Função para pegar uma carta específica do deck para a mão
+        function drawSpecificCard(index) {
+            if (index < 0 || index >= deck.length) return;
+            const card = deck.splice(index, 1)[0];
+            hand.push(card);
+            updateDrawQueue();
+            renderAll();
+            saveGameState();
+            addLog(`🎴 Puxou ${card.name} do deck para a mão.`);
+            updateCounts();
+        }
+
+        // Função para mover uma carta para o topo do deck
+        function moveCardToTop(index) {
+            if (index < 0 || index >= deck.length) return;
+            const card = deck.splice(index, 1)[0];
+            deck.unshift(card);
+            updateDrawQueue();
+            saveGameState();
+            addLog(`⬆ ${card.name} movido para o topo do deck.`);
+        }
+
+        // Função para mover uma carta para o fundo do deck
+        function moveCardToBottom(index) {
+            if (index < 0 || index >= deck.length) return;
+            const card = deck.splice(index, 1)[0];
+            deck.push(card);
+            updateDrawQueue();
+            saveGameState();
+            addLog(`⬇ ${card.name} movido para o fundo do deck.`);
+        }
+
+        // Função para embaralhar o deck (mantida)
+        function shuffleDeck() {
+            shuffleArray(deck);
+            updateDrawQueue();
+            saveGameState();
+            addLog('🔄 Deck embaralhado.');
+        }
+
+        // Função para adicionar uma carta do deck diretamente para o campo
+        function drawSpecificCardToField(index) {
+            if (index < 0 || index >= deck.length) return;
+            const card = deck.splice(index, 1)[0];
+            field.push(card);
+            updateDrawQueue();
+            renderAll();
+            saveGameState();
+            addLog(`⚔️ ${card.name} colocado em campo diretamente do deck.`);
+            updateCounts();
+        }
+
+        // Função para comprar várias cartas de uma vez
+        function drawMultipleCards(quantity) {
+            if (deck.length === 0) {
+                addLog('⚠️ Deck vazio!');
+                return;
+            }
+            const drawn = Math.min(quantity, deck.length);
+            for (let i = 0; i < drawn; i++) {
+                const card = deck.shift();
+                hand.push(card);
+            }
+            updateDrawQueue();
+            renderAll();
+            saveGameState();
+            addLog(`🎴 Comprou ${drawn} cartas.`);
+            updateCounts();
         }
 
         function createCardElement(card, index, zone) {
@@ -1544,11 +1797,11 @@
             element.addEventListener('mousemove', moveTooltip);
         }
 
-        
+
         function showTooltip(event, card) {
             const tooltip = document.getElementById('cardTooltip');
             document.getElementById('tooltipTitle').textContent = card.name || 'Sem nome';
-            
+
             let typeInfo = `${card.type || 'Carta'} • ${card.mana || '?'}⚡`;
             if (card.archetype) typeInfo += ` • ${card.archetype}`;
             document.getElementById('tooltipType').textContent = typeInfo;
@@ -1563,9 +1816,8 @@
             const defenseEffectEl = document.getElementById('tooltipDefenseEffect');
 
             if (card.type === 'creature' && (card.attackEffect || card.defenseEffect)) {
-                console.log(card.attackEffect);
                 combatEffectsDiv.style.display = 'block';
-                
+
                 // Efeito de Ataque
                 if (card.attackEffect) {
                     attackEffectEl.textContent = card.attackEffect;
@@ -1574,7 +1826,7 @@
                     attackEffectEl.textContent = 'Sem efeito de ataque';
                     attackEffectEl.style.display = 'block';
                 }
-                
+
                 // Efeito de Defesa
                 if (card.defenseEffect) {
                     defenseEffectEl.textContent = card.defenseEffect;
@@ -1745,7 +1997,7 @@
             return count;
         }
 
-         // Função para adicionar 3 cópias de uma vez (atalho)
+        // Função para adicionar 3 cópias de uma vez (atalho)
         function addThreeCopies(cardId) {
             const current = getCardQuantity(cardId);
             setCardQuantity(cardId, current + 3);
@@ -1760,7 +2012,7 @@
             addLog(`🗑️ Todas as cópias de ${card ? card.name : 'Carta'} removidas`);
         }
 
-       
+
 
         // ============================================================
         // ARMAZENAMENTO EM MEMÓRIA (localStorage)
@@ -1783,7 +2035,7 @@
             try {
                 const savedCards = localStorage.getItem(STORAGE_KEY);
                 const savedQuantities = localStorage.getItem(QUANTITY_KEY);
-                
+
                 if (savedCards) {
                     allCards = JSON.parse(savedCards);
                     if (savedQuantities) {
@@ -1792,7 +2044,7 @@
                         cardQuantities = {};
                     }
                     updateSelectedCards();
-                    
+
                     // Atualiza a interface
                     if (allCards.length > 0) {
                         populateArchetypes();
@@ -1802,12 +2054,12 @@
                         document.getElementById('controls').style.display = 'flex';
                         updateImportStatus(true, `💾 ${allCards.length} cartas carregadas da memória.`);
                         addLog(`📂 ${allCards.length} cartas carregadas do armazenamento local.`);
-                        
+
                         // Recupera o estado do jogo se houver cartas no deck
                         const savedDeck = localStorage.getItem('cardgame_current_deck');
                         const savedHand = localStorage.getItem('cardgame_current_hand');
                         const savedField = localStorage.getItem('cardgame_current_field');
-                        
+
                         if (savedDeck && savedHand) {
                             try {
                                 deck = JSON.parse(savedDeck);
@@ -1860,7 +2112,7 @@
                 const savedDeck = localStorage.getItem('cardgame_current_deck');
                 const savedHand = localStorage.getItem('cardgame_current_hand');
                 const savedField = localStorage.getItem('cardgame_current_field');
-                
+
                 if (savedDeck && savedHand) {
                     deck = JSON.parse(savedDeck);
                     hand = JSON.parse(savedHand);
@@ -1880,12 +2132,12 @@
         // ============================================================
         // INICIALIZAÇÃO
         // ============================================================
-         document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             setupDragDrop();
-            
+
             // TENTAR CARREGAR DADOS DA MEMÓRIA
             const hasSavedData = loadCardsFromMemory();
-            
+
             if (hasSavedData) {
                 // Tenta carregar o estado do jogo
                 loadGameState();
@@ -1898,8 +2150,9 @@
             }
         });
 
-       
+
 
     </script>
 </body>
+
 </html>
