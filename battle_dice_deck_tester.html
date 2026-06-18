@@ -944,6 +944,113 @@
             color: #fff;
         }
 
+        /* Variação 1: Cartas viradas com padronização */
+        .draw-queue-cards.hidden-deck .card-item {
+            background: linear-gradient(145deg, #2a1a3a, #1a0a2a);
+            border-color: #4a2a5a;
+        }
+
+        .draw-queue-cards.hidden-deck .card-item img {
+            content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="70" height="70"%3E%3Crect width="70" height="70" fill="%232a1a3a" rx="8"/%3E%3Ctext x="50%25" y="50%25" font-size="30" text-anchor="middle" dy=".35em" fill="%234a2a5a"%3E🃏%3C/text%3E%3C/svg%3E');
+        }
+
+        /* Variação 2: Destaque para cartas ocultas */
+        .draw-queue-cards.hidden-deck .card-item .card-name {
+            color: #666;
+        }
+
+        .draw-queue-cards.hidden-deck .card-item .card-cost {
+            background: rgba(0, 0, 0, 0.5);
+            border-color: #4a2a5a;
+            color: #666;
+        }
+
+        /* Animação de transição */
+        .draw-queue-cards.hidden-deck .card-item {
+            transition: all 0.4s ease;
+        }
+
+        .draw-queue-cards:not(.hidden-deck) .card-item {
+            transition: all 0.4s ease;
+        }
+
+        /* Estilos para o deck oculto */
+        .draw-queue-cards.hidden-deck .card-item {
+            opacity: 0.3;
+            filter: blur(4px);
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .draw-queue-cards.hidden-deck .card-item .card-actions {
+            display: none;
+        }
+
+        .draw-queue-cards.hidden-deck .card-item .card-cost {
+            display: none;
+        }
+
+        .draw-queue-cards.hidden-deck .card-item .card-stats {
+            display: none;
+        }
+
+        .draw-queue-cards.hidden-deck .card-item .card-name {
+            opacity: 0.5;
+        }
+
+        /* Versão mais "realista" - cartas viradas para baixo */
+        .draw-queue-cards.hidden-deck .card-item {
+            background: linear-gradient(145deg, #2a1a2e, #1a0a1e);
+            border-color: #4a2a4a;
+            transform: rotate(2deg);
+        }
+
+        .draw-queue-cards.hidden-deck .card-item img {
+            filter: brightness(0.3) saturate(0);
+        }
+
+        /* Mensagem de deck oculto */
+        .draw-queue-cards .deck-hidden-msg {
+            display: none;
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .draw-queue-cards.hidden-deck .deck-hidden-msg {
+            display: block;
+        }
+
+        .draw-queue-cards.hidden-deck .empty-msg {
+            display: none;
+        }
+
+        /* Botão de alternância */
+        .toggle-deck-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #aaa;
+            padding: 4px 14px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .toggle-deck-btn:hover {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: #ffd700;
+            color: #ffd700;
+        }
+
+        .toggle-deck-btn.active {
+            background: rgba(255, 215, 0, 0.15);
+            border-color: #ffd700;
+            color: #ffd700;
+        }
+
         /* Log */
         .log-area {
             background: rgba(0, 0, 0, 0.3);
@@ -1192,12 +1299,16 @@
                     </span>
                 </span>
                 <div class="queue-actions">
+                    <button class="toggle-deck-btn" id="toggleDeckBtn" onclick="toggleDeckVisibility()">
+                        👁️ Ocultar Deck
+                    </button>
                     <button class="success" onclick="shuffleDeck()">🔄 Embaralhar</button>
                     <button onclick="drawMultipleCards(3)">🎴 Comprar 3</button>
                     <button onclick="drawMultipleCards(5)">🎴 Comprar 5</button>
                 </div>
             </div>
             <div class="draw-queue-cards" id="drawQueueContainer">
+                <div class="deck-hidden-msg">🃏 Deck oculto (clique em "Mostrar Deck" para ver as cartas)</div>
                 <div class="empty-msg" style="color: #666; font-style: italic;">Deck vazio</div>
             </div>
         </div>
@@ -1607,6 +1718,52 @@
         }
 
         // ============================================================
+        // CONTROLE DE VISIBILIDADE DO DECK
+        // ============================================================
+        let isDeckHidden = true;
+
+        function toggleDeckVisibility() {
+            isDeckHidden = !isDeckHidden;
+            const container = document.getElementById('drawQueueContainer');
+            const btn = document.getElementById('toggleDeckBtn');
+
+            if (isDeckHidden) {
+                container.classList.add('hidden-deck');
+                btn.textContent = '👁️ Mostrar Deck';
+                btn.classList.add('active');
+                addLog('🃏 Deck ocultado.');
+            } else {
+                container.classList.remove('hidden-deck');
+                btn.textContent = '👁️ Ocultar Deck';
+                btn.classList.remove('active');
+                addLog('👁️ Deck revelado.');
+            }
+
+            // Salvar preferência
+            localStorage.setItem('cardgame_deck_hidden', JSON.stringify(isDeckHidden));
+        }
+
+        // Função para restaurar preferência ao carregar
+        function loadDeckVisibilityPreference() {
+            try {
+                const saved = localStorage.getItem('cardgame_deck_hidden');
+                if (saved !== null) {
+                    isDeckHidden = JSON.parse(saved);
+                    if (isDeckHidden) {
+                        const container = document.getElementById('drawQueueContainer');
+                        const btn = document.getElementById('toggleDeckBtn');
+                        container.classList.add('hidden-deck');
+                        btn.textContent = '👁️ Mostrar Deck';
+                        btn.classList.add('active');
+                    }
+                }
+            } catch (error) {
+                console.error('Erro ao carregar preferência:', error);
+            }
+        }
+
+
+        // ============================================================
         // FUNÇÕES DE RENDERIZAÇÃO COM TOOLTIP
         // ============================================================
         function renderHand() {
@@ -1642,27 +1799,34 @@
             const container = document.getElementById('drawQueueContainer');
             container.innerHTML = '';
 
+            // Remove a classe hidden se não houver deck
+            if (deck.length === 0) {
+                container.classList.remove('hidden-deck');
+                container.innerHTML = '<div class="empty-msg" style="color: #666; font-style: italic;">Deck vazio</div>';
+                document.getElementById('queueCount').textContent = '0';
+                return;
+            }
+
+            // Aplica a classe se o deck estiver oculto
+            if (isDeckHidden) {
+                container.classList.add('hidden-deck');
+            } else {
+                container.classList.remove('hidden-deck');
+            }
+
+            // Filtro opcional (se implementado)
             let filteredDeck = deck;
-            if (deckFilterText) {
+            if (typeof deckFilterText !== 'undefined' && deckFilterText) {
                 filteredDeck = deck.filter(card =>
-                    card.name.toLowerCase().includes(deckFilterText)
+                    card.name.toLowerCase().includes(deckFilterText.toLowerCase())
                 );
             }
 
-            if (filteredDeck.length === 0) {
-                container.innerHTML = '<div class="empty-msg" style="color: #666; font-style: italic;">' +
-                    (deck.length === 0 ? 'Deck vazio' : 'Nenhuma carta encontrada com este filtro') +
-                    '</div>';
-                document.getElementById('queueCount').textContent = deck.length;
-                return;
-            }
-            const preview = deck.slice(0, 5);
-
+            // Mostra TODAS as cartas do deck
             filteredDeck.forEach((card, index) => {
                 const div = document.createElement('div');
                 div.className = 'card-item';
                 div.style.width = '90px';
-                div.style.opacity = '0.85';
 
                 div.innerHTML = `
             <div class="card-cost" style="width:22px;height:22px;font-size:0.65rem;">${card.mana}</div>
@@ -1676,15 +1840,15 @@
             </div>
         `;
 
-                // Adiciona tooltip
+                // Adiciona tooltip (funciona mesmo com deck oculto, pois o mouse ainda detecta)
                 addTooltipEvents(div, card);
 
                 container.appendChild(div);
-
             });
 
             document.getElementById('queueCount').textContent = deck.length;
         }
+
         // Função para pegar uma carta específica do deck para a mão
         function drawSpecificCard(index) {
             if (index < 0 || index >= deck.length) return;
@@ -2136,6 +2300,9 @@
         // ============================================================
         document.addEventListener('DOMContentLoaded', () => {
             setupDragDrop();
+
+            // Carregar preferência de visibilidade do deck
+            loadDeckVisibilityPreference();
 
             // TENTAR CARREGAR DADOS DA MEMÓRIA
             const hasSavedData = loadCardsFromMemory();
