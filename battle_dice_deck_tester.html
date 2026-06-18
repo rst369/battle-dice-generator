@@ -1148,7 +1148,7 @@
             <button class="success" onclick="shuffleAndDraw()">🔄 Embaralhar e Comprar</button>
             <button onclick="drawOne()">🎴 Comprar +1</button>
             <button class="secondary" onclick="resetHand()">🔄 Resetar Mão</button>
-            <button class="danger" onclick="clearAll()">🗑️ Limpar Tudo</button>
+            <button class="danger" onclick="resetGame()">🗑️ Limpar Tudo</button>
             <div class="info">
                 Deck: <span id="deckCount">0</span> |
                 Mão: <span id="handCount">0</span> |
@@ -1422,6 +1422,8 @@
         }
 
         function resetGame() {
+            cardQuantities = {};
+            selectedCards = [];
             deck = [];
             hand = [];
             field = [];
@@ -1971,7 +1973,7 @@
             selectedCards = [];
             for (const [cardId, quantity] of Object.entries(cardQuantities)) {
                 if (quantity > 0) {
-                    const card = allCards.find(c => c.id === parseInt(cardId));
+                    const card = allCards.find(c => c.id === cardId);
                     if (card) {
                         for (let i = 0; i < quantity; i++) {
                             selectedCards.push({ ...card, copyId: `${card.id}-${i}` });
