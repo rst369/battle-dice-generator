@@ -274,6 +274,8 @@
                     <button class="btn-import" onclick="document.getElementById('importFile').click()">📥 Importar Dados (JSON)</button>
                     <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData(this.files[0])">
                 </div>
+                <!-- NOVO BOTÃO -->
+        <button class="btn-info" onclick="importFromOnlineDB()">🌐 Importar DB Online</button>
                 <button class="btn-danger" onclick="clearAllCards()">🗑️ Apagar Todas as Cartas</button>
             </div>
             <small>⚠️ A importação irá ADICIONAR as cartas do arquivo às cartas existentes. Para substituir completamente, limpe as cartas primeiro.</small>
