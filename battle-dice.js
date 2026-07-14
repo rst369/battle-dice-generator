@@ -845,12 +845,35 @@ function importData(file) {
     document.getElementById('importFile').value = '';
 }
 
+// Função para importar dados do DB online
+async function importFromOnlineDB() {
+    const url = 'https://rst369.github.io/battle-dice-generator/db_cards_BattleDice.json';
+
+    try {
+        showNotification('⏳ Baixando dados do servidor...', 'success');
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`Erro HTTP: ${response.status}`);
         }
-        
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
+
+        const data = await response.json();
+
+        // Validar estrutura do arquivo
+        let importedCards = [];
+        if (data.cards && Array.isArray(data.cards)) {
+            importedCards = data.cards;
+        } else if (Array.isArray(data)) {
+            importedCards = data;
+        } else {
+            throw new Error('Formato de arquivo inválido');
+        }
+
+        // Verificar se há cartas para importar
+        if (importedCards.length === 0) {
+            showNotification('❌ O arquivo não contém cartas para importar.', 'error');
+            return;
         }
 
         // Gerar novos IDs para evitar conflitos
