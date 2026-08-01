@@ -400,10 +400,10 @@
       "attack": 5,
       "defense": 5,
       "mana": 4,
-      "imageUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/13714538-e319-4cce-9062-6941ce18525d/dgcdz4g-642a8d27-b5b3-4f36-aae1-f2f500c9f307.png/v1/fill/w_1192,h_670,q_70,strp/eternal_soul__wallpaper__by_nhociory_dgcdz4g-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mLzEzNzE0NTM4LWUzMTktNGNjZS05MDYyLTY5NDFjZTE4NTI1ZC9kZ2NkejRnLTY0MmE4ZDI3LWI1YjMtNGYzNi1hYWUxLWYyZjUwMGM5ZjMwNy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.4CMaxy-l5Wk1wiOXn9oMdNBr4oiyQUDitVBNLr04jJE",
+      "imageUrl": "https://ms.yugipedia.com//thumb/3/3b/Eternal_Soul.png/250px-Eternal_Soul.png",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Role 1 dado duas vezes e some os resultados. jogue um MAGO do descarte com custo menor ou igual ao resultado, sem pagar o custo. Perca PV igual sua DEF"
+      "mainEffect": "Role 1 dado duas vezes e some os resultados. jogue um MAGO do descarte ou da mão com custo menor ou igual ao resultado, sem pagar o custo. Perca PV igual sua DEF"
     },
     {
       "id": 1781619701932,
@@ -465,7 +465,7 @@
       "attack": 6,
       "defense": 6,
       "mana": 6,
-      "imageUrl": "https://pbs.twimg.com/media/F4zLE3WXcAAA01u?format=jpg&name=4096x4096",
+      "imageUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/13714538-e319-4cce-9062-6941ce18525d/dg05so0-1afca71a-2c25-4d63-acae-e77fe4368a31.png/v1/fill/w_894,h_894,q_70,strp/dark_magician_the_knight_of_dragon_magic__artwork__by_nhociory_dg05so0-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiIvZi8xMzcxNDUzOC1lMzE5LTRjY2UtOTA2Mi02OTQxY2UxODUyNWQvZGcwNXNvMC0xYWZjYTcxYS0yYzI1LTRkNjMtYWNhZS1lNzdmZTQzNjhhMzEucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.nufC6VaAAobpyZSty9wdltS8uKyK8Y047Z71a5fLaaE",
       "attackEffect": "[1][2][3] +2 ATK - 2 MANA adversário\n[4][5] +3 ATK - 2 PV adversário\n[6] +5 ATK",
       "defenseEffect": "[1][2][3] +2 DEF - 2 MANA adversário\n[4][5][6] Adicione até 2 MAGO do descarte para a mão com custo somado até [6]",
       "mainEffect": "AO BATALHAR: -3 PV cause dano ao adversário igual a diferença entre o ATK e a DEF do defensor."
@@ -507,7 +507,7 @@
       "imageUrl": "https://i.redd.it/0lhcsz48lmc31.png",
       "attackEffect": "[1][2][3] +2 ATK +1 MANA | [4][5] +3 ATK +2 MANA\n[6] +ATK igual ao custo de outro MAGO no campo ou na mão",
       "defenseEffect": "[1][2][3] +2 DEF +2 MANA | [4][5] +3 DEF +3 MANA\n[6] +DEF igual ao custo de outro MAGO no campo ou na mão",
-      "mainEffect": "UMA VEZ POR TURNO: aplique um dos efeitos baseado na quantidade de mana gasta pelo adversário:\n3: Ganhe 2 PV e compre 1 carta\n5: As cartas do adversário custam 2 de mana adicional\n8 ou mais: Adicione 2 magias MAGO do deck ou descarte para a mão"
+      "mainEffect": "UMA VEZ POR TURNO: aplique um dos efeitos baseado na quantidade de mana gasta no turno:\n3: Ganhe 2 PV e compre 1 carta\n5: As cartas do adversário custam 2 de mana adicional\n8 ou mais: Adicione 2 magias MAGO do deck ou descarte para a mão"
     },
     {
       "id": 7110388098267,
@@ -663,7 +663,7 @@
       "imageUrl": "https://preview.redd.it/beelzemon-fanart-by-me-v0-34yeclp6e8pb1.jpg?auto=webp&s=c03bf28c3410c9524400a44e587b38a8d9f84340",
       "attackEffect": "[1]...[4] -2 DEF defensor | [5] Anule o efeito do defensor\n[6] Se ganhar a batalha: pode fazer um novo ataque",
       "defenseEffect": "[1]...[4] -2 ATK atacante | [5] Anule o efeito do atacante\n[6] Cancele a batalha e volte o atacante para a mão",
-      "mainEffect": "Descarte X DIGIMON do campo para o descarte:\n* reduza o custo desta carta em 2 para cada X\n* +2 ATK/+2 DEF (PERMANENTE)  para cada X"
+      "mainEffect": "AO ENTRAR: Envie X DIGIMON do campo para o descarte:\n* reduza o custo desta carta em 2 para cada X\n* +2 ATK/+2 DEF (PERMANENTE) para cada X"
     },
     {
       "id": 1779716234382,
@@ -1063,7 +1063,7 @@
       "attack": 5,
       "defense": 4,
       "mana": 5,
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZtUreFL6Z7ZAaOgqOX55HqXMglxr_BbJ1eQ&s",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVh0cbL_QFhXZKir6gF9AGdCBxKNvFZrjoCY0W-0itFg&s=10",
       "attackEffect": "[1][2] +2 ATK\n[3][4] +3 ATK + 1 MANA\n[5][6] +4 ATK + 2 MANA",
       "defenseEffect": "[1][2] +2 DEF\n[3][4] +3 DEF + 1 MANA\n[5][6] +4 DEF + 2 MANA",
       "mainEffect": "AO ENTRAR: Adicione uma carta NETWARRIOR do deck para a mão com o custo menor ou igual a [6]"

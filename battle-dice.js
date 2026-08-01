@@ -269,7 +269,14 @@ function deselectAllCards() {
     showNotification('Todas as cartas desmarcadas!', 'success');
 }
 
+
+
+
 function printSelectedCards() {
+    const checkbox = document.getElementById('chkLayout');
+    if(checkbox.checked) {
+        return printSelectedCardsNew();
+    }
     const selectedCards = [];
     cards.forEach(card => {
         const selection = printSelections[card.id];
@@ -398,6 +405,326 @@ function printSelectedCards() {
     printWindow.document.write(`</div></body></html>`);
     printWindow.document.close();
     printWindow.print();
+}
+
+
+
+function printSelectedCardsNew() {
+    const selectedCards = [];
+    cards.forEach(card => {
+        const selection = printSelections[card.id];
+        if (selection && selection.selected) {
+            for (let i = 0; i < selection.quantity; i++) {
+                selectedCards.push(card);
+            }
+        }
+    });
+
+    if (selectedCards.length === 0) {
+        showNotification('Nenhuma carta selecionada para impressão!', 'error');
+        return;
+    }
+
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(`
+        <html>
+        <head>
+            <title>Battle Dice - Cartas do Jogo</title>
+            <style>
+                * { margin: 0; padding: 0; box-sizing: border-box; }
+                body { font-family: 'Segoe UI', sans-serif; background: white; padding: 0; margin: 0; }
+                .print-grid { display: grid; grid-template-columns: repeat(4, 63mm); gap: 5mm; justify-content: center; padding: 5mm; page-break-inside: avoid; }
+                .print-card { width: 63mm; height: 88mm; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 3mm; padding: 1.5mm; border: 1.0mm solid #ffd700; break-inside: avoid; page-break-inside: avoid; position: relative; display: flex; flex-direction: column; box-sizing: border-box; overflow: hidden; }
+                .print-card-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.5; z-index: 0; }
+                .print-card-content { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; gap: 0.5mm; }
+                .print-card.magic-card { background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border-color: #9b59b6; }
+                .print-card-bg-criatura { background: rgba(194, 175, 9, 0.6); }
+                .print-card-bg-magia { background: rgba(188, 4, 167, 0.6); }
+                
+                .print-image-container { position: relative; margin: 0; border-radius: 1.5mm; overflow: hidden; background: rgba(44,62,80,0.3); min-height: 0; }
+                .print-card.creature-card .print-image-container { flex: 8.5; }
+                .print-card.magic-card .print-image-container { flex: 10.5; }
+                
+                .print-card-image { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: transparent; }
+                .print-card-image img { width: 100%; height: 100%; object-fit: inherit; opacity: 0.85; }
+                .print-card-image div { font-size: 1.8mm; color: #999; text-align: center; }
+                
+                /* MANA NO TOPO ESQUERDO DA IMAGEM */
+                .print-top-mana {
+                    position: absolute;
+                    top: 0.8mm;
+                    left: 0.8mm;
+                    display: flex;
+                    gap: 0.3mm;
+                    background: rgba(0,0,0,0.75);
+                    padding: 0.3mm 0.6mm;
+                    border-radius: 2.5mm;
+                    z-index: 4;
+                    backdrop-filter: blur(2px);
+                }
+                .print-top-mana .print-mana-dice {
+                    width: 4.8mm;
+                    height: 4.8mm;
+                    background: rgba(0,0,0,0.5);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .print-top-mana .print-mana-dice img { width: 4.8mm; height: 4.8mm; }
+                
+                /* STATS NO TOPO DIREITO DA IMAGEM - APENAS PARA CRIATURAS */
+                .print-top-stats {
+                    position: absolute;
+                    top: 0.8mm;
+                    right: 0.8mm;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.3mm;
+                    background: rgba(0,0,0,0.75);
+                    padding: 0.3mm 0.6mm;
+                    border-radius: 1.5mm;
+                    z-index: 4;
+                    backdrop-filter: blur(2px);
+                }
+                .print-top-stat {
+                    color: white;
+                    font-size: 3.0mm;
+                    display: flex;
+                    gap: 0.3mm;
+                    font-weight: bold;
+                    line-height: 1.0;
+                }
+                .print-top-stat .stat-icon { font-size: 3.0mm; }
+                .print-top-stat .stat-value { background: rgba(0,0,0,0.4); padding: 0 0.3mm; border-radius: 0.8mm; min-width: 2.8mm; text-align: center; }
+                
+                /* EFEITO PRINCIPAL SOBRE A IMAGEM - APENAS PARA CRIATURAS */
+                .print-main-effect-overlay {
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    right: 0;
+                    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+                    padding: 1.5mm 1.5mm 1.2mm 1.5mm;
+                    z-index: 3;
+                    text-align: center;
+                }
+                .print-main-effect-overlay .print-effect-text {
+                    color: #ffffff;
+                    font-size: 1.6mm;
+                    line-height: 1.2;
+                    text-shadow: 0 1px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.5);
+                    font-weight: bold;
+                    letter-spacing: 0.3px;
+                }
+                .print-main-effect-overlay .print-effect-text.short { font-size: 1.9mm; }
+                .print-main-effect-overlay .print-effect-text.medium { font-size: 1.7mm; }
+                .print-main-effect-overlay .print-effect-text.long { font-size: 1.5mm; }
+                .print-main-effect-overlay .print-effect-text.very-long { font-size: 1.2mm; }
+                .print-main-effect-overlay .print-dice-image { width: 1.8mm; height: 1.8mm; display: inline-block; vertical-align: middle; }
+                .print-main-effect-overlay .print-dice-image img { width: 100%; height: 100%; }
+                
+                /* BADGES NA PARTE INFERIOR DA CARTA */
+                .print-bottom-badges {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-shrink: 0;
+                    gap: 0.3mm;
+                    padding: 0.2mm 0.3mm;
+                    margin-top: 0.2mm;
+                }
+                .print-bottom-badge {
+                    background: rgba(0,0,0,0.7);
+                    color: white;
+                    padding: 0.2mm 0.6mm;
+                    border-radius: 1.2mm;
+                    font-size: 1.4mm;
+                    font-weight: bold;
+                    backdrop-filter: blur(2px);
+                }
+                .print-bottom-badge.archetype {
+                    color: #ffd700;
+                    background: rgba(0,0,0,0.75);
+                }
+                .print-bottom-badge.type {
+                    background: rgba(0,0,0,0.6);
+                }
+                
+                .print-card-bottom { display: flex; flex-direction: column; min-height: 0; gap: 0.3mm; }
+                .print-card.creature-card .print-card-bottom { flex: 3.5; }
+                .print-card.magic-card .print-card-bottom { flex: 4.5; }
+                
+                /* HEADER - Mana, NOME e Stats - REMOVIDO MANA E STATS, APENAS NOME */
+                .print-card-header {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: rgba(255,255,255,0.6);
+                    padding: 0.3mm 0.5mm;
+                    border-radius: 1.5mm;
+                    flex-shrink: 0;
+                    backdrop-filter: blur(2px);
+                }
+                .print-card-bg-criatura{ background: rgba(194, 175, 9, 0.6); }
+                .print-card-bg-magia{ background: rgba(188, 4, 167, 0.6); }
+                
+                .print-card-name { font-weight: bold; text-align: center; padding: 0.2mm 0.5mm; border-radius: 1mm; flex: 1; word-wrap: break-word; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 2.2mm; backdrop-filter: blur(1px); color: #ffffff; text-shadow: 0 1px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.5);}
+                .print-card-name[data-length="long"] { font-size: 1.8mm; }
+                .print-card-name[data-length="very-long"] { font-size: 1.5mm; }
+                
+                .print-effects-bottom { flex: 1; background: rgba(255,255,255,0.7); border-radius: 1.2mm; padding: 0.5mm; backdrop-filter: blur(2px); border: 0.6mm solid; transition: border-color 0.3s; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+                .print-card:not(.magic-card) .print-effects-bottom { border-color: #ffd700; }
+                .print-card.magic-card .print-effects-bottom { border-color: #9b59b6; }
+                .print-effects-row { display: flex; gap: 0.4mm; flex: 1; min-height: 0; }
+                .print-effects-column { flex: 1; display: flex; flex-direction: column; gap: 0.2mm; }
+                .print-effect-section { background: rgba(255,255,255,0.85); padding: 0.3mm 0.5mm; border-radius: 0.8mm; border-left: 0.4mm solid; flex: 1; min-height: 0; overflow: hidden; }
+                .print-effect-section.attack-effect { border-left-color: #e74c3c; }
+                .print-effect-section.defense-effect { border-left-color: #3498db; }
+                .print-effect-section.other-effect { border-left-color: #9b59b6; }
+                .print-effect-title { font-weight: bold; margin-bottom: 0.1mm; font-size: 0.9mm; }
+                .print-effect-text { color: #555; font-size: 1.6mm; line-height: 1.1; word-break: break-word; white-space: pre-wrap; font-weight: bold; }
+                .print-effect-text.short { font-size: 1.6mm; }
+                .print-effect-text.medium { font-size: 1.6mm; }
+                .print-effect-text.long { font-size: 1.5mm; }
+                .print-effect-text.very-long { font-size: 0.9mm; }
+                .print-effect-divider { border: none; border-top: 0.4mm dashed rgba(0,0,0,0.3); margin: 0.2mm 0; }
+                
+                /* ÁREA DE EFEITOS PARA MAGIAS (apenas efeito principal) */
+                .print-magic-effects { flex: 1; background: rgba(255,255,255,0.7); border-radius: 1.2mm; padding: 0.5mm; backdrop-filter: blur(2px); border: 0.6mm solid #9b59b6; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+                .print-magic-effects .print-effect-section { flex: 1; }
+                .print-magic-effects .print-effect-text { font-size: 1.6mm; }
+                .print-magic-effects .print-effect-text.short { font-size: 1.6mm; }
+                .print-magic-effects .print-effect-text.medium { font-size: 1.8mm; }
+                .print-magic-effects .print-effect-text.long { font-size: 1.6mm; }
+                .print-magic-effects .print-effect-text.very-long { font-size: 1.2mm; }
+            </style>
+        </head>
+        <body>
+            <div class="print-grid">
+    `);
+
+    selectedCards.forEach(card => {
+        const formatForPrint = (text, isMainEffect = false) => {
+            if (!text) return '-';
+            const diceSize = isMainEffect ? '1.8mm' : '1.6mm';
+            return text.replace(/\[(\d)\]/g, (match, num) => {
+                return `<span class="${isMainEffect ? 'print-dice-image' : 'print-dice-image'}"><img src="${getDiceImage(parseInt(num))}" style="width:${diceSize}; height:${diceSize};"></span>`;
+            }).replace(/\|/g, ' | ').replace(/\n/g, '<br>');
+        };
+
+        const nameLength = card.name.length;
+        let nameAttr = '';
+        if (nameLength > 25) nameAttr = 'very-long';
+        else if (nameLength > 15) nameAttr = 'long';
+
+        const manaDisplay = card.mana <= 6 ?
+            `<div class="print-mana-dice"><img src="${getDiceImage(card.mana)}"></div>` :
+            `<div class="print-mana-dice"><img src="${getDiceImage(6)}"></div><div class="print-mana-dice"><img src="${getDiceImage(card.mana - 6)}"></div>`;
+
+        // Posicionamento da imagem
+        const imgX = card.imagePosition ? (50 + (card.imagePosition.x || 0)) : 50;
+        const imgY = card.imagePosition ? (50 + (card.imagePosition.y || 0)) : 50;
+
+        // Função para determinar classe de tamanho do texto
+        const getTextSizeClass = (text) => {
+            return 'short'; // Sempre short para manter legibilidade
+        };
+
+        const mainEffectText = card.mainEffect || '-';
+        var mainSizeClass = 'short';
+
+        // Determinar se é criatura ou magia
+        const isCreature = card.type === 'creature';
+        if (isCreature) {
+            mainSizeClass = getTextSizeClass(card.mainEffect);
+        }
+
+        printWindow.document.write(`
+            <div class="print-card ${isCreature ? 'creature-card' : 'magic-card'}">
+                <div class="print-card-bg" style="background-image: url('${card.imageUrl || ''}');"></div>
+                <div class="print-card-content">
+                    <!-- IMAGEM -->
+                    <div class="print-image-container">
+                        <div class="print-card-image">
+                            ${card.imageUrl ? `<img src="${card.imageUrl}" alt="${card.name}" style="object-position: ${imgX}% ${imgY}%;">` : '<div>Sem imagem</div>'}
+                        </div>
+                        
+                        <!-- MANA NO TOPO ESQUERDO DA IMAGEM -->
+                        <div class="print-top-mana">${manaDisplay}</div>
+                        
+                        <!-- STATS NO TOPO DIREITO DA IMAGEM - APENAS PARA CRIATURAS -->
+                        ${isCreature ? `
+                        <div class="print-top-stats">
+                            <div class="print-top-stat">
+                                <span class="stat-icon">⚔️</span>
+                                <span class="stat-value">${card.attack}</span>
+                            </div>
+                            <div class="print-top-stat">
+                                <span class="stat-icon">🛡️</span>
+                                <span class="stat-value">${card.defense}</span>
+                            </div>
+                        </div>
+                        ` : ''}
+                        
+                        <!-- EFEITO PRINCIPAL SOBRE A IMAGEM - APENAS PARA CRIATURAS -->
+                        ${isCreature ? `
+                        <div class="print-main-effect-overlay">
+                            <div class="print-effect-text ${mainSizeClass}">${formatForPrint(mainEffectText, true)}</div>
+                        </div>
+                        ` : ''}
+                    </div>
+                    
+                    <!-- ÁREA INFERIOR -->
+                    <div class="print-card-bottom">
+                        <!-- HEADER - APENAS O NOME -->
+                        <div class="${isCreature ? 'print-card-bg-criatura' : 'print-card-bg-magia'} print-card-header">
+                            <div class="print-card-name" data-length="${nameAttr}">${escapeHtml(card.name)}</div>
+                        </div>
+                        
+                        <!-- ÁREA DE EFEITOS INFERIOR -->
+                        ${isCreature ? `
+                        <!-- CRIATURAS: Efeitos de Ataque e Defesa -->
+                        <div class="print-effects-bottom">
+                            <div class="print-effects-row">
+                                <div class="print-effects-column">
+                                    <div class="print-effect-section attack-effect">
+                                        <div class="print-effect-title">⚔️ Ataque</div>
+                                        <div class="print-effect-text">${formatForPrint(card.attackEffect)}</div>
+                                    </div>
+                                </div>
+                                <div class="print-effects-column">
+                                    <div class="print-effect-section defense-effect">
+                                        <div class="print-effect-title">🛡️ Defesa</div>
+                                        <div class="print-effect-text">${formatForPrint(card.defenseEffect)}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        ` : `
+                        <!-- MAGIAS: Efeito Principal na área inferior -->
+                        <div class="print-magic-effects">
+                            <div class="print-effect-section other-effect">
+                                <div class="print-effect-text ${mainSizeClass}">${formatForPrint(mainEffectText)}</div>
+                            </div>
+                        </div>
+                        `}
+                        
+                        <!-- BADGES INFERIORES (Arquétipo e Tipo) -->
+                        <div class="print-bottom-badges">
+                            ${card.archetype ? `<span class="print-bottom-badge archetype">🏷️ ${escapeHtml(card.archetype)}</span>` : '<span></span>'}
+                            <span class="print-bottom-badge type">${isCreature ? '🦎 Criatura' : '✨ Magia'}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+    });
+
+    printWindow.document.write(`</div></body></html>`);
+    printWindow.document.close();
+    printWindow.print();
+
 }
 
 function toggleCardType() {
