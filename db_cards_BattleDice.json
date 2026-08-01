@@ -3,6 +3,19 @@
   "exportDate": "2026-05-26T18:22:53",
   "cards": [
     {
+      "id": 1785609525233,
+      "name": "Caixa Mística do Caos",
+      "archetype": "Mago",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 7,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6SZ4DcvGx9khCOFpJkPW32vVxNm7I5dBxxe161Lth_A&s",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Envie 1 MAGO do campo para o descarte: envie para o descarte uma criatura adversária com custo menor ou igual ao MAGO enviado. Você pode pagar MANA para jogar um MAGO da sua mão."
+    },
+    {
       "id": 1783344584581,
       "name": "Yukito e Touya",
       "archetype": "Cardcaptor",
