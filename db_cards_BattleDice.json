@@ -403,7 +403,7 @@
       "imageUrl": "https://ms.yugipedia.com//thumb/3/3b/Eternal_Soul.png/250px-Eternal_Soul.png",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Role 1 dado duas vezes e some os resultados. jogue um MAGO do descarte com custo menor ou igual ao resultado, sem pagar o custo. Perca PV igual sua DEF"
+      "mainEffect": "Role 1 dado duas vezes e some os resultados. jogue um MAGO do descarte ou da mão com custo menor ou igual ao resultado, sem pagar o custo. Perca PV igual sua DEF"
     },
     {
       "id": 1781619701932,
@@ -507,7 +507,7 @@
       "imageUrl": "https://i.redd.it/0lhcsz48lmc31.png",
       "attackEffect": "[1][2][3] +2 ATK +1 MANA | [4][5] +3 ATK +2 MANA\n[6] +ATK igual ao custo de outro MAGO no campo ou na mão",
       "defenseEffect": "[1][2][3] +2 DEF +2 MANA | [4][5] +3 DEF +3 MANA\n[6] +DEF igual ao custo de outro MAGO no campo ou na mão",
-      "mainEffect": "UMA VEZ POR TURNO: aplique um dos efeitos baseado na quantidade de mana gasta pelo adversário:\n3: Ganhe 2 PV e compre 1 carta\n5: As cartas do adversário custam 2 de mana adicional\n8 ou mais: Adicione 2 magias MAGO do deck ou descarte para a mão"
+      "mainEffect": "UMA VEZ POR TURNO: aplique um dos efeitos baseado na quantidade de mana gasta no turno:\n3: Ganhe 2 PV e compre 1 carta\n5: As cartas do adversário custam 2 de mana adicional\n8 ou mais: Adicione 2 magias MAGO do deck ou descarte para a mão"
     },
     {
       "id": 7110388098267,
@@ -663,7 +663,7 @@
       "imageUrl": "https://preview.redd.it/beelzemon-fanart-by-me-v0-34yeclp6e8pb1.jpg?auto=webp&s=c03bf28c3410c9524400a44e587b38a8d9f84340",
       "attackEffect": "[1]...[4] -2 DEF defensor | [5] Anule o efeito do defensor\n[6] Se ganhar a batalha: pode fazer um novo ataque",
       "defenseEffect": "[1]...[4] -2 ATK atacante | [5] Anule o efeito do atacante\n[6] Cancele a batalha e volte o atacante para a mão",
-      "mainEffect": "Descarte X DIGIMON do campo para o descarte:\n* reduza o custo desta carta em 2 para cada X\n* +2 ATK/+2 DEF (PERMANENTE)  para cada X"
+      "mainEffect": "AO ENTRAR: Envie X DIGIMON do campo para o descarte:\n* reduza o custo desta carta em 2 para cada X\n* +2 ATK/+2 DEF (PERMANENTE) para cada X"
     },
     {
       "id": 1779716234382,
