@@ -207,7 +207,7 @@
       "mana": 3,
       "imageUrl": "https://i.pinimg.com/474x/5d/fa/6a/5dfa6abf5bd9e19942b1d758105dbf67.jpg?nii=t",
       "attackEffect": "[1][2][3]+2 MANA +2 PV\n[4][5][6] Se uma carta que contenha SAKURA no nome estiver em campo, volte o defensor para a mão",
-      "defenseEffect": "[1][2][3] -3 MANA: jogue uma carta que contenha SAKURA no nome do deck, mão ou descarte sem pagar o custo\n[4][5][6] -3 MANA: Jogue um CERBERUS do deck ou da mão sem pagar o custo",
+      "defenseEffect": "[1][2][3] -3 MANA: jogue uma carta que contenha SAKURA no nome do deck, mão ou descarte sem pagar o custo\n[4][5][6] -3 MANA: Jogue um KERBEROS do deck ou da mão sem pagar o custo",
       "mainEffect": "AO ENTRAR: Role um dado até duas vezes, adicione do deck para a mão magias CARDCAPTOR cujo custo somado seja menor ou igual ao resultado obtido"
     },
     {
