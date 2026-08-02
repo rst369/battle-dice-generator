@@ -569,8 +569,8 @@ function printSelectedCardsNew() {
                 .print-card-bg-criatura{ background: rgba(194, 175, 9, 0.6); }
                 .print-card-bg-magia{ background: rgba(188, 4, 167, 0.6); }
                 
-                .print-card-name { font-weight: bold; text-align: center; padding: 0.2mm 0.5mm; border-radius: 1mm; flex: 1; word-wrap: break-word; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 2.2mm; backdrop-filter: blur(1px); color: #ffffff; text-shadow: 0 1px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.5);}
-                .print-card-name[data-length="long"] { font-size: 1.8mm; }
+                .print-card-name { font-weight: bold; text-align: center; padding: 0.2mm 0.5mm; border-radius: 1mm; flex: 1; word-wrap: break-word; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 2.8mm; backdrop-filter: blur(1px); color: #ffffff; text-shadow: 0 1px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.5);}
+                .print-card-name[data-length="long"] { font-size: 2.9mm; }
                 .print-card-name[data-length="very-long"] { font-size: 1.5mm; }
                 
                 .print-effects-bottom { flex: 1; background: rgba(255,255,255,0.7); border-radius: 1.2mm; padding: 0.5mm; backdrop-filter: blur(2px); border: 0.6mm solid; transition: border-color 0.3s; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
