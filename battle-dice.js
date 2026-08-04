@@ -583,7 +583,7 @@ function printSelectedCardsNew() {
                 .print-effect-section.defense-effect { border-left-color: #3498db; }
                 .print-effect-section.other-effect { border-left-color: #9b59b6; }
                 .print-effect-title { font-weight: bold; margin-bottom: 0.1mm; font-size: 0.9mm; }
-                .print-effect-text { color: #555; font-size: 1.6mm; line-height: 1.1; word-break: break-word; white-space: pre-wrap; font-weight: bold; }
+                .print-effect-text { color: #555; font-size: 1.6mm; line-height: 1.0; word-break: break-word; white-space: pre-wrap; font-weight: bold; }
                 .print-effect-text.short { font-size: 1.6mm; }
                 .print-effect-text.medium { font-size: 1.6mm; }
                 .print-effect-text.long { font-size: 1.5mm; }

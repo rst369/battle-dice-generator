@@ -3,6 +3,58 @@
   "exportDate": "2026-05-26T18:22:53",
   "cards": [
     {
+      "id": 1785778648652,
+      "name": "Guerreiro Veloz",
+      "archetype": "Sucata",
+      "type": "creature",
+      "attack": 1,
+      "defense": 2,
+      "mana": 2,
+      "imageUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/13714538-e319-4cce-9062-6941ce18525d/dkfk09m-4073ee14-de70-47c6-87ec-360898224412.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8xMzcxNDUzOC1lMzE5LTRjY2UtOTA2Mi02OTQxY2UxODUyNWQvZGtmazA5bS00MDczZWUxNC1kZTcwLTQ3YzYtODdlYy0zNjA4OTgyMjQ0MTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lbjuCqUd5WD_gXzbJtvMSJJf7ykQYJ9_LPQJRsHUhfI",
+      "attackEffect": "[1]<>[5] compre 1 carta\n[6] Descarte um SUCATA ganhe ATK igual seu ATK",
+      "defenseEffect": "[1]<>[5] +1 MANA\n[6] Descarte um SUCATA para adicionar do descarte para a mão um STARDUST com custo menor ou igual",
+      "mainEffect": "AO ENTRAR: Envie esta carta para o descarte: adicione uma carta SUCATA ou STARDUST do deck para a mão com custo menor que [4]."
+    },
+    {
+      "id": 1785778465585,
+      "name": "Guerreiro Sucata Extremo",
+      "archetype": "Sucata",
+      "type": "creature",
+      "attack": 7,
+      "defense": 5,
+      "mana": 7,
+      "imageUrl": "https://cdn.ygorganization.com/2026/02/JunkWarriorExtreme-MADU-EN-VG-artwork.png",
+      "attackEffect": "[1][3][5] +2 ATK\n[2][4][6] +2 ATK para cada SUCATA em campo",
+      "defenseEffect": "[1][3][5] +2 DEF para cada SUCATA em campo\n[2][4][6] +3 MANA Adicione uma magia SUCATA ou STARDUST do deck para a mão. ",
+      "mainEffect": "AO ENTRAR: Jogue um SUCATA do descarte com custo menor que [6] sem pagar o custo."
+    },
+    {
+      "id": 1785778227812,
+      "name": "Guerreiro Sucata",
+      "archetype": "Sucata",
+      "type": "creature",
+      "attack": 5,
+      "defense": 3,
+      "mana": 5,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQINwRsnryMuRhWQZILpSjI34zOPiLOGtsoelCZeC7W8kweQTUWwsB4Jiu_&s=10",
+      "attackEffect": "[1][3][5] +2 MANA + 2 PV\n[2][4][6] compre 2 cartas",
+      "defenseEffect": "[1]<>[5] Adicione um STARDUST do deck ou descarte para a mão\n[6] -5 MANA: Jogue um STARDUST do deck ou da mão sem pagar o custo",
+      "mainEffect": "EM CAMPO: Ganha ATK igual ao ATK de todos SUCATA em campo com custo menor que [3]."
+    },
+    {
+      "id": 1785778051925,
+      "name": "Sincron Sucata",
+      "archetype": "Sucata",
+      "type": "creature",
+      "attack": 3,
+      "defense": 2,
+      "mana": 3,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL5XPVdDW-tIfBMHU-bFc_n6oFs_SjpFWq7PALuK5t0ATzEcUYkSXXFkFY&s=10",
+      "attackEffect": "[1][2][3] +1 ATK\n[4][5][6] +1 ATK compre 1 carta",
+      "defenseEffect": "[1][2][3] +1 DEF\n[4][5][6] Adicione um SUCATA do descarte para a mão",
+      "mainEffect": "AO ENTRAR: Jogue do descarte, sem pagar o custo, um SUCATA de custo menor que [3].\nUMA VEZ POR TURNO: Envie esta carta e outra criatura de custo [2] em campo para o descarte para jogar do deck ou da mão um SUCATA de custo [5] sem pagar o custo"
+    },
+    {
       "id": 1785696977119,
       "name": "Defesa impenetrável",
       "archetype": "Samurai",
@@ -946,7 +998,7 @@
       "attack": 6,
       "defense": 6,
       "mana": 12,
-      "imageUrl": "https://preview.redd.it/beelzemon-fanart-by-me-v0-34yeclp6e8pb1.jpg?auto=webp&s=c03bf28c3410c9524400a44e587b38a8d9f84340",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRws2htuZEQSwlr0cRPnxgnlCAgMIoqiwExFNO4Kip_Q&s=10",
       "attackEffect": "[1]...[4] -2 DEF defensor | [5] Anule o efeito do defensor\n[6] Se ganhar a batalha: pode fazer um novo ataque",
       "defenseEffect": "[1]...[4] -2 ATK atacante | [5] Anule o efeito do atacante\n[6] Cancele a batalha e volte o atacante para a mão",
       "mainEffect": "AO ENTRAR: Envie X DIGIMON do campo para o descarte:\n* reduza o custo desta carta em 2 para cada X\n* +2 ATK/+2 DEF (PERMANENTE) para cada X"
@@ -3228,7 +3280,7 @@
       "attack": 10,
       "defense": 7,
       "mana": 8,
-      "imageUrl": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2019/01/dragon-ball-super-broly-movie-header.jpg",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVgdpfLvK6cmxNl6D5OYVEcswqcG60QxjaMO1VdQGgzg&s=10",
       "attackEffect": "Jogue um dado, de acordo com o resultado, reduza a defesa do oponente.",
       "defenseEffect": "[1][6] -3 ATK para criatura atacante.\n[2][5] -2 ATK para criatura atacante.\n[3][4] -2 ATK para todas as criaturas do oponente.",
       "mainEffect": "Quando entrar em jogo, todas as criaturas do oponente perdem 2 de defesa."
@@ -3267,7 +3319,7 @@
       "attack": 6,
       "defense": 5,
       "mana": 5,
-      "imageUrl": "https://i.redd.it/which-form-had-a-cooler-reveal-v0-cwjoc8pozpke1.png?width=706&format=png&auto=webp&s=4384e91f596b610615b31fa67c83d0fa571e8b79",
+      "imageUrl": "https://i1.sndcdn.com/artworks-000499472043-36qgpa-t500x500.jpg",
       "attackEffect": "[1][2][3] +1 ATK | [4][5] +2 ATK e MANA+1 | [6] +3 ATK  e MANA+2.",
       "defenseEffect": "[1][2][3] +1 DEF | [4][5] +2 DEF e MANA+1 | [6] +3 DEF e MANA+2",
       "mainEffect": "No final do turno jogue um dado se o resultado for [1][6], envie esta carta para pilha de descarte e depois invoque Instinto Superior do deck, da mão ou do descarte."
@@ -3280,7 +3332,7 @@
       "attack": 3,
       "defense": 3,
       "mana": 2,
-      "imageUrl": "https://recreio.com.br/wp-content/uploads/2024/05/goku_capa-1.jpg",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQ_I7hBlk7mNF_NqONEE3gmUStACskG1xRF1RCCaXig&s=10",
       "attackEffect": "[1][2][3] +1 ATK | [4][5][6] +2 ATK",
       "defenseEffect": "[1][2][3] +1 DEF | [4][5][6] +2 DEF",
       "mainEffect": "No final do turno jogue um dado se o resultado for [1][3][5][6], envie esta carta para o descarte e depois jogue Goku SS2 do deck, da mão ou do descarte."
