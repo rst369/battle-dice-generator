@@ -946,7 +946,7 @@
       "attack": 6,
       "defense": 6,
       "mana": 12,
-      "imageUrl": "https://preview.redd.it/beelzemon-fanart-by-me-v0-34yeclp6e8pb1.jpg?auto=webp&s=c03bf28c3410c9524400a44e587b38a8d9f84340",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRws2htuZEQSwlr0cRPnxgnlCAgMIoqiwExFNO4Kip_Q&s=10",
       "attackEffect": "[1]...[4] -2 DEF defensor | [5] Anule o efeito do defensor\n[6] Se ganhar a batalha: pode fazer um novo ataque",
       "defenseEffect": "[1]...[4] -2 ATK atacante | [5] Anule o efeito do atacante\n[6] Cancele a batalha e volte o atacante para a mão",
       "mainEffect": "AO ENTRAR: Envie X DIGIMON do campo para o descarte:\n* reduza o custo desta carta em 2 para cada X\n* +2 ATK/+2 DEF (PERMANENTE) para cada X"
@@ -3228,7 +3228,7 @@
       "attack": 10,
       "defense": 7,
       "mana": 8,
-      "imageUrl": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2019/01/dragon-ball-super-broly-movie-header.jpg",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVgdpfLvK6cmxNl6D5OYVEcswqcG60QxjaMO1VdQGgzg&s=10",
       "attackEffect": "Jogue um dado, de acordo com o resultado, reduza a defesa do oponente.",
       "defenseEffect": "[1][6] -3 ATK para criatura atacante.\n[2][5] -2 ATK para criatura atacante.\n[3][4] -2 ATK para todas as criaturas do oponente.",
       "mainEffect": "Quando entrar em jogo, todas as criaturas do oponente perdem 2 de defesa."
@@ -3267,7 +3267,7 @@
       "attack": 6,
       "defense": 5,
       "mana": 5,
-      "imageUrl": "https://i.redd.it/which-form-had-a-cooler-reveal-v0-cwjoc8pozpke1.png?width=706&format=png&auto=webp&s=4384e91f596b610615b31fa67c83d0fa571e8b79",
+      "imageUrl": "https://i1.sndcdn.com/artworks-000499472043-36qgpa-t500x500.jpg",
       "attackEffect": "[1][2][3] +1 ATK | [4][5] +2 ATK e MANA+1 | [6] +3 ATK  e MANA+2.",
       "defenseEffect": "[1][2][3] +1 DEF | [4][5] +2 DEF e MANA+1 | [6] +3 DEF e MANA+2",
       "mainEffect": "No final do turno jogue um dado se o resultado for [1][6], envie esta carta para pilha de descarte e depois invoque Instinto Superior do deck, da mão ou do descarte."
@@ -3280,7 +3280,7 @@
       "attack": 3,
       "defense": 3,
       "mana": 2,
-      "imageUrl": "https://recreio.com.br/wp-content/uploads/2024/05/goku_capa-1.jpg",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQ_I7hBlk7mNF_NqONEE3gmUStACskG1xRF1RCCaXig&s=10",
       "attackEffect": "[1][2][3] +1 ATK | [4][5][6] +2 ATK",
       "defenseEffect": "[1][2][3] +1 DEF | [4][5][6] +2 DEF",
       "mainEffect": "No final do turno jogue um dado se o resultado for [1][3][5][6], envie esta carta para o descarte e depois jogue Goku SS2 do deck, da mão ou do descarte."
