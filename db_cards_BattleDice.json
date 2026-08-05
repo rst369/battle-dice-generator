@@ -36,7 +36,7 @@
       "attack": 5,
       "defense": 3,
       "mana": 5,
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQINwRsnryMuRhWQZILpSjI34zOPiLOGtsoelCZeC7W8kweQTUWwsB4Jiu_&s=10",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHMSI14lsx0Vx8YW05whVdBCOFtAGnovvBKHDh7YcD2bObLCHLChJzfA&s=10",
       "attackEffect": "[1][3][5] +2 MANA + 2 PV\n[2][4][6] compre 2 cartas",
       "defenseEffect": "[1]<>[5] Adicione um STARDUST do deck ou descarte para a mão\n[6] -5 MANA: Jogue um STARDUST do deck ou da mão sem pagar o custo",
       "mainEffect": "EM CAMPO: Ganha ATK igual ao ATK de todos SUCATA em campo com custo menor que [3]."
