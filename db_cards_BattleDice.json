@@ -3,6 +3,32 @@
   "exportDate": "2026-05-26T18:22:53",
   "cards": [
     {
+      "id": 1785765904450,
+      "name": "Oração aos Digimon",
+      "archetype": "Digimon",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 6,
+      "imageUrl": "https://i.postimg.cc/C13ZxqGK/praying-at-the-shrine.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Se um DIGIMON for derrotado em batalha: Jogue um dado e some o resultado ao custo do DIGIMON derrotado. Jogue da sua mão um DIGIMON com custo menor ou igual ao resultado somado e faça a criatura que derrotou o DIGIMON batalhar com a criatura jogada."
+    },
+    {
+      "id": 1785765750116,
+      "name": "Recrutando Novatos",
+      "archetype": "Digimon",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 5,
+      "imageUrl": "https://static.wikia.nocookie.net/digimon/images/8/8e/List_of_Digimon_Tamers_episodes_03.jpg/revision/latest?cb=20100316003949",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "Jogue um DIGIMON com custo menor que [6] do deck ou descarte sem pagar o custo. Se ele for enviado para o descarte neste turno para reduzir o custo de outro DIGIMON: +3 MANA + 3 PV"
+    },
+    {
       "id": 1786413218630,
       "name": "Montando acampamento",
       "archetype": "MH",
