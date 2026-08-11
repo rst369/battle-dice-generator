@@ -1200,13 +1200,13 @@
     },
     {
       "id": 1779715863078,
-      "name": "Domadores de Digimon",
+      "name": "Digievolução",
       "archetype": "Digimon",
       "type": "magic",
       "attack": 5,
       "defense": 5,
       "mana": 5,
-      "imageUrl": "https://i.ytimg.com/vi/Se-2l5A2wu4/maxresdefault.jpg",
+      "imageUrl": "https://preview.redd.it/just-started-digimon-tamers-and-the-evolution-scene-is-soo-v0-dfu5tjjyww1c1.jpeg?auto=webp&s=959be1e0d3bf1758bcff7e5ca977a8d46686faf0",
       "attackEffect": "",
       "defenseEffect": "",
       "mainEffect": "[PERMANENTE] Toda vez que você descartar um DIGIMON para jogar outro: compre uma carta (para cada DIGIMON descartado) e a criatura jogada ganha +3 ATK +3 DEF até o fim do próximo turno."
@@ -1976,7 +1976,7 @@
       "imageUrl": "https://static.wikia.nocookie.net/digimon-tamers/images/7/75/Blue_Card.jpg/revision/latest?cb=20180405050640",
       "attackEffect": "",
       "defenseEffect": "",
-      "mainEffect": "Retorne duas cartas DIGIMON do descarte para o deck, compre 1 carta. \nEscolha um DIGIMON em campo, Se ele vencer uma batalha: Adicione uma magia \"Equipamento\" DIGIMON qualquer do deck para a mão"
+            "mainEffect": "Retorne cinco cartas DIGIMON do descarte para o deck, compre 2 cartas. \n\nEscolha um DIGIMON em campo, Se ele vencer uma batalha: Adicione uma magia DIGIMON do deck para a mão"
     },
     {
       "id": 35562596950827,
