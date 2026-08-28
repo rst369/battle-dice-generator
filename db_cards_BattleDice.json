@@ -3,6 +3,45 @@
   "exportDate": "2026-05-26T18:22:53",
   "cards": [
     {
+      "id": 1787881121181,
+      "name": "Proteção dos Cavaleiros",
+      "archetype": "Cavaleiro",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 6,
+      "imageUrl": "https://uploads.spiritfanfiction.com/historias/capas/201411/fanfiction-saint-seiya-a-verdadeira-estoria-da-casa-de-libra-2734642,161120141631.jpg",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "[PERMANENTE] Uma vez por turno se um CAVALEIRO for derrotado em batalha você pode adicionar um outro CAVALEIRO do deck para a mão com custo menor que o derrotado.\n\nEnquanto você tiver 2 CAVALEIRO com nomes diferentes em campo: todos CAVALEIRO ganham +2 DEF"
+    },
+    {
+      "id": 1787880583723,
+      "name": "O Relógio do Santuário",
+      "archetype": "Cavaleiro",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 5,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAxRXoS7eajYKFxD5Jf-_pirx5eFxPk5s2eAQfffNpRQ&s=10",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "[PERMANENTE] Toda vez que um CAVALEIRO for derrotado coloque X contadores, nesta carta, igual ao custo. Uma vez por turno você pode ativar um dos efeitos:\n\n* Remova 12 contadores desta carta: Adicione uma Deusa Atena do deck ou descarte para a mão;\n\n* Remova X contadores desta carta: Reduza o custo de uma Deusa Atena na mão em X (o custo mínimo para jogar é 1);"
+    },
+     {
+      "id": 1787880883150,
+      "name": "Reforços do Treinamento",
+      "archetype": "Cavaleiro",
+      "type": "magic",
+      "attack": 5,
+      "defense": 5,
+      "mana": 5,
+      "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhihGJKv16Vo5AnPPdtE9cfvhCiFVvo3PXDvpucBVdT46DABW8-_Gf374MP4JfHXwiMX2kdCl9D-L6_6ipJd_dxwLNrymd9YeQf8bw1wJF4206HabmthxpMs3UxrXWAbrTHSN9KLwTkwO8u/s1600/seiya+box.png",
+      "attackEffect": "",
+      "defenseEffect": "",
+      "mainEffect": "[PERMANENTE] Uma vez por turno, quando um CAVALEIRO for jogado em campo: Adicione uma magia que cite o nome do CAVALEIRO no texto do deck ou descarte para a mão."
+    },
+    {
       "id": 1785765904450,
       "name": "Oração aos Digimon",
       "archetype": "Digimon",
